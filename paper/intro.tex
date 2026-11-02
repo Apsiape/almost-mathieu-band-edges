@@ -1,0 +1,81 @@
+\section{The question and the result}\label{sec:intro}
+How large can the spectral gaps of a supercritical almost Mathieu operator remain as their integer labels grow? We prove polynomial lower bounds along infinitely many labels whenever $L/2<\beta(\alpha)<\infty$, where $L=\log\lambda$ and $\beta(\alpha)$ is the Liouville exponent defined below. A separate surplus argument also covers $\beta=\infty$. At one rational approximation, the top band produces many labelled gaps, with no restriction on denominator parity. The proof combines a common well ladder with an exact IDS count.
+
+We use hopping one:
+\begin{equation}\label{eq:H}
+(H_{\lambda,\alpha,\theta}u)(j)=u(j+1)+u(j-1)
+ +2\lambda\cos(2\pi(j\alpha+\theta))u(j).
+\end{equation}
+Throughout, $\lambda>1$, $L=\log\lambda$, and $\alpha$ is irrational. Its convergents are $p_n/q_n$, and
+\begin{equation}\label{eq:arithmetic}
+\delta_n=q_n\alpha-p_n,\quad b_n=-\frac{\log|\delta_n|}{q_n},
+\quad \beta=\beta(\alpha)=\limsup_n\frac{\log q_{n+1}}{q_n}.
+\end{equation}
+The common spectrum is $\Sig$. The integrated density of states, denoted by $N$, labels a bounded gap $G_m$ by $N|_{G_m}=\{m\alpha\}$, $m\in\Z\setminus\{0\}$. We normalize the global gap exponent as
+\begin{equation}\label{eq:rho}
+\rho(\lambda,\alpha)=\liminf_{|m|\to\infty}
+ \frac{-\log|G_m|}{L|m|}.
+\end{equation}
+Thus the unnormalized exponential rate is $L\rho$. A closed gap, if needed in a general convention, has length zero and contributes $+\infty$ to the quotient.
+
+\begin{maintheorem}[Polynomial lower subsequences]\label{thm:polynomial}
+Suppose $L/2<\beta<\infty$.
+\begin{enumerate}
+\item If $\beta<3L/2$, then for every $\beta'\in(L/2,\beta)$ and $\epsilon>0$ there are infinitely many labels $m$ with
+\[
+ |G_m|\ge |m|^{-\frac{\beta'+L/2}{\beta'-L/2}-\epsilon}.
+\]
+\item If $3L/2\le\beta<\infty$, then for every $\epsilon>0$ there are infinitely many labels $m$ with
+\[
+ |G_m|\ge |m|^{-\frac{\beta+L/2}{L}-\epsilon}.
+\]
+\end{enumerate}
+In both cases $\rho(\lambda,\alpha)=0$. The labels can be chosen as
+$m=-Dq_n\sgn\delta_n$ at the top of the spectrum.
+\end{maintheorem}
+
+The scale estimate behind the theorem is more informative. Let $P_n$ be the monic Chambers polynomial and $E_n$ the top of the rational phase union. Set
+\begin{equation}\label{eq:scales}
+ \Lambda_n=\lambda^{q_n},\qquad
+ \hbar_n=2\pi q_n\Lambda_n^{1/2}|\delta_n|,\qquad
+ \kappa_n=\hbar_n^2.
+\end{equation}
+The derivative $P_n'(E_n)$ is positive.
+\input{figures/scale-picture}
+
+\begin{maintheorem}[Gaps at one Liouville scale]\label{thm:scale}
+There are absolute constants $c_0,c_1>0$ with the following property. Fix $\xi\in(0,L]$. For all sufficiently large $n$ with $b_n\ge L/2+\xi$, every integer
+\begin{equation}\label{eq:Dcap}
+ 1\le D\le
+ \left\lfloor\min\left\{\frac{c_1}{\hbar_n},
+                   \Lambda_n e^{-\xi q_n}\right\}\right\rfloor
+\end{equation}
+has a gap with
+\begin{equation}\label{eq:width}
+ N|_{G_m}=1-D|\delta_n|,\quad m=-Dq_n\sgn\delta_n,
+ \qquad |G_m|\ge\frac{c_0\hbar_n}{P_n'(E_n)}.
+\end{equation}
+For each $\eta>0$, the last bound is at least
+$C_\eta\exp(-(b_n+L/2+\eta)q_n)$ eventually, with $C_\eta>0$ independent of $b_n$ and $D$. Equivalently it is
+$\exp(-(b_n+L/2+o(1))q_n)$, with the $o(1)$ uniform in $b_n$.
+The first cap in~\eqref{eq:Dcap} is the smaller one when
+$b_n\le3L/2-\xi$ and $n$ is large.
+\end{maintheorem}
+
+The threshold at $3L/2$ concerns the precision of the comparison with a quadratic well. It is not a claimed spectral transition. The second cap retains control of the inverse-polynomial curvature and the cosine quartic when the spacing is very small.
+
+\subsection{Relation to earlier work}
+All noncritical allowed gaps are already open by Avila--You--Zhou~\cite[Theorem~1.1]{AYZdry}. Our assertion concerns widths at growing labels.
+
+For Diophantine $\alpha$, Ge--You--Zhou~\cite[Theorem~1.1]{GYZ} prove the rate $\rho=1$; earlier two-sided estimates appear in Leguil--You--Zhao--Zhou~\cite{LYZZ2017}. Avila--You--Zhou~\cite[Theorem~6.2]{AYZdry} also supply quantitative rational-gap estimates in a different label range. Liu--Shi~\cite[Theorem~1.3]{LiuShi2019} give exponential upper bounds under a sufficiently small dual-coupling hypothesis. Its unspecified absolute constant does not identify an exact complementary boundary to Theorem~\ref{thm:polynomial}. Krasovsky~\cite[Theorems~3--4]{Krasovsky} proves polynomial inherited-gap bounds at critical coupling under approximation and parity hypotheses. Thus polynomial Liouville-gap phenomena themselves are not new.
+
+The band reduction is classical in substance. Wilkinson~\cite{Wilkinson1987} develops projected effective Hamiltonians near rational magnetic flux. Helffer--Sj\"ostrand~\cite{HSII} give a rigorous one-step near-rational reduction; their Section~5.1 already treats translated reference wells. Their iterated spectral results have additional arithmetic hypotheses. Those hypotheses are not an obstruction theorem for a single-scale edge calculation.
+
+The orbital displacement used here is the Rammal--Wilkinson correction. Rammal--Bellissard~\cite{RammalBellissard} and the account of Bellissard--Barelli~\cite{BellissardBarelli} explain its place in band-edge asymptotics. Inverse-square-root Gram orthogonalization and interaction matrices are standard multiple-well tools~\cite[Sections~2.1--2.2 and 3.2]{HSwells}. IDS limits are classical~\cite{AvronSimon}.
+
+The contribution of Theorem~\ref{thm:scale} is the explicit combination of these tools with constants controlled as $q_n$ grows. It yields common counting windows over every translated well, labels of order $Dq_n$ with $D$ growing exponentially, and the stated arithmetic range. No priority claim is made for the individual mechanisms. The earlier surplus route, proved in Section~\ref{sec:surplus}, reaches $\beta>2L$, including $\beta=\infty$; the closed-central-gap variant reaches $\beta_e>L$ along even denominators. Theorem~\ref{thm:polynomial} extends the finite-$\beta$ conclusion to $\beta>L/2$.
+
+\subsection{Reading the proof}
+Section~\ref{sec:consequences} derives the label exponents from Theorem~\ref{thm:scale} and identifies the exact count that proves it. Sections~\ref{sec:surplus}--\ref{sec:discussion} give the earlier argument, the corrected phase diagram, numerical checks and open questions. The detailed reduction is in Appendices~\ref{app:complex}--\ref{app:comparison}. Appendix~\ref{app:mathieu} supplies the uniform one-well input. The last appendix lists every result imported from the companion papers, with its source number and use.
+
+\label{end:intro}

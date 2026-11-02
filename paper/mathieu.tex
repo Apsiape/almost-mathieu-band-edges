@@ -1,0 +1,94 @@
+\section{The uniform Mathieu ladder: a one-well argument}\label{app:mathieu}
+This is input (I5), stated in the form used by the comparison. The semiclassical facts are classical. We give the one-well reduction, the oscillator endpoint and the twist bookkeeping, since a fixed-index expansion alone does not control a growing ladder.
+
+\begin{inputbox}
+\begin{classicalinput}[uniform scalar Mathieu ladder; one-well quantization]
+There are absolute $c_M,C_M,c_1,\hbar_0>0$ such that, for $0<\hbar<\hbar_0$, $\kappa=\hbar^2$, the simple eigenvalues $e_j(\kappa,y)$ of
+\[
+ \hM_{\kappa,y}=2-S-S^*+\kappa(j-y)^2
+ \quad\hbox{on }\ell^2(\Z)
+\]
+have $y$-independent reference levels $\mu_j(\kappa)$ with
+\begin{equation}\label{eq:Mladder}
+ \begin{split}
+ |e_j(\kappa,y)-\mu_j(\kappa)|&\le c_M\hbar/8,\\
+ \mu_{j+1}-\mu_j&\ge c_M\hbar,\qquad
+ \mu_j\le C_M(j+1)\hbar.
+ \end{split}
+\end{equation}
+These estimates are uniform for all $y\in\R$ and all levels in a fixed compact energy interval below four, in particular for all $j\le c_1/\hbar$ with $\mu_j\le3.5$ after decreasing $c_1$. The same common windows separate the union over offsets.
+\end{classicalinput}
+\end{inputbox}
+\begin{proof}
+\emph{Fourier transformation.} Use $\widehat u(k)=\sum_ju_je^{ijk}$. Position becomes $-i\partial_k$ and hopping becomes $2-2\cos k$. Writing $\widehat u=e^{iyk}g$ gives
+\begin{equation}\label{eq:circleMathieu}
+ -\hbar^2g''+(2-2\cos k)g,
+ \quad g(\pi)=e^{-2\pi iy}g(-\pi),\quad
+ g'(\pi)=e^{-2\pi iy}g'(-\pi).
+\end{equation}
+Thus the offset is solely a circle twist. Integer changes of $y$ do not affect the spectrum.
+
+\emph{A well separated from the seam.} Fix energies $3.5<e_+<4$. The allowed set for $V(k)=2-2\cos k\le e_+$ is a closed interval strictly inside $(-\pi,\pi)$. Choose collars between it and the seam where $V-e_+$ has a fixed positive lower bound. Extend $V$ smoothly outside $(-\pi,\pi)$ to a confining potential $\widetilde V$ with no additional well or critical value below $e_+$. Let $\widetilde P_\hbar=-\hbar^2\partial_k^2+\widetilde V$ on the line and let $\mu_j$ be its eigenvalues below $e_+$.
+
+Dirichlet and Neumann realizations on $(-\pi,\pi)$ bracket every twisted realization in quadratic-form order, because
+\[
+ H_0^1(-\pi,\pi)\subset
+ \{g\in H^1:g(\pi)=e^{-2\pi iy}g(-\pi)\}
+ \subset H^1(-\pi,\pi).
+\]
+The bracket is independent of the twist. Cutting the line at the same seam gives the same brackets for $\widetilde P_\hbar$ below $e_+$; the two exterior pieces have a strictly higher form lower bound.
+
+\emph{Exponential independence of the boundary condition.} Choose a real even Lipschitz weight $\phi$, zero on a fixed neighbourhood of the allowed set for energies at most $e_+$, increasing through the forbidden collars, and constant with the same positive value near both endpoints. Take that neighbourhood slightly larger than the allowed set, so that all transitions of $\phi$ occur in a fixed strictly forbidden region. Require $|\phi'|^2\le(V-e_+)/2$ wherever $\phi$ is nonzero. Multiplication by $e^{\phi/\hbar}$ preserves each twisted boundary condition; boundary terms also vanish for the Dirichlet and Neumann realizations. The eigenfunction equation therefore gives, for an eigenfunction $g$ with eigenvalue $E$,
+\[
+ \int\bigl(\hbar^2|(e^{\phi/\hbar}g)'|^2
+ +(V-E-|\phi'|^2)e^{2\phi/\hbar}|g|^2\bigr)=0.
+\]
+The negative part lies where $\phi=0$ and is bounded by normalization. Positivity on the forbidden collars bounds the weighted mass and scaled derivative there uniformly for $E\le e_+$. On an outer collar where $\phi\ge c>0$, the unweighted mass and scaled derivative are at most $Ce^{-c'/\hbar}$. Use the same argument for the confining line realization. Cutting off before the seam now changes norms, scalar products and Rayleigh quotients by at most $C\hbar^{-M}e^{-c'/\hbar}$. The subspace below $e_+$ has dimension $O(\hbar^{-1})$, so the estimates remain exponential after summing over that subspace. Cut-off line eigenfunctions lie in $H_0^1(-\pi,\pi)$ and bound the Dirichlet levels from above; cut-off Neumann eigenfunctions extend by zero to the line, where $\widetilde V=V$ on their support, and bound the levels $\mu_j$ from above. Dirichlet/Neumann bracketing and min--max therefore give
+\begin{equation}\label{eq:twisttunnel}
+ |e_j(\kappa,y)-\mu_j(\kappa)|\le Ce^{-c''/\hbar},
+\end{equation}
+uniformly in $y$, for all indices in the smaller energy window $\mu_j\le3.5$. The same bracketing excludes extra levels there.
+
+\emph{Uniform spacings within the line well.} For $0<e<e_+$, let $k_e=\arccos(1-e/2)$ and use the action
+\begin{equation}\label{eq:action}
+ \mathcal A(e)=\frac1\pi\int_{-k_e}^{k_e}
+                    \sqrt{e-2+2\cos k}\,dk.
+\end{equation}
+It extends smoothly to zero, with $\mathcal A(e)=e/2+O(e^2)$. Its derivative satisfies $0<\ell_-\le\mathcal A'\le\ell_+$ on $[0,e_+]$ (decrease $e_+$ slightly if necessary). Away from zero the two turning points are simple. The one-dimensional Bohr--Sommerfeld construction with the two Airy connection phases gives
+\begin{equation}\label{eq:BS}
+ \mathcal A(\mu_j)=\hbar(j+1/2)+O(\hbar^2)
+\end{equation}
+with an error uniform on compact regular energy intervals. The regular Mathieu action and its higher-order quantum actions are recorded in Hezari--Zelditch~\cite[Section~3.4]{HezariZelditch}; the uniform one-dimensional quantization theorem is Helffer--Robert~\cite[Theorem~3.14 and Corollary~3.15]{HelfferRobert}.
+
+To include the bottom, use the nondegenerate minimum $V(k)=k^2+O(k^4)$. For the fixed confining scalar well, apply Helffer--Robert~\cite[Theorem~4.5 and Remark~4.9]{HelfferRobert} near the Morse minimum, and~\cite[Theorem~3.14 and Corollary~3.15]{HelfferRobert} on overlapping compact regular intervals. The near-minimum expansion is uniform above a fixed finite index. For each of the remaining finitely many indices, oscillator perturbation gives $\mu_j=(2j+1)\hbar+O_j(\hbar^2)$; since $\mathcal A(e)=e/2+O(e^2)$, it gives the same action formula. Sturm ordering fixes the index from the ground state and identifies the indexing on the overlap. The principal action is smooth through zero and the Schr\"odinger subprincipal symbol vanishes. Consequently
+\[
+ \sup_j|\mathcal A(\mu_j)-\hbar(j+1/2)|\le C\hbar^2
+\]
+throughout the chosen fixed window below the separatrix.
+
+These results are applied to $\widetilde P_\hbar$. Its potential $\widetilde V$ agrees with $V$ on the circle and remains above $e_+$ outside it. It has one well below $e_+$, a nondegenerate minimum, compact low-energy sublevels and regular closed orbits at positive energies. The normalized action gives period $2\pi$. These are the scalar one-well hypotheses being used, with no $q$ parameter. Uniformity is over $j$ up to a constant$/\hbar$, not just fixed $j$.
+
+Subtracting adjacent action equations gives $\mathcal A(\mu_{j+1})-\mathcal A(\mu_j)=\hbar+O(\hbar^2)$. The bounds $0<\ell_-\le\mathcal A'\le\ell_+$ then give
+\[
+ \mu_{j+1}-\mu_j\ge\hbar/(2\ell_+)\ge c_M\hbar
+\]
+for small $\hbar$ and $c_M\le1/(2\ell_+)$. This step is valid even though the individual remainders need not vary smoothly with $j$. Inverting the action also gives $\mu_j\le C_M(j+1)\hbar$ and at least $c_1/\hbar$ levels below $3.5$, after fixing a sufficiently small $c_1$. Finally~\eqref{eq:twisttunnel} is less than $c_M\hbar/8$ for small $\hbar$. This proves~\eqref{eq:Mladder} and the common-window assertion.
+\end{proof}
+
+The analytic work imported in this argument is the standard scalar one-well quantization theorem, including its Morse-minimum version; the twist conclusion is the explicit bracketing and forbidden-region argument above. Neither cited source is described as stating the lattice-offset statement verbatim. In particular the input does not assert stability for an arbitrary $q$-dependent quantized symbol.
+
+\subsection{Classical characteristic values}
+The same Fourier transformation identifies the union of the offset spectra with the Floquet spectrum of the Mathieu equation. Let $a_D,b_D$ be its characteristic values. Translation by $\pi/2$ changes the sign of the Mathieu parameter if required by convention. Then
+\begin{equation}\label{eq:Mathieugap}
+ G_D(\kappa)=\frac\kappa4
+       \bigl(a_D(4/\kappa)-b_D(4/\kappa)\bigr)>0.
+\end{equation}
+The endpoints occur at offsets zero and $1/2$. The classical fixed-$D$ asymptotics are
+\[
+ G_D(\kappa)=\frac{2\kappa^{1-D}}{((D-1)!)^2}
+                (1+O_D(\kappa^{-1}))\quad(\kappa\to\infty),
+ \qquad G_D(\kappa)\sim2\sqrt\kappa\quad(\kappa\to0).
+\]
+See the standard Mathieu expansions~\cite{DLMF}. The leading phase-space count below the separatrix is $8/(\pi\sqrt\kappa)$, obtained by integrating the width of $\{\kappa j^2+2-2\cos k\le4\}$. None of these fixed-index formulas replaces the uniform argument above.
+
+\label{end:mathieu}

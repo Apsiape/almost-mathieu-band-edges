@@ -1,0 +1,55 @@
+\section{Complex energies and rational transfer products}\label{app:complex}
+This appendix proves the extension of Paper~B, Lemmas~2.4--2.5, used below. It does not assert that the complex-energy Lyapunov exponent equals its real spectral value.
+
+For $z\in\C$, put
+\[
+ A(z,t)=\begin{pmatrix}z-v(t)&-1\\1&0\end{pmatrix},\qquad
+ A_r^{(\omega)}(z,t)=A(z,t+(r-1)\omega)\cdots A(z,t).
+\]
+On the spectrum of the supercritical almost Mathieu operator, the Lyapunov exponent equals $L=\log\lambda$, by Bourgain--Jitomirskaya~\cite[Corollary~2]{BourgainJitomirskaya2002}, after matching the coupling convention. This spectral identity is the AMO instance of the growth input in the companion papers.
+
+\begin{lemma}[Uniform complex neighbourhood]\label{lem:complexgrowth}
+For each $h>L$ there are a bounded open neighbourhood $U_h^{\C}$ of $\Sig$ and $C_h<\infty$ such that
+\[
+ \norm{A_r^{(\alpha)}(z,t)}\le C_he^{hr}
+ \quad(z\in U_h^{\C},\ t\in\T,\ r\ge0).
+\]
+After enlarging $C_h$, every sufficiently large convergent $p/q$ satisfies
+\begin{equation}\label{eq:complexrat}
+ \norm{A_r^{(p/q)}(z,t)}\le C_he^{hr}
+ \quad(0\le r\le q, z\in U_h^{\C},\ t\in\T).
+\end{equation}
+The same estimates hold for subblocks.
+\end{lemma}
+\begin{proof}
+Choose $h_1\in(L,h)$. At each $E_0\in\Sig$, the infimum formula for the Lyapunov exponent gives an integer $r_0$ with
+\[
+ \frac1{r_0}\int_\T\log\norm{A_{r_0}^{(\alpha)}(E_0,t)}\,dt<h_1.
+\]
+The finite product is jointly continuous in complex $z$ and real $t$. Its determinant is one, so its norm never vanishes. The strict averaged inequality persists on a compact complex neighbourhood $K_0$ of $E_0$.
+
+Rotation by $r_0\alpha$ is uniquely ergodic. The continuous functions $t\mapsto\log\norm{A_{r_0}^{(\alpha)}(z,t)}$, $z\in K_0$, form a compact family in the uniform norm. A finite uniform approximation to that family makes the Birkhoff convergence uniform in both variables. For all sufficiently many blocks, their summed logarithmic norms are at most $mr_0h$. Splitting $r=mr_0+s$ leaves a uniformly bounded remainder. This proves the bound on $K_0$. A finite cover of $\Sig$ gives $U_h^{\C}$ and one constant.
+
+For the rational comparison, each one-step error has norm at most $d=\Lip(v)|\delta|$. A term with $j$ such errors in a product of $r\le q$ factors contains at most $j+1$ irrational subblocks. Its total norm is bounded by $C_h^{j+1}e^{h(r-j)}d^j$. Consequently
+\[
+ \norm{A_r^{(p/q)}}\le C_he^{hr}(1+C_hde^{-h})^r
+ \le C_he^{hr}\exp(C_h\Lip(v)e^{-h}),
+\]
+because $q|\delta|<1$ for convergents. No step uses realness of $z$. Starting phases cover all subblocks.
+\end{proof}
+
+\begin{corollary}[Polynomial derivatives and the top contour]\label{cor:derivatives}
+For fixed $r\ge1$, on a fixed smaller complex neighbourhood,
+\[
+ |\partial_z^r\Delta_t(z)|\le C_{r,h}q^re^{hq},\qquad
+ |P^{(r)}(z)|\le C_{r,h}q^re^{hq}.
+\]
+A fixed-radius complex neighbourhood of $E_*(p_n/q_n)$ lies in $U_h^{\C}$ for all sufficiently large $n$.
+\end{corollary}
+\begin{proof}
+Differentiate the product. Each derivative inserts $\left(\begin{smallmatrix}1&0\\0&0\end{smallmatrix}\right)$ at a distinct position. There are at most $q^r$ ordered choices and at most $r+1$ rational segments. Apply~\eqref{eq:complexrat} and bound the trace by twice the norm. The Chambers correction is independent of energy. Finally~\eqref{eq:continuity} gives convergence of the rational top edge to $\max\Sig$; compact containment in the open complex neighbourhood supplies the fixed radius.
+\end{proof}
+
+For real energies this is also exactly the derivative input (I2) of Paper~A, Proposition~3.3(2). Before using it on a whole rational band,~\eqref{eq:continuity} puts the whole phase union in its neighbourhood. It is never applied at an unanchored critical point far from the spectrum.
+
+\label{end:complex}

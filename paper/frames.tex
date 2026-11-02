@@ -1,0 +1,188 @@
+\section{Translated Wannier frames and self-adjoint compression}\label{app:frames}
+Fix $b\ge L/2+\xi$ and the slack choices of Section~\ref{sec:methods}. Set
+\[
+ t_{\rm fr}=\frac{e^{-\xi q/4}}{2\pi q},\quad
+ \Phi^0=[-t_{\rm fr},t_{\rm fr}],\quad
+ \eta'=\eta_q-\log4,\quad \eta''=\eta'-2\tau q,
+ \quad a=L-4\tau.
+\]
+Then $2\Lambda-c(t)\le M'$ on $\Phi^0$.
+
+\subsection{Exact translated coordinates}
+For $\nu\in\Z$, let $a_\nu\in\{0,\ldots,q-1\}$ solve
+$pa_\nu+\nu\equiv0\pmod q$. Put
+\begin{equation}\label{eq:anchors}
+ \begin{aligned}
+ c_{\nu,j}&=jq+a_\nu,&
+ t_{\nu,j}&=\tau_\nu+j\delta,\\
+ \tau_\nu&=\theta-\nu/q+a_\nu\eps,&
+ J_\nu&=\{j:|t_{\nu,j}|\le t_{\rm fr}\}.
+ \end{aligned}
+\end{equation}
+
+\begin{lemma}[Covariance and well density]\label{lem:anchors}
+For $c=c_{\nu,j}$ and $t=t_{\nu,j}$,
+\begin{equation}\label{eq:covariance}
+ S^{-c}HS^c=B_t+V_t^\eps,\quad
+ V_t^\eps(m)=v(mp/q+t+m\eps)-v(mp/q+t).
+\end{equation}
+Each $J_\nu$ is an interval of consecutive integers. Centres in different wells have distance at least $1/(3|\delta|)$ eventually. With $y_\nu=-\tau_\nu/\delta$, the physical well bottoms are exactly
+\begin{equation}\label{eq:wellpositions}
+ x_\nu=qy_\nu+a_\nu=\frac{\nu-q\theta}{\delta}.
+\end{equation}
+Thus their density is $|\delta|$ per physical site.
+\end{lemma}
+\begin{proof}
+Expand $(c+m)\alpha+\theta$. The terms $jp+(pa_\nu+\nu)/q$ are integers; the remaining phase is $mp/q+t+m\eps$. This proves~\eqref{eq:covariance}, including the term $a_\nu\eps$.
+
+The affine phase $\tau_\nu+j\delta$ proves the interval assertion. If two centres belong to different wells, then
+\[
+ |j-j'|\,|\delta|\ge1/q-2t_{\rm fr}-2|\delta|\ge1/(2q)
+\]
+for large $q$. Hence $|c-c'|\ge1/(2|\delta|)-q\ge1/(3|\delta|)$. Here $q|\delta|\to0$ on the exponentially resonant scales under consideration. Substitution of $y_\nu$ gives~\eqref{eq:wellpositions}. Consecutive bottoms are separated by $1/|\delta|$, with their spatial order reversed when $\delta<0$.
+\end{proof}
+
+Translated wells and modular-inverse coordinates are classical; compare Helffer--Sj\"ostrand~\cite[Section~5.1, especially (5.1.7)--(5.1.17)]{HSII}. Here the exact coordinate identity fixes the phase shift needed for uniformity in $q$.
+
+\subsection{A single valid local chart}
+\begin{lemma}[Aubry--Perron normalization and Wannier decay]\label{lem:Wannier}
+There is a real family $w_t\in\ell^2(\Z)$, $t\in\Phi^0$, such that
+\begin{enumerate}
+\item the translates $S^{mq}w_t$ are an orthonormal basis of the full-line top-band subspace of $B_t$;
+\item $\mathcal Rw_t=w_{-t}$ and, for $0\le\ell\le3$,
+\begin{equation}\label{eq:Wanniertails}
+ |\partial_t^\ell w_t(n)|\le\EE e^{-a|n|};
+\end{equation}
+\item if $\widehat E_m(t)$ is the $m$-th Fourier coefficient of $E_t(k)$, then
+\begin{equation}\label{eq:bandFourier}
+ B_tw_t=\sum_m\widehat E_m(t)S^{mq}w_t,
+ \qquad |\widehat E_m(t)|\le(r/2)e^{-\eta'|m|}\quad(m\ne0).
+\end{equation}
+These coefficients are real and even in $m$. Their first four phase derivatives are bounded by $\EE(2\pi q\Lambda)^\ell e^{-\eta'|m|}$ for $m\ne0$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+At $t=k=0$, finite rational Aubry duality transforms $B_0(0)$ to a matrix with positive hopping $\lambda$ and diagonal $2\cos(2\pi p\ell/q)$. Adding a scalar makes it irreducible and nonnegative. Its top Perron vector has strictly positive components. The modulus of its inverse Fourier transform is maximal at original site zero, by the triangle inequality. Consequently
+\[
+ \gamma_0(0):=(\Pi_0(0))_{00}\ge1/q.
+\]
+This assertion is used only at $B_0(0)$.
+
+Let $\gamma_t(k)=(\Pi_t(k))_{00}$, analytically continued as a matrix entry. Riesz differentiation gives
+$\norm{\partial_t\Pi_t}\le4\pi\lambda r(K_q')^2$. Its $k$-Fourier coefficients are bounded by $rK_q'e^{-\eta'|m|}$. On the smaller strip $|\operatorname{Im}k|\le\eta''$, the nonconstant part is at most $4rK_q'e^{-2\tau q}$. With~\eqref{eq:slack} and $|t|\le t_{\rm fr}$, both this variation and the real-phase variation are eventually less than $1/(4q)$. Thus $\gamma_t(k)$ stays in the disc of radius $1/(2q)$ about the positive number $\gamma_0(0)$.
+
+The principal square root is therefore analytic, and
+\[
+ u_t(k)=\frac{\Pi_t(k)\delta_0}{\gamma_t(k)^{1/2}}
+\]
+is a normalized top Bloch vector for real $k$. Uniform-gauge covariance gives $u_t(k+2\pi)=U^*u_t(k)$, $U_{ss}=e^{2\pi is/q}$, and realness gives $u_t(-k)=\overline{u_t(k)}$ on the real axis. The inverse Bloch transform
+\[
+ w_t(n)=\frac1{2\pi}\int_0^{2\pi}
+ e^{ikn/q}u_t(k)(n\bmod q)\,dk
+\]
+is consequently real. The integrand is periodic in $k$. Bloch unitarity proves the orthonormal basis assertion. Shift its contour to the appropriate side of $|\operatorname{Im}k|=\eta''$ to get~\eqref{eq:Wanniertails}; $\eta''/q\ge L-4\tau$ eventually. Finitely many phase derivatives add finitely many resolvents and bounded derivatives of $D_t$, all covered by~\eqref{eq:slack}. Reflection fixes the normalization at zero and gives $\mathcal Rw_t=w_{-t}$.
+
+Multiplication by $E_t(k)$ in the Bloch representation proves~\eqref{eq:bandFourier}. The function is even and real for real $k$. The Fourier estimate follows by contour shifting. Phase derivatives follow by differentiating the analytic top inverse in Lemma~\ref{lem:contour} and $c(t)$ up to four times; Cauchy bounds on a fixed fraction of its discriminant disc give the stated, deliberately coarse bounds.
+\end{proof}
+
+This frame is not asserted to remain anchored at the same physical site on every component of $\Phi_{\rm fr}$ modulo $1/q$. Lemma~\ref{lem:anchors} translates each well before the local construction is applied.
+
+\subsection{The global Gram matrix}
+Let $\cF=\{(\nu,j):j\in J_\nu\}$ and define
+\[
+ \widehat w_f=S^{c_f}w_{t_f},\quad
+ W\beta=\sum_{f\in\cF}\beta_f\widehat w_f,
+ \quad \Gamma_{f'f}=\inner{\widehat w_{f'}}{\widehat w_f}.
+\]
+
+\begin{lemma}[Overlap cancellation and global orthogonalization]\label{lem:Gram}
+Put
+\[
+ g_\infty=\exp\left(-\frac{L-6\tau}{3|\delta|}\right),\qquad
+ g_1=|\delta|e^{-(L-5\tau)q}+g_\infty.
+\]
+Then $\norm{\Gamma-1}\le g_1\le1/4$ eventually. The closed span $\cV=\overline{\Ran W}$ has orthogonal projection
+\[
+ \Pi=W\Gamma^{-1}W^*,\qquad
+ U_V=W\Gamma^{-1/2}:\ell^2(\cF)\longrightarrow\cV
+\]
+unitary, and $\norm{\Gamma^{-1/2}-1}\le g_1$, $\norm{\Gamma^{-1}}\le4/3$.
+\end{lemma}
+\begin{proof}
+For equal phase, $\inner{S^{nq}w_t}{w_t}=\delta_{n0}$. For $n\ne0$, use a mean-value integral in the phase before summing spatially:
+\[
+ |\inner{S^{nq}w_{t'}}{w_t}|
+ \le\EE|t'-t|(1+|n|q)e^{-a|n|q}.
+\]
+For $n=0$, normalized real vectors give
+$\inner{w_{t'}}{w_t}-1=-\norm{w_{t'}-w_t}^2/2$.
+The elementary convolution estimate used here is
+\[
+ \sum_x e^{-a|x-d|}e^{-a|x|}
+ \le(|d|+1+2/(1-e^{-2a}))e^{-a|d|}.
+\]
+In one well $t'-t=(j'-j)\delta$. Its off-diagonal Schur sums are at most $|\delta|e^{-(L-5\tau)q}$. Between wells the physical separation is at least $1/(3|\delta|)$; summing over the distinct integer centres gives at most $g_\infty$. The row and column constants are independent of the number of wells. This proves the norm bound.
+
+Spectral calculus on $[3/4,5/4]$ gives the inverse and square-root bounds. The identities follow from $W^*W=\Gamma$. This is the usual Gram orthogonalization used in multiple-well analysis~\cite{HSwells}.
+\end{proof}
+
+\subsection{The matrix and its quantization convention}
+The local Taylor bound is
+\begin{equation}\label{eq:Taylor}
+ |v(x+y)-v(x)-yv'(x)|\le4\pi^2\lambda y^2.
+\end{equation}
+Let $M=W^*HW$. In a well define the column-frozen matrix
+\[
+ h_{\rm tb}(j',j)=\widehat E_{j'-j}(t_j)
+                  +\delta_{jj'}s(t_j),
+ \qquad s(t)=\eps\inner{w_t}{XD_tw_t}.
+\]
+Set its entries between different wells to zero and put $h_s=(h_{\rm tb}+h_{\rm tb}^*)/2$.
+
+\begin{proposition}[Self-adjoint band compression]\label{prop:compression}
+The function $d(t)=s(t)/\eps$ is real analytic and even on $\Phi^0$, with $|\partial_t^\ell d|\le\EE$ for $\ell\le3$. Moreover
+\begin{align}
+ \norm{M-h_{\rm tb}}&\le\eta_1
+  :=|\delta|e^{-(L-6\tau)q}+\delta^2\EE+Cg_\infty,\label{eq:eta1}\\
+ \norm{\widetilde M-h_s}&\le\eta_2
+  \le |\delta|e^{-(L-7\tau)q}+\delta^2\EE,
+ \quad \widetilde M=\Gamma^{-1/2}M\Gamma^{-1/2}.
+ \label{eq:eta2}
+\end{align}
+The latter is the matrix of $\Pi H\Pi|_{\cV}$ in an orthonormal basis.
+\end{proposition}
+\begin{proof}
+Use~\eqref{eq:covariance} and expand $V_t^\eps=\eps XD_t+\rho_t$ with $|\rho_t(m)|\le4\pi^2\lambda m^2\eps^2$. In one well let $n=j'-j$, $t'=t+n\delta$. The frozen part of $M_{j'j}$ is
+\[
+ \sum_m\widehat E_m(t)
+ \inner{S^{nq}w_{t'}}{S^{mq}w_t}.
+\]
+At $n=0$ this is exactly $\widehat E_0(t)$. At $n\ne0$, subtract $\widehat E_n(t)$, use the overlap bound in Lemma~\ref{lem:Gram}, and convolve the two exponential tails. Its Schur sum is at most $|\delta|e^{-(L-6\tau)q}$ after absorbing polynomial factors.
+
+The diagonal first-order term is exactly $s(t)$. For $n\ne0$, its absolute entry is at most
+$|\eps|\EE(1+|n|q)^2e^{-a|n|q}$. The Taylor remainder has entries bounded by
+$\eps^2\EE(1+|n|q)^3e^{-a|n|q}$, including the diagonal. Their Schur sums give the two terms in~\eqref{eq:eta1}. Cross-well entries are at most a constant times the overlap tail, hence cost $Cg_\infty$.
+
+Reflection changes the signs of $X$ and $D_t$ simultaneously: $\mathcal RX\mathcal R=-X$ and $\mathcal RD_t\mathcal R=-D_{-t}$. Lemma~\ref{lem:Wannier} implies $d(-t)=d(t)$; its derivatives are bounded by the summable site tails.
+
+For orthogonalization use $\norm M\le\norm\Gamma\norm H$, valid for a nonorthogonal frame. Thus
+\[
+ \norm{\widetilde M-M}\le3g_1(3+2\lambda).
+\]
+Taking the Hermitian part of the bound against $h_{\rm tb}$ proves~\eqref{eq:eta2}. Every subsequent min--max statement uses $h_s$, which is self-adjoint.
+\end{proof}
+
+For $a(t,k)=\sum_n\widehat a_n(t)e^{ink}$ with real even coefficients, define the symmetric quantization on the lattice $t_j=\tau+ j\delta$ by
+\begin{equation}\label{eq:quantization}
+ \Op^\tau(a)(j',j)
+ =\tfrac12\bigl(\widehat a_{j'-j}(t_j)
+                +\widehat a_{j'-j}(t_{j'})\bigr).
+\end{equation}
+Then $h_s=\bigoplus_\nu\Op^{\tau_\nu}(E_t(k)+s(t))|_{J_\nu}$. In particular
+\[
+ \Op^\tau(g(k))=g(S),\qquad
+ \Op^\tau(u(t)g(k))=\tfrac12(ug(S)+g(S)u).
+\]
+This mean of row- and column-frozen quantizations is the declared convention throughout. No Weyl-quantization identity is silently substituted for it.
+
+\label{end:frames}

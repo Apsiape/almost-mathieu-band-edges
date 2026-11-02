@@ -1,0 +1,158 @@
+\section{Common well windows and completion of the scale theorem}\label{app:comparison}
+Let $T(k)=2-2\cos k$, $T(S)=2-S-S^*$, and
+\[
+ U(t)=2\Lambda(1-\cos2\pi qt),\qquad
+ F(y)=P_*'\bigl(E_*-P_{\rm top}^{-1}(R-y)\bigr).
+\]
+The inverse is the one selected in Lemma~\ref{lem:contour}. On each well use
+\[
+ z_j=2\pi q\sqrt\Lambda\,t_{\nu,j}
+     =\hbar\sgn\delta\,(j-y_\nu),\qquad
+ I_{\rm in}=\{j:|z_j|\le3.5\},\quad I_{\rm out}=\{j:|z_j|\ge3\}.
+\]
+The frame extends to $|z|=\sqrt\Lambda e^{-\xi q/4}\to\infty$.
+
+Define the rescaled self-adjoint operators
+\begin{equation}\label{eq:Aoperators}
+ A_\nu=P_*'(E_*+s(0)-h_{s,\nu}),\qquad
+ A_\nu^{(\pm)}=P_*'(E_*+s(0)-h_\nu^\pm).
+\end{equation}
+The superscript follows $h_\nu^\pm$, so $A_\nu^{(+)}$ is the lower rescaled comparison. Chambers gives exactly
+\begin{equation}\label{eq:Asymbol}
+ A_\nu=\Op^{\tau_\nu}(F(T(k)+U(t)))
+                    -P_*'(s(t)-s(0)).
+\end{equation}
+This is the actual top inverse branch; no branch is recovered from a collapsed polynomial spectrum.
+
+\subsection{Inverse curvature and a two-region count}
+Cauchy bounds on a fixed fraction of $|y|\le R/(8q)$ give
+\begin{equation}\label{eq:fcurvature}
+ f:=\sup_{|y|\le2M'}|F''(y)|\le\EE/\Lambda.
+\end{equation}
+Indeed $|F|\le P_*'r/2$ there, and $P_*'r\le\Lambda\EE$, for example by Markov's inequality on $I_q$. We have $F(0)=0$, $F'(0)=1$. For the nonnegative real arguments used below, convexity gives $F(y)\ge y$ and $1\le F'(y)\le1+2fy$ within the relevant interval. On a complex disc only the bound $|F'(z)-1|\le f|z|$ is used; no ordered complex inequality is intended.
+
+\begin{lemma}[Two-region min--max]\label{lem:tworegion}
+Suppose a self-adjoint matrix $A$ on an interval containing $I_{\rm in}$ has
+\[
+ \sup_j\sum_n|A(j,j+n)|n^2\le C_A
+\]
+and its restriction to $I_{\rm out}$ has form lower bound six. For $e\le5$ and sufficiently small $\kappa$,
+\begin{equation}\label{eq:tworegion}
+ \#\{\operatorname{eig}A_{I_{\rm in}}<e\}
+ \le\#\{\operatorname{eig}A<e\}
+ \le\#\{\operatorname{eig}A_{I_{\rm in}}<e+16C_A\kappa\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose $\chi_{\rm in}^2+\chi_{\rm out}^2=1$, with $\chi_{\rm in}=1$ on $|z|\le3$, supported in $|z|\le3.5$, and Lipschitz constants at most four in $z$. Their lattice Lipschitz constants are at most $4\hbar$. The IMS double-commutator Schur norm is at most $16C_A\kappa$. The map $J\psi=(\chi_{\rm in}\psi,\chi_{\rm out}\psi)$ is an isometry into the doubled space, and
+\[
+ A\ge J^*(A_{I_{\rm in}}\oplus6I)J-16C_A\kappa.
+\]
+Compression to the image of this isometry can only raise the ordered lower eigenvalues. Below $e+16C_A\kappa<6$, the doubled-space count comes entirely from the first block. This proves the upper inequality. The lower one is ordinary interlacing for the inner compression.
+\end{proof}
+
+\begin{lemma}[Far barrier and row moments]\label{lem:far}
+Both $A_\nu^{(\pm)}$ satisfy Lemma~\ref{lem:tworegion} with $C_A=4$, uniformly in every well and $b\ge L/2+\xi$.
+\end{lemma}
+\begin{proof}
+For $|\operatorname{Im}k|\le1$, expand
+\[
+ F(U+2-2\cos k)=F(U+2)-2\cos k\,F'(U+2)+O(f).
+\]
+Its nearest off-diagonal coefficients have absolute value at most $1+2fM'+2f$, and the remaining coefficients are at most $15fe^{-|n|}$. As $fM'\to0$, the off-diagonal row sums and second moments are at most $2.01+o(1)$, even after the symmetric row/column average.
+
+The diagonal average of $F(T+U)$ is at least $2+U$. Evenness of $s$ and~\eqref{eq:dipole} give
+\begin{equation}\label{eq:dipolerelative}
+ |P_*'(s(t)-s(0))|\le|\delta|\EE U(t).
+\end{equation}
+On $I_{\rm out}$, $U\ge8.9$ eventually. Subtracting the row sum leaves a form barrier at least $8.7$. The scalar comparison errors in~\eqref{eq:boxoperators} are $o(1)$ in rescaled units. So is the whole norm of $P_*'W_{{\rm bd},\nu}$ by~\eqref{eq:errors3}. Its second row moments are $o(1)$ as well, by the weighted Gram series. The barrier remains above six, and the moments below four.
+\end{proof}
+
+The Mathieu operator $\hM_{\kappa,y}=T(S)+\kappa(j-y)^2$ satisfies the same lemma with $C_A=2$.
+
+\subsection{Relative comparison inside the well}
+\begin{proposition}[The two relative errors]\label{prop:relative}
+On $I_{\rm in}$, for either sign,
+\begin{equation}\label{eq:relativeform}
+ (1-\eta_r)\hM_{\kappa,y_\nu}|_{I_{\rm in}}-\eta_a
+ \le (A_\nu^{(\pm)})_{I_{\rm in}}
+ \le(1+\eta_r)\hM_{\kappa,y_\nu}|_{I_{\rm in}}+\eta_a,
+\end{equation}
+where
+\begin{align}
+ \eta_r&\le C(f+\Lambda^{-1}+|\delta|\EE),\label{eq:etar}\\
+ \eta_a&\le C\bigl(f\kappa+P_*'\eta_2'+P_*'\eta_3'
+       +P_*'\norm{\un_{I_{\rm in}}W_{{\rm bd},\nu}\un_{I_{\rm in}}}\bigr).
+ \label{eq:etaa}
+\end{align}
+For some $c>0$, $\eta_a/\hbar\le e^{-cq}$ uniformly in $b$. One may choose any sufficiently small positive $c$ below $\min\{\xi/2,L/2-8\tau\}$ after the rate losses.
+\end{proposition}
+\begin{proof}
+For the symbol write
+\[
+ F(T+U)=F(T)+UF'(T)+U^2\varrho(t,k),\qquad
+ \varrho=\int_0^1(1-r)F''(T+rU)\,dr.
+\]
+On the complex unit strip in $k$ over $I_{\rm in}$, $|\varrho|\le Cf$. First take pure multiplier inequalities on the full line, then compress. Since $0\le T(S)\le4$,
+\[
+ T(S)\le F(T(S))\le(1+Cf)T(S).
+\]
+For $g=F'(T(S))$ the declared symmetric quantization gives
+\[
+ \tfrac12(Ug+gU)=U^{1/2}gU^{1/2}
+                 +\tfrac12[U^{1/2},[U^{1/2},g-1]].
+\]
+The first term is between $U$ and $(1+Cf)U$. The function $U^{1/2}$ is $\hbar$-Lipschitz per cell. The Fourier coefficients of $g-1$ have second moment $O(f)$, so the double commutator has norm at most $Cf\kappa$.
+
+The coefficients of $\varrho$ are bounded by $Cfe^{-|n|}$. On the inner region $U\le12.3$ and
+$U_{j+n}\le2U_j+2\kappa n^2$. Schur's quadratic-form estimate then bounds the quantized $U^2\varrho$ by $CfU+Cf\kappa$ in absolute form. The cosine Taylor bound gives
+\[
+ (1-1.1/\Lambda)z_j^2\le U(t_j)\le z_j^2
+          =\kappa(j-y_\nu)^2.
+\]
+The dipole contributes the relative term in~\eqref{eq:dipolerelative}. Adding the scalar errors and the compressed boundary weight proves~\eqref{eq:relativeform}--\eqref{eq:etaa}.
+
+For the sizes, $f\kappa/\hbar=f\hbar\to0$ exponentially. Equations~\eqref{eq:errors1}--\eqref{eq:errors2} control the scalar errors divided by $\hbar$. The box and interwell tails are smaller than every power of $\hbar$, as is the inner boundary leakage by Lemma~\ref{lem:leakage}. This proves the stated uniform rate. We have used compression of $F(T_{\Z})$; it is not identified with $F(T_{I_{\rm in}})$.
+\end{proof}
+
+The term $|\delta|\EE$ in~\eqref{eq:etar} need not be $e^{-(L-\xi/2)q}$. At $b=L/2+\xi$ with small $\xi$ such an upper bound would be false. Its contribution is controlled with the other cap.
+
+\begin{proposition}[One count in every offset]\label{prop:commoncount}
+Let $c_1$ be sufficiently small for the Mathieu ladder~\eqref{eq:Mladder} of Appendix~\ref{app:mathieu}. For every integer $D$ satisfying~\eqref{eq:Dcap}, every well $\nu$ and every $e\in W_D$ from~\eqref{eq:WD},
+\begin{equation}\label{eq:commoncount}
+ \#\{\operatorname{eig}A_\nu^{(+)}<e\}
+ =\#\{\operatorname{eig}A_\nu^{(-)}<e\}=D.
+\end{equation}
+The threshold in $q$ is independent of $b,D,\nu$ and $\theta$.
+\end{proposition}
+\begin{proof}
+Apply Lemma~\ref{lem:tworegion} first to $A=A_\nu^{(\pm)}$, then use~\eqref{eq:relativeform}, and then apply it to the full-line Mathieu operator. The count is squeezed between its counts at
+\[
+ x_\pm=e\pm(2\eta_re+2\eta_a+128\kappa).
+\]
+Here $e\le C_M(D+1)\hbar$ and the cap makes $e$ stay below the fixed cutoff of the Mathieu input in Appendix~\ref{app:mathieu}. Crucially,
+\begin{align}
+ D(f+\Lambda^{-1})&\le e^{-(\xi-o(1))q},\label{eq:cap1use}\\
+ D|\delta|\EE&\le\frac{c_1|\delta|\EE}{\hbar}
+        =\frac{c_1}{2\pi q}e^{-(L/2-o(1))q}.
+ \label{eq:cap2use}
+\end{align}
+The second cap on $D$ proves~\eqref{eq:cap1use}; the first proves~\eqref{eq:cap2use}. Hence $(D+1)\eta_r=o(1)$ uniformly. Also $\eta_a/\hbar=o(1)$ and $\kappa/\hbar=\hbar=o(1)$. The points $x_\pm$ therefore stay inside
+\[
+ [\mu_{D-1}+c_M\hbar/8,\ \mu_D-c_M\hbar/8]
+\]
+with strict interior margins for large $q$. The Mathieu input~\eqref{eq:Mladder} gives exactly $D$ levels below each, whatever the offset $y_\nu$. This proves~\eqref{eq:commoncount}. All errors were uniform over the declared parameters.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:scale}]
+For $E$ corresponding to the interior of $W_D$, its rescaled energy is bounded and $|s(0)|\le|\delta|\EE$. Equations~\eqref{eq:topbounds} and~\eqref{eq:m0} show $E>E_*-m_0/2$ eventually. Proposition~\ref{prop:commoncount} applies to the already enlarged box operators~\eqref{eq:boxoperators}. Proposition~\ref{prop:box} therefore gives~\eqref{eq:IDSidentity}. The argument in Section~\ref{sec:consequences} proves the label and the width with $c_0=c_M/2$, or a smaller absolute constant.
+
+Finally
+\[
+ \frac{c_0\hbar}{P_*'}\ge C_he^{-(b+L/2+(h-L))q}.
+\]
+The finite derivative list permits $h-L$ as small as desired. Diagonalize the corresponding thresholds for the $o(1)$ formulation; every bound is uniform in $b$. If $b\le3L/2-\xi$, then
+$c_1/\hbar=c_1e^{(b-L/2)q}/(2\pi q)\le e^{(L-\xi)q}$ eventually, proving the cap assertion. No parity condition entered the construction.
+\end{proof}
+
+\label{end:comparison}

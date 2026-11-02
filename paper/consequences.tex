@@ -1,0 +1,71 @@
+\section{From a single scale to polynomial gaps}\label{sec:consequences}
+\subsection{The arithmetic conversion}
+The continued-fraction inequalities give
+\begin{equation}\label{eq:CF}
+ \frac1{q_{n+1}+q_n}<|\delta_n|<\frac1{q_{n+1}},\qquad
+ 0<b_n-\frac{\log q_{n+1}}{q_n}<\frac{\log2}{q_n}.
+\end{equation}
+In particular $\limsup b_n=\beta$. Put
+\[
+ D_n=\left\lfloor\min\{c_1/\hbar_n,
+                        e^{(L-\xi)q_n}\}\right\rfloor,
+ \qquad m_n=-D_nq_n\sgn\delta_n.
+\]
+For $0<\xi<L$, when $b_n\ge L/2+\xi$, both quantities inside the minimum tend to infinity. Rounding therefore changes their logarithm by $o(1)$. For bounded $b_n$,
+\begin{align}
+ \log|m_n|&=\min\{b_n-L/2,L-\xi\}\,q_n+O(\log q_n),\label{eq:labelsize}\\
+ -\log|G_{m_n}|&\le(b_n+L/2+\eta)q_n+O_\eta(1).
+ \label{eq:gapsize}
+\end{align}
+The minimum must be retained near the cap switch. The factor $2\pi q_n$ in $\hbar_n$ shifts its exact location by $O(\log q_n/q_n)$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:polynomial} from Theorem~\ref{thm:scale}]
+Suppose first $L/2<\beta<3L/2$, and fix $\beta'\in(L/2,\beta)$. Choose $\xi>0$ smaller than $\beta'-L/2$ and with $\beta+2\xi<3L/2$. Infinitely many $n$ satisfy $b_n\ge\beta'$, and all sufficiently large $n$ satisfy $b_n\le\beta+\xi$. On this subsequence the first cap is active. Dividing~\eqref{eq:gapsize} by~\eqref{eq:labelsize} gives
+\[
+ \frac{-\log|G_{m_n}|}{\log|m_n|}
+ \le\frac{b_n+L/2+\eta}{b_n-L/2}+o(1)
+ \le\frac{\beta'+L/2}{\beta'-L/2}
+       +\frac{\eta}{\beta'-L/2}+o(1).
+\]
+Choose $\eta$ sufficiently small and then $n$ sufficiently large to obtain the first assertion.
+
+Now let $3L/2\le\beta<\infty$. Choose $\zeta>0$ small and restrict to infinitely many scales with $b_n>\beta-\zeta$. Eventually $b_n<\beta+\zeta$. Equations~\eqref{eq:labelsize}--\eqref{eq:gapsize} bound the quotient by
+\[
+ \frac{\beta+\zeta+L/2+\eta}
+ {\min\{\beta-\zeta-L/2,L-\xi\}}+o(1).
+\]
+Let $\zeta,\xi,\eta$ be sufficiently small. This gives any exponent strictly greater than $(\beta+L/2)/L$, including $\beta=3L/2$. Equivalently, diagonalize these fixed-slack choices along the subsequence.
+
+In either case $|m_n|\to\infty$, so there are infinitely many distinct absolute labels. The lower subsequence implies $\rho\le0$. All bounded gaps have length at most $4+4\lambda$, which implies $\rho\ge0$. Hence $\rho=0$.
+\end{proof}
+
+\subsection{The count that creates the gap}
+Drop the index $n$ for a fixed scale. Let $B_t=H_{\lambda,p/q,t}$, let $E_*$ be the top of its phase union, and write $P_*'=P'(E_*)$. Near phase zero choose a real Wannier function $w_t$ for the top band. Define the even dipole and its energy shift by
+\begin{equation}\label{eq:dipole}
+ d(t)=\inner{w_t}{XD_tw_t},\qquad
+ D_t=\operatorname{diag}v'(mp/q+t),\qquad s(t)=\eps d(t),
+ \quad \eps=\alpha-p/q.
+\end{equation}
+Every well is translated into this same chart. Their common energy origin is $E_*+s(0)$.
+
+Let $\mu_0(\kappa)<\mu_1(\kappa)<\cdots$ be the common Mathieu reference levels constructed in Appendix~\ref{app:mathieu}. Their separation is at least $c_M\hbar$ below a fixed energy less than the separatrix. For
+\begin{equation}\label{eq:WD}
+ W_D=[\mu_{D-1}+c_M\hbar/4,\ \mu_D-c_M\hbar/4],
+ \qquad e=P_*'(E_*+s(0)-E),
+\end{equation}
+the global reduction proves the following statement. If $D$ satisfies~\eqref{eq:Dcap}, every sufficiently long Dirichlet box whose ends lie midway between wells has exactly $KD$ eigenvalues above $E$ for every $e\in W_D$, where $K$ is its number of wells. The box length is $K/|\delta|+O(1)$.
+
+Taking the box limit gives
+\begin{equation}\label{eq:IDSidentity}
+ N(E)=1-D|\delta|\qquad(e\in W_D).
+\end{equation}
+The DOS measure has support $\Sig$. Thus the open interior of the interval in~\eqref{eq:WD}, transported back to energy $E$, contains no spectrum. Its length is at least $c_M\hbar/(2P_*')$. Since $0<D|\delta|<1$, there is spectrum on both sides. Finally,
+\[
+ (-Dq\sgn\delta)\alpha
+ =-D\sgn\delta\,p-D|\delta|,
+\]
+so the gap label is $-Dq\sgn\delta$. This proves~\eqref{eq:width} once the exact box count is established.
+
+The count is squeezed between two self-adjoint comparison counts, each equal to $KD$. Frame truncation and coupling errors have already been paid inside those operators. There is no residual spectral error to remove by volume normalization. Appendices~\ref{app:global} and~\ref{app:comparison} prove these assertions, completing Theorem~\ref{thm:scale}.
+
+\label{end:consequences}

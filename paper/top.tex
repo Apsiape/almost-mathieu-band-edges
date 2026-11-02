@@ -1,0 +1,117 @@
+\section{The rational top band, Green decay and flatness}\label{app:top}
+\subsection{Convexity and an isolated inverse branch}
+Fix a sufficiently large convergent and put $\Lambda=\lambda^q$, $R=2\Lambda+2$. Let $I_q=[a_q,E_*]$ be the top phase-union band and let $P_*'=P'(E_*)$.
+
+\begin{lemma}[Top-band geometry]\label{lem:convex}
+The polynomial is convex on the final monotonicity interval, and
+\begin{equation}\label{eq:topbounds}
+ P_*'=\max_{I_q}P'\ge\frac{2R}{|I_q|}
+       \ge\frac{\Lambda+1}{\lambda+1},\qquad
+ |I_q|\ge c_hq^{-1}e^{-(h-L)q}.
+\end{equation}
+All roots of $P-R$ other than $E_*$ lie at distance at least $|I_q|$ from $E_*$.
+\end{lemma}
+\begin{proof}
+For each $w\in[-R,R]$, Chambers' formula realizes $P-w$ as the characteristic polynomial of a Hermitian fibre. Rolle's theorem gives real critical points with critical modulus at least $R$. The zeros of $P''$ interlace those of $P'$. Hence $P''>0$ to the right of the last critical point, which is at or below $a_q$. Integrating $P'$ on $I_q$ gives $2R\le |I_q|P_*'$. The spectral diameter is at most $4+4\lambda$, proving the second inequality. The derivative upper bound in Corollary~\ref{cor:derivatives} proves the band-length lower bound. The other roots belong to lower monotone bands, hence are no larger than $a_q$.
+\end{proof}
+
+Set
+\begin{equation}\label{eq:contour}
+ r=\frac{|I_q|}{4q},\qquad \mathcal C_r=\{z:|z-E_*|=r\}.
+\end{equation}
+Initially assume $0\le2\Lambda-c(t)\le1$.
+
+\begin{lemma}[Contour and top inverse]\label{lem:contour}
+On $\mathcal C_r$,
+\[
+ |P(z)-R|\ge\tfrac34rP_*'\ge\frac{3R}{8q},\qquad
+ |\Delta_t(z)|\ge\frac{\Lambda}{2q}.
+\]
+For $|w-R|\le R/(8q)$, $P(E)=w$ has exactly one root in $|E-E_*|<r$, and this root lies in $|E-E_*|<r/2$. It is simple and analytic in $w$.
+\end{lemma}
+\begin{proof}
+Factor $P(z)-R=(z-E_*)\prod_{j<q}(z-e_j)$. On either radius $r$ or $r/2$, each other factor is at least its value at $E_*$ times $1-1/(4q)$. Their product is at least three quarters of its value there. The radius-$r$ bound follows. On radius $r/2$ the bound is at least $3R/(16q)>R/(8q)$. Rouch\'e's theorem gives one root counting algebraic multiplicity on each circle. That root is therefore simple. Since $|R-c(t)|\le3$, subtraction gives the discriminant estimate eventually.
+\end{proof}
+
+\subsection{The decay is per physical site}
+Let $G_t(x,y;z)=\inner{\delta_x}{(B_t-z)^{-1}\delta_y}$.
+
+\begin{lemma}[Periodic Green function]\label{lem:green}
+For $z\in\mathcal C_r$,
+\begin{equation}\label{eq:green}
+ |G_t(x,y;z)|\le K_qe^{-L_q|x-y|},\qquad
+ K_q=128C_h^2q^2e^{2(h-L)q},\quad
+ L_q=L-\frac{\log(8q)}q.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The cell monodromy has eigenvalues $\mu,\mu^{-1}$ with
+$|\mu|\ge|\Delta_t(z)|-1\ge\Lambda/(4q)>1$. Let $\Psi_+$ span its stable line and $\Psi_-$ its unstable line. The reciprocal sine of their Hermitian angle is the norm of the unstable spectral projection. The formula
+\[
+ \Pi_u=\frac{M_x-\mu^{-1}}{\mu-\mu^{-1}}
+\]
+and~\eqref{eq:complexrat} give
+\[
+ (\sin\angle(\Psi_+,\Psi_-))^{-1}
+ \le8qC_he^{(h-L)q}.
+\]
+For $0\le j<q$, propagate the stable solution backwards from $x+q$. A determinant-one $2\times2$ matrix has inverse with the same operator norm. Thus
+\[
+ \frac{\norm{\Psi_+(x+j)}}{\norm{\Psi_+(x)}}
+ \le C_he^{h(q-j)}|\mu|^{-1}
+ \le4qC_he^{(h-L)q}e^{-hj}.
+\]
+The Green-function Wronskian formula bounds its kernel by this quotient times the reciprocal sine. Every further complete cell contributes $|\mu|^{-1}$. Writing $y-x=mq+j$ gives~\eqref{eq:green} for $x\le y$, with the displayed enlargement of constants. For complex energy use transpose symmetry $G_t(x,y;z)=G_t(y,x;z)$ to cover $x>y$. Hermitian symmetry at complex $z$ is not asserted.
+\end{proof}
+
+The rate in~\eqref{eq:green} measures actual site distance, including the displacement inside a cell. No ordering of the sampled potential values is assumed.
+
+\subsection{Complex Bloch strips}
+Fix $\tau\in(0,L)$ and set $\eta_q=(L_q-\tau)q$.
+
+\begin{lemma}[Analytic fibre data]\label{lem:strip}
+For $|\operatorname{Im}k|\le\eta_q$ and $z\in\mathcal C_r$, the fibre resolvent exists and
+\[
+ \norm{(B_t(k)-z)^{-1}}\le K_q':=\frac{2K_q}{1-e^{-\tau}}.
+\]
+There is exactly one simple eigenvalue $E_t(k)$ inside $\mathcal C_r$, with $|E_t(k)-E_*|<r/2$. It satisfies
+$P(E_t(k))=2\cos k+c(t)$. Its Riesz projection $\Pi_t(k)$ and reduced resolvent
+$\mathcal S_t(k)=Q_t(k)(B_t(k)-E_t(k))^{-1}Q_t(k)$ are analytic, with
+\begin{equation}\label{eq:Rieszbounds}
+ \norm{\Pi_t(k)}\le rK_q',\qquad
+ \norm{\mathcal S_t(k)}\le2K_q',\qquad
+ \norm{\partial_kB_t(k)}\le2e^L/q.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The uniform-gauge fibre resolvent is the sum of full-line kernels with weight $e^{ikd/q}$, where $d$ is the physical displacement. Its absolute value is bounded by $K_qe^{-\tau|d|}$. Both Schur sums are bounded by $K_q'$. Absolute convergence permits multiplication by $B_t(k)-z$ and proves the resolvent identity. Chambers and Lemma~\ref{lem:contour} select one root since $|2\cos k+c(t)-R|\le R/(8q)$ for large $q$. Riesz calculus gives the first two estimates: the contour has length $2\pi r$ and $|z-E_t(k)|\ge r/2$. The hopping derivative gives the last.
+\end{proof}
+
+All these estimates extend to
+\[
+ \Phi_{\rm fr}=\{t:0\le2\Lambda-c(t)\le M'\},\qquad M'=\Lambda e^{-\xi q/2},
+\]
+after replacing $\eta_q$ by $\eta' =\eta_q-\log4$. Indeed $M'=o(R/q)$, which preserves the contour inequalities. The scalar estimates apply on every phase component. A frame anchored at zero will be used only on the component about zero.
+
+\begin{proposition}[Frozen orbital flatness]\label{prop:flatness}
+At a simple top-band point write $D=\partial_tB$, $K=\partial_kB$ and $\mathcal S=\mathcal S_t(k)$. The top diagonal entry of the first-order polynomial symbol in Appendix~\ref{app:remainder} is
+\begin{equation}\label{eq:traceflat}
+ \mathcal G_{tt}(k)=\frac{qP'(E_t(k))}{2i}
+ \bigl(\tr(\Pi D\mathcal SK)-\tr(\Pi K\mathcal SD)\bigr).
+\end{equation}
+Define $S_{\rm top}=-\mathcal G_{tt}/P'(E_t(k))$. For every fixed $j\ge0$ and $\varepsilon>0$, eventually
+\[
+ \sup_{k\in\R}\left|
+ \partial_k^j\bigl(S_{\rm top}(k)-S_{\rm top}(0)\bigr)\right|
+ \le C_{j,\varepsilon}e^{-(L-\varepsilon)q}.
+\]
+For $j\ge1$ the derivative of the constant is read as zero.
+\end{proposition}
+\begin{proof}
+On the real axis the orbital formula is
+$\mathcal G_{tt}=qP'(E_t)\operatorname{Im}\inner{u}{D\mathcal SKu}$. Taking the difference with its conjugate gives~\eqref{eq:traceflat}. The right-hand side is its analytic continuation. For a rank-one idempotent, even when it is not orthogonal, $|\tr(\Pi A)|\le\norm\Pi\norm A$. Equation~\eqref{eq:Rieszbounds} bounds the trace expression after cancellation of $P'$ by $\EE$. It is periodic under the uniform-gauge covariance. Its Fourier coefficients are therefore bounded by $\EE e^{-\eta'|m|}$. Sum the nonconstant coefficients for $j=0$ and sum $|m|^je^{-\eta'|m|}$ for each fixed $j\ge1$. Choose $h-L$ and the strip slack arbitrarily small to obtain the asserted rate. This uses the Fourier series directly and does not lose half the strip through a Cauchy derivative bound.
+\end{proof}
+
+The normalization has no extra factor $q$ in $S_{\rm top}=-\mathcal G_{tt}/P'$. The global proof below uses the Wannier dipole directly, so it does not require this proposition as a separate input. At $t=0$ its Wannier value is the zone average $d(0)=-(2\pi)^{-1}\int S_{\rm top}(k,0)\,dk$, in the present gauge. In general this is not $-S_{\rm top}(0,0)$.
+
+\label{end:top}

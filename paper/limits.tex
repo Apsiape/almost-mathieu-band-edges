@@ -1,0 +1,69 @@
+\section{Two classical limits with their quantifiers}\label{app:limits}
+\subsection{A fixed-curvature Mathieu limit}
+\begin{proposition}[Fixed $\kappa$ limit and the upper-edge sign]\label{prop:fixedkappa}
+Fix $\kappa>0$. Let $\Lambda\to\infty$ and
+$\omega=\sqrt\kappa/(2\pi\sqrt\Lambda)>0$ be irrational. For any phase put
+\[
+ T_\Lambda=2\Lambda+2-H_{\Lambda,\omega,\theta}.
+\]
+On a bounded energy window whose upper endpoint is in a model gap, its spectrum converges in Hausdorff distance to
+$\bigcup_y\sigma(\hM_{\kappa,y})$, with error $O_\kappa(\Lambda^{-1/6})$. Every fixed model gap inside the window is approached by a gap of the same limiting width. Its upper-edge label for $H_{\Lambda,\omega,\theta}$ is $-D$, with IDS $1-D\omega$. The reflected bottom gap has label $+D$.
+\end{proposition}
+\begin{proof}
+The potential of $T_\Lambda$ is $W(m)=2\Lambda(1-\cos2\pi(\theta+m\omega))$, and its kinetic term is $2-S-S^*$. Its bottoms are $m_k=(k-\theta)/\omega$, separated by $1/\omega$. Their offsets modulo integers are dense, because $1/\omega$ is irrational. Near a bottom,
+\[
+ |W(m)-\kappa(m-m_k)^2|
+ \le\frac{\kappa^2(m-m_k)^4}{12\Lambda}.
+\]
+At distance at least $M$ from every bottom, $W\ge(4/\pi^2)\kappa M^2$.
+
+Take $M=\Lambda^{1/6}$. A low-energy normalized model eigenvector can be cut off within distance $M$ with residual $O(M^{-1})$, uniformly over its compact offset circle and the finitely many levels in the fixed window. Choose a true well with offset error $\eta\le M^{-2}$, after integer translation of the offsets. Its phase mismatch contributes $O_\kappa(\eta M)$, and the quartic contributes $O_\kappa(M^4/\Lambda)$. The normalized cutoff is therefore a quasimode of $T_\Lambda$ with error $O_\kappa(\Lambda^{-1/6})$.
+
+For the reverse inclusion choose a squared partition with bounded overlap, with each well cutoff equal to one within radius $M$ and supported within radius $2M$; require every well cutoff and the exterior cutoff to have discrete gradient at most $C/M$. Enlarge supports by one site when evaluating the nearest-neighbour commutators. The operator sum of their squared commutators is $O(M^{-2})$; diagonal terms commute with the cutoffs. The Taylor estimate is used on radius $2M$, which changes only its constant, and the exterior starts at distance at least $M$ from every bottom. A quasimode of $T_\Lambda$ in the fixed window has exterior mass tending to zero, since the exterior form lower bound is $\kappa M^2/\pi^2$. Averaging the squared localized residuals gives at least one well whose normalized residual has size $O(M^{-1})$. Comparing its potential with the quadratic model adds $O_\kappa(M^4/\Lambda)$. This proves the reverse spectral approximation and the asserted rate. Compactness of the window and uniform model tails make both inclusions uniform. Neighbouring model-band witnesses locate the endpoints of each fixed gap.
+
+To label the gap, take $t$ strictly inside a fixed model gap. On the exterior, $T_\Lambda-t$ is positive. Its elimination contributes a Schur correction of norm at most $C/(\kappa M^2)$ on the union of the well windows, including all inter-window terms. The model's own positive exterior tails justify that its large Dirichlet restrictions have exactly $D$ levels below $t$, uniformly in the offset. The quartic and Schur errors are smaller than the fixed distance from $t$ to the union of model spectra. Thus a finite collection of complete windows has exactly $D$ negative directions per well after the errors, by homotopy and min--max. Partially cut boundary windows cost a bounded number for fixed $\Lambda$ and vanish in the box limit. There are $\omega$ wells per site, so $N_{T_\Lambda}(t)=D\omega$. Energy reversal gives
+\[
+ N_{H_{\Lambda,\omega}}(2\Lambda+2-t)=1-D\omega.
+\]
+Gap labelling identifies the upper label as $-D$. Reflection gives $+D$ at the bottom.
+\end{proof}
+
+This is a fixed-$\kappa$, fixed-window statement. Its constants need not be uniform as $\kappa\to0$ or $\infty$, or as $D$ grows. It therefore does not replace Appendix~\ref{app:comparison}. It is a self-contained application of classical separated-well ideas; no firstness is claimed for the scaling mechanism.
+
+\subsection{Fixed-period strong coupling and the Sudler product}
+Write $S_N(\omega)=\prod_{j=1}^N|2\sin(\pi j\omega)|$, with $S_0=1$. Rational labels in the next proposition mean minimal representatives modulo $Q$.
+
+\begin{inputbox}
+\begin{classicalproposition}[Classical fixed-period perturbation calculation]
+Fix reduced $p/Q$ with odd $Q$, and $1\le d=|m|\le(Q-1)/2$. The width of its rational phase-union gap obeys
+\begin{equation}\label{eq:Sudler}
+ w_m(\lambda)=2\lambda^{1-d}S_{d-1}(p/Q)^{-2}
+                         (1+O_{p,Q,m}(\lambda^{-1}))
+ \quad(\lambda\to\infty).
+\end{equation}
+\end{classicalproposition}
+\end{inputbox}
+\begin{proof}
+Divide the $Q$-site fibre by $\lambda$ and put $\epsilon=1/\lambda$. The unperturbed diagonal is $f(\phi_j)=2\cos2\pi\phi_j$, $\phi_j=jp/Q+\theta$, with hopping $\epsilon$. A crossing between sites at shortest lattice distance $d$ has $2\phi_j=-dp/Q\pmod1$. It contains exactly two resonant levels with opposite nonzero slopes; all other levels are separated by a positive constant for this fixed rational.
+
+Eliminate the other sites in a small fixed crossing neighbourhood. The off-diagonal Feshbach entry is
+\[
+ T=\epsilon^d\prod_{i=1}^{d-1}
+     (E-f(\phi_{j+i}))^{-1}(1+O(\epsilon^2))
+       +O(\epsilon^{Q-d}).
+\]
+The first path is the unique shortest arc; the second arc has relative size $\epsilon^{Q-2d}=O(\epsilon)$. Backtracking adds at least two hops. The estimates and their local energy and phase derivatives follow from the convergent nonresonant resolvent series.
+
+At the corrected crossing $\theta_0$, the derivative of the sum of the two diagonal entries is $O(\epsilon^2)$, while their difference has nonzero derivative. This small common slope assertion is used at $\theta_0$, not throughout the fixed neighbourhood. Retain the common quadratic Taylor term there. Optimizing the two avoided-crossing branches in $\theta$ then gives width $2|T|(1+O(\epsilon))$; the phase displacement is $O(|T|)$ and its quadratic contribution is a relative $O(\epsilon)$ or smaller error. Dependence of the effective matrix on energy has derivative $O(\epsilon^2)$ and does not change that leading term.
+
+At the crossing,
+\[
+ |E_*-f(\phi_{j+i})|
+ =4|\sin(\pi ip/Q)\sin(\pi(d-i)p/Q)|,
+\]
+so their product is exactly $S_{d-1}(p/Q)^2$. Worst Bloch phase changes the answer only by the complementary-arc relative error. Finite classical ordering excludes any unrelated gap closing outside the finitely many equivalent crossing neighbourhoods; their gap index satisfies $k\equiv\pm dp\pmod Q$. This fixes $|m|=d$. Multiplying the normalized width by $\lambda$ proves~\eqref{eq:Sudler}.
+\end{proof}
+
+The sine-product structure is classical. Fedotov~\cite[Theorem~2.5]{Fedotov} gives a related small-coupling lower bound with a finite label range and its own frequency-dependent smallness hypotheses. Its printed coefficient is half the dual fixed-rational asymptotic coefficient here. This calculation supplies no uniform remainder as $Q$ grows and no irrational label anchoring by itself. Applying it recursively to the transformed operator is the heuristic Law R, not a theorem proved in this paper.
+
+\label{end:limits}

@@ -1,0 +1,234 @@
+\section{Global exclusion, boundary weights and exact box counts}\label{app:global}
+Write $Q=1-\Pi$. The physical translates of every well now belong to one global frame.
+
+\subsection{Excluding the complementary subspace}
+Set
+\begin{equation}\label{eq:m0}
+ M''=\frac4{9\pi^2}\Lambda e^{-\xi q/2},\qquad
+ m_0=\frac{M''}{2P_*'}
+ \ge\frac{e^{-(\xi/2+h-L)q}}{Cq}.
+\end{equation}
+
+\begin{lemma}[Complement exclusion]\label{lem:complement}
+For all sufficiently large $q$,
+\begin{equation}\label{eq:complement}
+ QHQ\le(E_*-m_0)Q.
+\end{equation}
+The same form inequality holds for vectors supported in a box with ends midway between well bottoms and orthogonal to the frames of its internal wells.
+\end{lemma}
+\begin{proof}
+Put $\ell_c=\lceil(q|\delta|)^{-1/2}\rceil$, $\ell=\ell_cq$. Choose a squared partition $\sum_a\chi_a^2=1$ with support intervals $I_a$ of at most $4\ell$ sites, overlap at most three, and Lipschitz constants at most $\pi/\ell$. Discrete IMS has error at most $3\pi^2/\ell^2\le3\pi^2|\delta|/q$. Freezing the phase on a patch costs at most
+\[
+ \mathrm{drift}_a\le16\pi\lambda\sqrt{|\delta|/q}.
+\]
+Let $j_a$ be its centre cell.
+
+If some translated coordinate satisfies $|t_{\nu,j_a}|\le t_{\rm fr}/2$, all cells meeting the patch belong to $J_\nu$ for large $q$. Indeed their phase drift is at most $3\ell_c|\delta|$, which is much less than $t_{\rm fr}$. Freeze the reference $B_{t_a}$ at $c_a=c_{\nu,j_a}$ and write $f_a=\chi_a\psi$. Its other bands lie below $E_*-|I_q|$, so
+\begin{equation}\label{eq:localcomplement}
+ \inner{f_a}{Hf_a}\le(E_*-|I_q|+\mathrm{drift}_a)\norm{f_a}^2
+                   +|I_q|\norm{\Pi_af_a}^2,
+\end{equation}
+where $\Pi_a$ is its frozen top-band projection.
+
+We give the joint Bessel estimate, including its support factors. For $z=c_a+mq$ define
+\[
+ g_{a,m}=(\chi_a-\chi_a(z))S^zw_{t_a}
+       +\chi_a(z)S^z(w_{t_a}-w_{t_a+m\delta}).
+\]
+The second term is defined only when its coefficient is nonzero; then both phases lie in the chart. Orthogonality to the translated frame implies
+$\inner{S^zw_{t_a}}{\chi_a\psi}=\inner{g_{a,m}}{\psi}$. With $\zeta_q=\EE\sqrt{|\delta|/q}$, the tails and the mean-value phase bound give
+\begin{equation}\label{eq:supportBessel}
+ |g_{a,m}(x)|\le C\zeta_q(1+|x-z|)e^{-a|x-z|}
+       \bigl(\un_{I_a}(x)+\un_{I_a}(z)\bigr).
+\end{equation}
+For fixed $x$, the first support term has at most three patches. In the second, each centre belongs to its unique well and to at most three patch supports. Summation over the distinct integer centres is bounded by the summable exponential envelope. Both Schur sums of the synthesis kernel are at most $C\zeta_q$, including the column sum over $x$. Therefore
+\begin{equation}\label{eq:jointBessel}
+ \sum_{a\text{ of this type}}\norm{\Pi_a\chi_a\psi}^2
+ \le\EE\frac{|\delta|}{q}\norm\psi^2.
+\end{equation}
+The support factors in~\eqref{eq:supportBessel} are essential; an unrestricted sum of envelopes over all patches would not justify~\eqref{eq:jointBessel}.
+
+On the other patches, the frozen phase has distance at least $t_{\rm fr}/3$ from $q^{-1}\Z$ throughout the patch. Thus $2\Lambda-c\ge M''$. Convexity on the top branch yields the sharp drop $M''/P_*'$ from $E_*$. Below that branch the drop is at least $|I_q|\ge2R/P_*'$. Hence
+\[
+ \inner{f_a}{Hf_a}\le(E_*-2m_0+\mathrm{drift}_a)\norm{f_a}^2.
+\]
+Summing the two patch types gives an error bounded by
+\[
+ C\sqrt{|\delta|/q}+C|\delta|/q
+       +|I_q|\EE|\delta|/q.
+\]
+It is $o(m_0)$ uniformly on $b\ge L/2+\xi$, after~\eqref{eq:slack}. Also $2m_0\le|I_q|$. This proves~\eqref{eq:complement}. There is no additive $e^{-q}$ floor.
+
+For a supported box vector, every patch of the first type that meets the box is associated with an internal well. The patch length is $o(1/|\delta|)$ and the ends lie in the middle of the forbidden region. The same orthogonality and sums therefore apply using only the internal frames.
+\end{proof}
+
+\subsection{Coupling and the actual boundary weight}
+For $f=(\nu,j)$ let $d_f=\dist(j,\Z\setminus J_\nu)\ge1$ and
+$\Delta_{\rm bd}=\operatorname{diag}(e^{-\eta'd_f})$.
+
+\begin{lemma}[Interior coupling and omitted translates]\label{lem:coupling}
+There is a decomposition
+\[
+ QHW\beta=Q\sum_f\beta_f(z_f^{\rm in}+z_f^{\rm bd})
+\]
+with
+\begin{align}
+ \left\|\sum_f\beta_fz_f^{\rm in}\right\|&\le c_{\rm in}\norm\beta,
+  &c_{\rm in}&=|\delta|\EE,\label{eq:interiorcoupling}\\
+ \left\|\sum_f\beta_fz_f^{\rm bd}\right\|^2
+ &\le16r^2e^{-\eta'}\inner\beta{\Delta_{\rm bd}\beta}
+       +Cr^2g_\infty\norm\beta^2.\label{eq:boundaryform}
+\end{align}
+\end{lemma}
+\begin{proof}
+Use~\eqref{eq:bandFourier} in~\eqref{eq:covariance}. For $j+m\in J_\nu$ subtract the retained frame vector, which is killed by $Q$. This leaves
+\[
+\begin{split}
+ z_f^{\rm in}={}&\sum_{m\ne0,\,j+m\in J_\nu}\widehat E_m(t_f)
+       S^{c_f+mq}(w_{t_f}-w_{t_f+m\delta})
+       +S^{c_f}(\eps XD_{t_f}+\rho_{t_f})w_{t_f},\\
+ z_f^{\rm bd}={}&\sum_{j+m\notin J_\nu}\widehat E_m(t_f)
+                         S^{c_f+mq}w_{t_f}.
+\end{split}
+\]
+The first family has envelope
+$|\delta|\EE(1+|x-c_f|)^2e^{-a|x-c_f|}$.
+Schur summation over distinct centres gives~\eqref{eq:interiorcoupling}. In the second family only $|m|\ge d_f$ occurs, so
+\[
+ \norm{z_f^{\rm bd}}\le2re^{-\eta'd_f},\qquad
+ |z_f^{\rm bd}(x)|\le r\EE e^{-2\tau qd_f}e^{-a|x-c_f|}.
+\]
+Within one well use weighted Cauchy--Schwarz and
+$\sum_{f\text{ in well}}\norm{z_f^{\rm bd}}\le8re^{-\eta'}$.
+This gives the first term in~\eqref{eq:boundaryform}. The convolution of the physical-site envelopes between distinct wells has Schur sum at most $Cr^2g_\infty$, which gives the second.
+\end{proof}
+
+Define
+\begin{equation}\label{eq:sandwichdefs}
+ \begin{split}
+ h^-&=h_s-\eta_2,\qquad h^+=h_s+\eta_3+W_{\rm bd},\\
+ \eta_3&=\eta_2+\frac{16c_{\rm in}^2}{3m_0}
+                 +\frac{Cr^2g_\infty}{m_0},\\
+ W_{\rm bd}&=\frac{64r^2e^{-\eta'}}{m_0}
+           \Gamma^{-1/2}\Delta_{\rm bd}\Gamma^{-1/2}\ge0.
+ \end{split}
+\end{equation}
+
+\begin{lemma}[Two-sided form comparison]\label{lem:sandwich}
+On $\cV$ the compression is at least $U_Vh^-U_V^*$. On the whole physical space,
+\begin{equation}\label{eq:sandwich}
+ H\le U_Vh^+U_V^*\Pi+(E_*-m_0/2)Q.
+\end{equation}
+In rescaled units the errors satisfy
+\begin{align}
+ \frac{P_*'\eta_2}{\hbar}
+ &\le e^{-(L/2-8\tau)q}+e^{-(b-L/2)q}\EE,\label{eq:errors1}\\
+ \frac{P_*'c_{\rm in}^2}{m_0\hbar}
+ &\le e^{-(b-L/2-\xi/2)q}\EE,\label{eq:errors2}\\
+ P_*'\norm{W_{\rm bd}}
+ &\le e^{-(L-\xi/2-3\tau)q}.\label{eq:errors3}
+\end{align}
+\end{lemma}
+\begin{proof}
+The lower assertion is Proposition~\ref{prop:compression}. Write a vector as $U_V\beta+y$, $y\in\Ran Q$, and apply
+\[
+ 2\operatorname{Re}\inner y{QHU_V\beta}
+ \le\frac{m_0}{2}\norm y^2+\frac2{m_0}\norm{QHU_V\beta}^2.
+\]
+Insert Lemmas~\ref{lem:complement} and~\ref{lem:coupling}, with coefficients $\Gamma^{-1/2}\beta$, whose squared norm is at most $4\norm\beta^2/3$. The constants in~\eqref{eq:sandwichdefs} dominate the resulting terms.
+
+For the sizes use $P_*'\le C_hqe^{hq}$, $r\le(\lambda+1)/q$, $P_*'r\le C\Lambda\EE$, and
+$e^{-\eta'}=32q\Lambda^{-1}e^{\tau q}$. Equations~\eqref{eq:eta2} and~\eqref{eq:m0} give~\eqref{eq:errors1}--\eqref{eq:errors2}; the same substitutions give~\eqref{eq:errors3}, after the prescribed slack. All omitted interwell tails are smaller uniformly in $b$.
+\end{proof}
+
+The whole norm $\norm{W_{\rm bd}}/\hbar$ need not tend to zero when $b>3L/2$. Its distance from the low-energy part of a well must be retained.
+
+\begin{lemma}[Boundary leakage with the correct rate]\label{lem:leakage}
+Let $K(d_*)=\{f:d_f\ge d_*\}$. Then
+\begin{equation}\label{eq:weightedleakage}
+ P_*'\norm{\un_KW_{\rm bd}\un_K}
+ \le e^{(\xi/2+3\tau)q}
+       \bigl(Ce^{-\eta'd_*/2}+Cg_\infty\bigr)^2.
+\end{equation}
+For the inner region $|2\pi q\sqrt\Lambda\,t_f|\le4$, its right-hand side is smaller than every fixed power of $\hbar$, uniformly in $b\ge L/2+\xi$.
+\end{lemma}
+\begin{proof}
+Let $\Gamma_0$ be the direct sum of the well blocks. In each block use the weighted Schur algebra with weight $e^{\eta'|j-j'|/2}$. Lemma~\ref{lem:Gram} gives $\norm{\Gamma_0-1}_{\rm weighted}=o(1)$. The convergent binomial series gives the same bounded weighted norm for $\Gamma_0^{-1/2}$. Since $d_j$ is 1-Lipschitz,
+\[
+ e^{-\eta'd_g/2}\le e^{-\eta'd_f/2}e^{\eta'|g-f|/2}.
+\]
+Both restricted Schur sums show
+$\norm{\Delta_{\rm bd}^{1/2}\Gamma_0^{-1/2}\un_K}
+\le Ce^{-\eta'd_*/2}$. Analytic functional calculus and the interwell Gram bound give
+$\norm{\Gamma^{-1/2}-\Gamma_0^{-1/2}}\le Cg_\infty$.
+Finally $P_*'64r^2e^{-\eta'}/m_0\le e^{(\xi/2+3\tau)q}$, proving~\eqref{eq:weightedleakage}.
+
+The inner region lies at distance
+\[
+ d_*\ge\frac{e^{(b-\xi/4)q}}{8\pi q}
+\]
+from the frame boundary. Since $\eta'$ is of order $q$, its leakage has rate
+\begin{equation}\label{eq:doubleexp}
+ \exp\bigl(-c e^{(b-\xi/4)q}\bigr),
+\end{equation}
+with the still smaller interwell term retained in~\eqref{eq:weightedleakage}. There is no extra factor $q$ in the exponent of~\eqref{eq:doubleexp}. For any fixed $N$, $e^{(b-\xi/4)q}$ dominates $Nbq$ uniformly for $b\ge L/2+\xi$. As $\hbar=2\pi qe^{-(b-L/2)q}$, the asserted comparison follows.
+\end{proof}
+
+\subsection{Arbitrary intervals and whole-well boxes}
+\begin{inputbox}
+\begin{classicalinput}[IDS limit; Avron--Simon]
+For fixed irrational $\alpha$ and fixed phase, every sequence of intervals $I_N\subset\Z$ with $|I_N|\to\infty$ satisfies
+\[
+ \frac{\#\{\operatorname{eig}H_{I_N}\le E\}}{|I_N|}\longrightarrow N(E)
+ \quad(E\in\R),
+\]
+independently of the positions of the intervals.
+\end{classicalinput}
+\end{inputbox}
+\begin{proof}
+For each fixed $k$, finite propagation bounds the difference between $\tr H_I^k$ and $\sum_{j\in I}\inner{\delta_j}{H^k\delta_j}$ by a constant depending on $k$ and $\norm H$, independent of $I$. The latter diagonal is a continuous trigonometric polynomial of $\theta+j\alpha$. Unique ergodicity gives its interval average uniformly in the starting point. Thus all moments of the normalized counting measures converge to the DOS moments. Uniform compact spectral support and polynomial approximation imply weak convergence. Continuity of the irrational IDS gives convergence of the distribution functions at every $E$. This recovers the classical IDS passage~\cite{AvronSimon} in precisely the moving-box form needed here.
+\end{proof}
+
+Choose box ends at the integer parts of the midpoints between the $x_\nu$ in~\eqref{eq:wellpositions}, with spatial orientation reversed if $\delta<0$. A box $I$ containing $K$ consecutive wells has
+\begin{equation}\label{eq:boxlength}
+ |I|=K/|\delta|+O(1).
+\end{equation}
+Every frame centre in it is at distance at least $1/(3|\delta|)$ from its exterior. Choose $c_{\rm box}>0$ slightly smaller than $a/3$ and set
+$g_{\rm box}=\exp(-c_{\rm box}/|\delta|)$, decreasing $c_{\rm box}$ further when needed to absorb polynomial and $m_0^{-1}$ factors.
+
+For each well let $\Gamma_\nu$ be its Gram block and define
+\begin{equation}\label{eq:boxoperators}
+ \begin{split}
+ h_\nu^-&=h_{s,\nu}-\eta_2',\qquad
+ h_\nu^+=h_{s,\nu}+\eta_3'+W_{{\rm bd},\nu},\\
+ W_{{\rm bd},\nu}&=\frac{64r^2e^{-\eta'}}{m_0}
+                 \Gamma_\nu^{-1/2}\Delta_\nu\Gamma_\nu^{-1/2},\\
+ \eta_2'&=\eta_2+Cg_{\rm box},\\
+ \eta_3'&=\eta_3+Cg_{\rm box}
+       +C(P_*')^{-1}e^{(\xi/2+3\tau)q}g_\infty.
+ \end{split}
+\end{equation}
+Constants may be enlarged once, independently of $K$.
+
+\begin{proposition}[Exact box sandwich]\label{prop:box}
+For $E>E_*-m_0/2$,
+\begin{equation}\label{eq:boxsandwich}
+ \sum_{\nu\text{ in }I}\#\{\operatorname{eig}h_\nu^->E\}
+ \le\#\{\operatorname{eig}H_I>E\}
+ \le\sum_{\nu\text{ in }I}\#\{\operatorname{eig}h_\nu^+>E\}.
+\end{equation}
+If both per-well counts equal $D$ at every well, then the middle count is exactly $KD$, and $N(E)=1-D|\delta|$.
+\end{proposition}
+\begin{proof}
+Truncate the internal frame vectors by $\un_I$. Their Gram and compression matrices differ from the internal blocks of $\Gamma$ and $M$ in Schur norm by at most $Cg_{\rm box}$. The tail entries contain the distances from both centres to a box end. Summing them over the distinct physical centres is independent of $K$; there are only two ends.
+
+Orthogonalize the truncated frame. A box vector orthogonal to it is orthogonal to the original internal frames, because it vanishes outside $I$. Lemma~\ref{lem:complement} applies. In the coupling calculation all retained frozen translates still belong to internal wells and are killed by the box complementary projection. The omitted truncation term costs $Cg_{\rm box}$ before squaring. Retain its square divided by $m_0$ and its mixed terms until absorption: $g_{\rm box}/m_0=o(1)$ and $(c_{\rm in}+re^{-\eta'})/m_0=o(1)$, so an enlarged $Cg_{\rm box}$ covers them. No constant grows with $K$.
+
+Separating the well Gram blocks from the full Gram matrix costs $Cg_\infty$. Conjugation of the boundary weight costs at most the last term of $\eta_3'$ in~\eqref{eq:boxoperators}. Thus the form comparison of Lemma~\ref{lem:sandwich} holds in the box with these already enlarged operators. Interlacing for its compression gives the lower count. The form majorant is block diagonal with complementary block at most $E_*-m_0/2<E$, giving the upper count by min--max. This proves~\eqref{eq:boxsandwich}.
+
+If both sums equal $KD$, the integer inequalities force equality exactly. Let $K\to\infty$ at the fixed scale. Equation~\eqref{eq:boxlength} and the classical IDS input above yield $1-N(E)=D|\delta|$.
+\end{proof}
+
+The final gap inference uses full DOS support. For completeness, if a nonnegative continuous function supported in an interval has DOS integral zero, then the phase average of its nonnegative diagonal matrix element is zero. That element is continuous in phase, hence vanishes at every phase. Covariance gives the same assertion at every site. The positive operator is zero, so its support misses the common spectrum. This proves the required support statement for the minimal continuous AMO family.
+
+\label{end:global}

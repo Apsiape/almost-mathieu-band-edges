@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\hypersetup{pdftitle={Band edges of the almost Mathieu operator at Liouville scales},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\un}{\mathbf 1}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\Ga}{G_\alpha}
+\newcommand{\au}{\alpha_u^+}
+\newcommand{\aunif}{\alpha_u^{\mathrm{unif}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\om}{\omega}
+\newcommand{\omt}{\tilde\omega}
+\newcommand{\omh}{\hat\omega}
+\newcommand{\FU}{F_{\mathrm U}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{maintheorem}{Theorem}
+\renewcommand{\themaintheorem}{\Alph{maintheorem}}
+\newtheorem{maincorollary}[maintheorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{plain}
+\newtheorem*{classicalinput}{Classical input}
+\newtheorem*{classicalidentity}{Classical identity}
+\newtheorem*{classicalproposition}{Proposition}
+\usepackage{framed}
+\newenvironment{inputbox}{\begin{framed}\vspace{-0.7\baselineskip}}{\vspace{-0.7\baselineskip}\end{framed}}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+
+\usepackage{graphicx,booktabs,longtable,array}
+\newcommand{\Sig}{\Sigma_{\lambda,\alpha}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Op}{\operatorname{Op}}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\hM}{\mathsf h}
+\newcommand{\EE}{\mathcal E_q}
+\newcommand{\neig}{\mathcal N}
+\newcommand{\inner}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\title{Band edges of the almost Mathieu operator\\ at Liouville scales}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, November 2026}
+\begin{document}
+\maketitle
+\begin{center}\small Both authors contributed equally.\end{center}
+\begin{abstract}
+Can a supercritical almost Mathieu operator have gaps that are only polynomially small in their integer label? We prove that it does whenever its frequency has finite Liouville exponent $\beta(\alpha)>\tfrac12\log\lambda$. The proof uses the top edge of a rational approximant and imposes no parity condition on its denominator. At a convergent $p_n/q_n$, write $\delta_n=q_n\alpha-p_n$, $b_n=-q_n^{-1}\log|\delta_n|$ and $L=\log\lambda$. We construct gaps with labels $m=-Dq_n\operatorname{sgn}\delta_n$ and width at least $\exp(-(b_n+L/2+o(1))q_n)$, uniformly over an explicit growing range of $D$. This gives the power $(\beta'+L/2)/(\beta'-L/2)$ below $\beta=3L/2$, for every $L/2<\beta'<\beta$, and $(\beta+L/2)/L$ at and above that value, with arbitrary positive slack. Hence the exponential gap-decay rate vanishes. A separate surplus argument includes $\beta=\infty$. The reduction combines periodic Green-function decay, translated Wannier frames, self-adjoint comparison operators and exact finite-box counts. The orbital displacement is the classical Rammal--Wilkinson correction. The quantitative contribution is their uniform combination at one Liouville scale with growing labels. We also give the rational surplus argument, a fixed-curvature Mathieu limit, and a phase diagram that separates established results from conjectures. No computation enters a proof.
+\end{abstract}
+\noindent\textbf{AI disclosure.} AI models assisted the exploration, checking and drafting. The authors are responsible for the claims; the process is described in Section~\ref{sec:discussion}.
+
+{\small\tableofcontents}
+\input{intro}
+\input{consequences}
+\input{surplus}
+\input{diagram}
+\input{conjectures}
+\input{discussion}
+\input{methods}
+\appendix
+\input{complex}
+\input{top}
+\input{frames}
+\input{global}
+\input{comparison}
+\input{mathieu}
+\input{remainder}
+\input{limits}
+\input{companions}
+\bibliographystyle{plainurl}
+\bibliography{references}
+\end{document}

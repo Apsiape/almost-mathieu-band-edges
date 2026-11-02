@@ -1,0 +1,54 @@
+\section{Results from the companion papers}\label{app:companions}
+This is the complete companion-import list for the present manuscript. The versioned references are Paper~A~\cite{PaperA}, v2.0.1; Paper~B~\cite{PaperB}, v1.0.0; and Paper~C~\cite{PaperC}, v1.0.0. Numbers and source labels below refer to these versions, whose DOIs are in the bibliography.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.29\linewidth}>{\raggedright\arraybackslash}p{.37\linewidth}>{\raggedright\arraybackslash}p{.28\linewidth}@{}}
+\toprule
+Source result & Imported statement & Use here\\
+\midrule
+\endfirsthead
+\toprule Source result & Imported statement & Use here\\\midrule
+\endhead
+A, Lemmas 2.5--2.6, \texttt{prelim.tex}, labels \texttt{lem:window}, \texttt{lem:ratspec}
+& A supported Weyl vector has residual at most $8/M$; rational phase unions approach the irrational spectrum with a square-root frequency bound.
+& Equation~\eqref{eq:continuity}; the surplus conversion; the derivative domain; Corollary~\ref{cor:derivatives}.\\[5pt]
+A, Proposition 3.3(1), \texttt{polynomial.tex}, label \texttt{prop:poly}
+& $P(H)=V+S^q+S^{-q}+R_q$, with range-$q$ self-adjoint remainder bounded by $C_hq^{5/2}e^{hq}|\delta|$.
+& Equations~\eqref{eq:polyidentity}--\eqref{eq:regroup}; interpretation of the coarse norm error.\\[5pt]
+A, Proposition 3.3(2) and proof Steps 1--3
+& Near-spectrum derivative bounds $|P^{(r)}|\le C_{r,h}q^re^{hq}$; locally modified rational comparison and a fixed smooth cutoff.
+& Top-band length and width bounds; inverse curvature; $m_0$; Proposition~\ref{prop:even}; Proposition~\ref{prop:remainder}.\\[5pt]
+A, Theorem A
+& Typical moment and fastest upper Abel exponents $\max(0,1-L/\beta)$; all-phase statement for $\beta=\infty$. A gives the finite-positive-$\beta$ law used here; its $\beta=\infty$ transport and packing endpoint is due to Jitomirskaya--Zhang~\cite[Corollary~3]{JZ2022}, and its $\beta=0$ fastest endpoint to Damanik--Tcheremchantsev~\cite{DT2007}.
+& Section~\ref{sec:diagram}, including the typical-transport entry and the all-phase infinite-$\beta$ endpoint.\\[5pt]
+A, Theorem C
+& Both packing dimensions of every nonzero spectral measure have the same value under its a.e.-phase hypotheses, and at every phase for $\beta=\infty$ (the Jitomirskaya--Zhang endpoint~\cite[Corollary~3]{JZ2022}).
+& The spectral-measure packing statement in Section~\ref{sec:diagram}.\\[5pt]
+B, Lemmas 2.4--2.5, \texttt{prelim.tex}, labels \texttt{lem:growth}, \texttt{lem:ratprod}
+& Uniform real-energy transfer growth and its rational-product expansion.
+& Appendix~\ref{app:complex} proves the needed complex extension. The extension is proved here, rather than quoted as the original statement.\\[5pt]
+B, Theorem A
+& The typical fastest-exponent law for supercritical type I operators.
+& Background attribution in Section~\ref{sec:diagram}; the AMO table itself uses A.\\[5pt]
+C, Corollary 7.2, \texttt{sharp.tex}, label \texttt{cor:closedgap}
+& For even $q$, $P$ is even and $P(0)=(-1)^{q/2}(2\lambda^q+2)$.
+& Proposition~\ref{prop:even}; the central-cone discussion in Appendix~\ref{app:remainder}.\\[5pt]
+C, Theorem 7.5, \texttt{sharp.tex}, label \texttt{thm:quarter}
+& At even $q_n$, a polynomially small fastest tail at radius $c_\eta Te^{-hq_n/2}$ for $b_n\ge h/2+(h-L)$ and $e^{(h/2+(h-L))q_n}\le T\le|\delta_n|^{-1}$; nearby turning-phase clause.
+& The parity-qualified phase-$1/4$ lower bound and transport geometry in Section~\ref{sec:diagram}.\\[5pt]
+C, Corollary 5.6, \texttt{upperlaw.tex}, label \texttt{cor:typeI}
+& For AMO, $\alpha_u^{\rm unif}\le\beta/(\beta+L)$ below $\beta=L$ and $\le1-L/(2\beta)$ above, including $\beta=L$.
+& Every upper transport entry in Table~\ref{tab:phase}; the endpoint $\beta=0$.\\[5pt]
+C, Corollary 7.6, \texttt{sharp.tex}, label \texttt{cor:exactunif}
+& If $\beta_e=\beta\in[L,\infty)$, the uniform, worst-phase and phase-$1/4$ exponents equal $1-L/(2\beta)$.
+& Exact entries at $x\ge2$ with the stated parity hypothesis.\\[5pt]
+C, Proposition 6.4, \texttt{amoproof.tex}, label \texttt{prop:Camo}
+& Uniform confinement radius bounded by a constant times $\sqrt{\sigma_n}/|\delta_n|$ plus its specified collars.
+& The geometric comparison in Section~\ref{sec:diagram}; not a new confinement estimate.\\
+\bottomrule
+\end{longtable}
+
+In A v2.0.1, Lemma~2.5 is the window lemma and Lemma~2.6 the rational-spectrum lemma; in C v1.0.0, Corollary~7.2 is the closure corollary and 7.3 its priority remark. The source labels guard against numbering changes between versions.
+
+For clarity, the external analytic inputs are separate from this table. Chambers' formula is due to Chambers~\cite{Chambers1965}; the periodic polynomial identity also follows from the standard magic formula~\cite[Theorem~3.1]{DKS2010}. On the spectrum, the Lyapunov exponent equals $\log\lambda$, by Bourgain--Jitomirskaya~\cite[Corollary~2]{BourgainJitomirskaya2002}, after matching the coupling convention. The IDS facts are standard AMO background, as used in A/B and reviewed in~\cite{AYZdry}. The rational core measure is Avron--van Mouche--Simon~\cite{AvMS}; the all-irrational noncritical measure is Jitomirskaya--Krasovsky~\cite{JKmeasure}. The one-well quantization input is explicitly scoped in Appendix~\ref{app:mathieu}. The Aubry--Perron fact needed at the reference fibre is proved in Lemma~\ref{lem:Wannier}. No unproved general Harper perturbation lemma, all-band reduction, or dynamical localization assumption is imported.
+
+\label{end:companions}

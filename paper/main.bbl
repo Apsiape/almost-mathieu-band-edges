@@ -1,0 +1,283 @@
+\begin{thebibliography}{10}
+
+\bibitem{AKmeasure}
+Artur Avila and Rapha{\"e}l Krikorian.
+\newblock Reducibility or nonuniform hyperbolicity for quasiperiodic
+  {Schr\"odinger} cocycles.
+\newblock {\em Ann. of Math.}, 164(3):911--940, 2006.
+\newblock URL:
+  \url{https://annals.math.princeton.edu/wp-content/uploads/annals-v164-n3-p04.pdf}.
+
+\bibitem{ALSZ}
+Artur Avila, Yoram Last, Mira Shamis, and Qi~Zhou.
+\newblock On the abominable properties of the almost {Mathieu} operator with
+  well approximated frequencies.
+\newblock arXiv:2110.07974v2, 2023.
+\newblock URL: \url{https://arxiv.org/abs/2110.07974v2}.
+
+\bibitem{AYZ2017}
+Artur Avila, Jiangong You, and Qi~Zhou.
+\newblock Sharp phase transitions for the almost {M}athieu operator.
+\newblock {\em Duke Math. J.}, 166(14):2697--2718, 2017.
+\newblock URL: \url{https://doi.org/10.1215/00127094-2017-0013}.
+
+\bibitem{AYZdry}
+Artur Avila, Jiangong You, and Qi~Zhou.
+\newblock Dry {Ten Martini} problem in the non-critical case.
+\newblock arXiv:2306.16254v2, 2024.
+\newblock URL: \url{https://arxiv.org/abs/2306.16254v2}.
+
+\bibitem{AvronSimon}
+Joseph Avron and Barry Simon.
+\newblock Almost periodic {Schr\"odinger} operators {II}: The integrated
+  density of states.
+\newblock {\em Duke Math. J.}, 50(1):369--391, 1983.
+\newblock URL: \url{https://math.caltech.edu/SimonPapers/149.pdf}, \href
+  {https://doi.org/10.1215/S0012-7094-83-05016-0}
+  {\path{doi:10.1215/S0012-7094-83-05016-0}}.
+
+\bibitem{AvMS}
+Joseph~E. Avron, P.~H.~M. van Mouche, and Barry Simon.
+\newblock On the measure of the spectrum for the almost {Mathieu} operator.
+\newblock {\em Comm. Math. Phys.}, 132:103--118, 1990.
+\newblock URL:
+  \url{https://phsites.technion.ac.il/avron/wp-content/uploads/sites/3/2013/05/commun_math_phys_132_103-118_1990.pdf}.
+
+\bibitem{AvMSerratum}
+Joseph~E. Avron, P.~H.~M. van Mouche, and Barry Simon.
+\newblock Erratum: On the measure of the spectrum for the almost {Mathieu}
+  operator.
+\newblock {\em Comm. Math. Phys.}, 139:215, 1991.
+\newblock \href {https://doi.org/10.1007/BF02102736}
+  {\path{doi:10.1007/BF02102736}}.
+
+\bibitem{BellissardBarelli}
+Jean Bellissard and Armelle Barelli.
+\newblock Semiclassical methods in solid state physics: Two examples.
+\newblock {\em J. Phys. I France}, 3(2):471--499, 1993.
+\newblock \href {https://doi.org/10.1051/jp1:1993145}
+  {\path{doi:10.1051/jp1:1993145}}.
+
+\bibitem{BellissardSimon1982}
+Jean Bellissard and Barry Simon.
+\newblock Cantor spectrum for the almost {Mathieu} equation.
+\newblock {\em J. Funct. Anal.}, 48(3):408--419, 1982.
+\newblock \href {https://doi.org/10.1016/0022-1236(82)90094-5}
+  {\path{doi:10.1016/0022-1236(82)90094-5}}.
+
+\bibitem{BourgainJitomirskaya2002}
+Jean Bourgain and Svetlana Jitomirskaya.
+\newblock Continuity of the {Lyapunov} exponent for quasiperiodic operators
+  with analytic potential.
+\newblock {\em J. Stat. Phys.}, 108(5-6):1203--1218, 2002.
+\newblock \href {https://doi.org/10.1023/A:1019751801035}
+  {\path{doi:10.1023/A:1019751801035}}.
+
+\bibitem{Chambers1965}
+W.~G. Chambers.
+\newblock Linear-network model for magnetic breakdown in two dimensions.
+\newblock {\em Phys. Rev.}, 140(1A):A135--A143, 1965.
+\newblock \href {https://doi.org/10.1103/PhysRev.140.A135}
+  {\path{doi:10.1103/PhysRev.140.A135}}.
+
+\bibitem{Claro}
+Francisco Claro.
+\newblock Graphene-like massless {Dirac} fermions in {Harper} systems.
+\newblock arXiv:0708.3160, 2007.
+\newblock URL: \url{https://arxiv.org/abs/0708.3160}.
+
+\bibitem{DKS2010}
+David Damanik, Rowan Killip, and Barry Simon.
+\newblock Perturbations of orthogonal polynomials with periodic recursion
+  coefficients.
+\newblock {\em Ann. of Math.}, 171(3):1931--2010, 2010.
+\newblock \href {https://doi.org/10.4007/annals.2010.171.1931}
+  {\path{doi:10.4007/annals.2010.171.1931}}.
+
+\bibitem{DT2007}
+David Damanik and Serguei Tcheremchantsev.
+\newblock Upper bounds in quantum dynamics.
+\newblock {\em J. Amer. Math. Soc.}, 20(3):799--827, 2007.
+\newblock \href {https://doi.org/10.1090/S0894-0347-06-00554-6}
+  {\path{doi:10.1090/S0894-0347-06-00554-6}}.
+
+\bibitem{PaperA}
+Seth Douglas and Nidhal Mghirbi.
+\newblock Exact transport and spectral dimensions for the almost {Mathieu}
+  operator.
+\newblock Preprint, version 2.0.1, Zenodo, 2026.
+\newblock Concept DOI 10.5281/zenodo.23830304.
+\newblock \href {https://doi.org/10.5281/zenodo.23864352}
+  {\path{doi:10.5281/zenodo.23864352}}.
+
+\bibitem{PaperB}
+Seth Douglas and Nidhal Mghirbi.
+\newblock Universality of the transport law for supercritical quasi-periodic
+  operators.
+\newblock Preprint, version 1.0.0, Zenodo, 2026.
+\newblock \href {https://doi.org/10.5281/zenodo.23830333}
+  {\path{doi:10.5281/zenodo.23830333}}.
+
+\bibitem{PaperC}
+Seth Douglas and Nidhal Mghirbi.
+\newblock Worst-case transport and light cones for quasi-periodic operators.
+\newblock Preprint, version 1.0.0, Zenodo, 2026.
+\newblock \href {https://doi.org/10.5281/zenodo.23845228}
+  {\path{doi:10.5281/zenodo.23845228}}.
+
+\bibitem{Fedotov}
+Alexander Fedotov.
+\newblock A series of spectral gaps for the almost {Mathieu} operator with a
+  small coupling constant.
+\newblock arXiv:2012.03356, 2020.
+\newblock URL: \url{https://arxiv.org/abs/2012.03356}.
+
+\bibitem{GYZ}
+Lingrui Ge, Jiangong You, and Qi~Zhou.
+\newblock Sharp spectral gaps, arithmetic localization, and reducibility via
+  resonance analysis.
+\newblock arXiv:2407.05490v2, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2407.05490v2}.
+
+\bibitem{HelfferRobert}
+Bernard Helffer and Didier Robert.
+\newblock Puits de potentiel g\'{e}n\'{e}ralis\'{e}s et asymptotique
+  semi-classique.
+\newblock {\em Ann. Inst. H. Poincar\'{e} Phys. Th\'{e}or.}, 41(3):291--331,
+  1984.
+\newblock URL: \url{https://www.numdam.org/item/AIHPA_1984__41_3_291_0.pdf}.
+
+\bibitem{HSwells}
+Bernard Helffer and Johannes Sj{\"o}strand.
+\newblock Puits multiples en limite semi-classique. {II}. interaction
+  mol\'{e}culaire. sym\'{e}tries. perturbation.
+\newblock {\em Ann. Inst. H. Poincar\'{e} Phys. Th\'{e}or.}, 42(2):127--212,
+  1985.
+\newblock URL: \url{https://numdam.org/item/AIHPA_1985__42_2_127_0.pdf}.
+
+\bibitem{HSII}
+Bernard Helffer and Johannes Sj{\"o}strand.
+\newblock {\em Analyse semi-classique pour l'\'{e}quation de {Harper}. {II}:
+  Comportement semi-classique pr\`es d'un rationnel}, volume~40 of {\em
+  M\'{e}moires de la Soci\'{e}t\'{e} Math\'{e}matique de France, nouvelle
+  s\'{e}rie}.
+\newblock Soci\'{e}t\'{e} Math\'{e}matique de France, 1990.
+\newblock URL: \url{https://www.numdam.org/item/10.24033/msmf.347.pdf}, \href
+  {https://doi.org/10.24033/msmf.347} {\path{doi:10.24033/msmf.347}}.
+
+\bibitem{HezariZelditch}
+Hamid Hezari and Steve Zelditch.
+\newblock Eigenfunction asymptotics and spectral rigidity of the ellipse.
+\newblock {\em J. Spectr. Theory}, 12(1):23--52, 2022.
+\newblock URL: \url{https://ems.press/content/serial-article-files/33859?nt=1},
+  \href {https://doi.org/10.4171/JST/393} {\path{doi:10.4171/JST/393}}.
+
+\bibitem{JKmeasure}
+Svetlana Jitomirskaya and Igor Krasovsky.
+\newblock Continuity of the measure of the spectrum for discrete quasiperiodic
+  operators.
+\newblock {\em Math. Res. Lett.}, 9:413--422, 2002.
+\newblock URL: \url{https://arxiv.org/abs/math/0107061v2}.
+
+\bibitem{JLphase}
+Svetlana Jitomirskaya and Wencai Liu.
+\newblock Universal reflective-hierarchical structure of quasiperiodic
+  eigenfunctions and sharp spectral transition in phase.
+\newblock arXiv:1802.00781, 2018.
+\newblock URL: \url{https://arxiv.org/abs/1802.00781}, \href
+  {https://arxiv.org/abs/1802.00781} {\path{arXiv:1802.00781}}.
+
+\bibitem{JLT2025}
+Svetlana Jitomirskaya, Wencai Liu, and Serguei Tcheremchantsev.
+\newblock Lower bounds on concentration through {B}orel transforms and
+  quantitative singularity of spectral measures near the arithmetic transition.
+\newblock arXiv:2501.12153, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2501.12153}, \href
+  {https://arxiv.org/abs/2501.12153} {\path{arXiv:2501.12153}}.
+
+\bibitem{JSimon}
+Svetlana Jitomirskaya and Barry Simon.
+\newblock Operators with singular continuous spectrum. {III}. almost periodic
+  {Schr\"odinger} operators.
+\newblock {\em Comm. Math. Phys.}, 165:201--205, 1994.
+\newblock \href {https://doi.org/10.1007/BF02099743}
+  {\path{doi:10.1007/BF02099743}}.
+
+\bibitem{JZ2022}
+Svetlana Jitomirskaya and Shiwen Zhang.
+\newblock Quantitative continuity of singular continuous spectral measures and
+  arithmetic criteria for quasiperiodic {Schr\"odinger} operators.
+\newblock {\em J. Eur. Math. Soc.}, 24(5):1723--1767, 2022.
+\newblock \href {https://doi.org/10.4171/JEMS/1139}
+  {\path{doi:10.4171/JEMS/1139}}.
+
+\bibitem{Krasovsky}
+Igor Krasovsky.
+\newblock Central spectral gaps of the almost {Mathieu} operator.
+\newblock arXiv:1602.08624, 2016.
+\newblock URL: \url{https://arxiv.org/abs/1602.08624}.
+
+\bibitem{LamoureuxMingo2007}
+Michael~P. Lamoureux and James~A. Mingo.
+\newblock On the characteristic polynomial of the almost {Mathieu} operator.
+\newblock {\em Proc. Amer. Math. Soc.}, 135(10):3205--3215, 2007.
+\newblock \href {https://doi.org/10.1090/S0002-9939-07-08830-2}
+  {\path{doi:10.1090/S0002-9939-07-08830-2}}.
+
+\bibitem{LYZZ2017}
+Martin Leguil, Jiangong You, Zhiyan Zhao, and Qi~Zhou.
+\newblock Asymptotics of spectral gaps of quasi-periodic {S}chr{\"o}dinger
+  operators.
+\newblock arXiv:1712.04700, 2017.
+\newblock URL: \url{https://arxiv.org/abs/1712.04700}, \href
+  {https://arxiv.org/abs/1712.04700} {\path{arXiv:1712.04700}}.
+
+\bibitem{Liu2022}
+Wencai Liu.
+\newblock Small denominators and large numerators of quasiperiodic
+  {S}chr{\"o}dinger operators.
+\newblock arXiv:2205.04648, 2022.
+\newblock URL: \url{https://arxiv.org/abs/2205.04648}, \href
+  {https://arxiv.org/abs/2205.04648} {\path{arXiv:2205.04648}}.
+
+\bibitem{LiuShi2019}
+Wencai Liu and Yunfeng Shi.
+\newblock Upper bounds on the spectral gaps of quasi-periodic {S}chr{\"o}dinger
+  operators with {L}iouville frequencies.
+\newblock {\em J. Spectr. Theory}, 9(4):1223--1248, 2019.
+\newblock Theorem numbers as in arXiv:1708.01760v3.
+\newblock URL: \url{https://arxiv.org/abs/1708.01760v3}, \href
+  {https://arxiv.org/abs/1708.01760v3} {\path{arXiv:1708.01760v3}}, \href
+  {https://doi.org/10.4171/JST/275} {\path{doi:10.4171/JST/275}}.
+
+\bibitem{DLMF}
+{NIST Digital Library of Mathematical Functions}.
+\newblock Chapter 28: {Mathieu} functions and {Hill}'s equation.
+\newblock Sections 28.6 and 28.8, 2026.
+\newblock Release 1.2.8 of 2026-09-15; accessed 1 November 2026.
+\newblock URL: \url{https://dlmf.nist.gov/28}.
+
+\bibitem{PST}
+Gianluca Panati, Herbert Spohn, and Stefan Teufel.
+\newblock Effective dynamics for {Bloch} electrons: {Peierls} substitution and
+  beyond.
+\newblock {\em Comm. Math. Phys.}, 242:547--578, 2003.
+\newblock URL: \url{https://arxiv.org/abs/math-ph/0212041}.
+
+\bibitem{RammalBellissard}
+R.~Rammal and Jean Bellissard.
+\newblock An algebraic semi-classical approach to {Bloch} electrons in a
+  magnetic field.
+\newblock {\em J. Phys. (Paris)}, 51(17):1803--1830, 1990.
+\newblock \href {https://doi.org/10.1051/jphys:0199000510170180300}
+  {\path{doi:10.1051/jphys:0199000510170180300}}.
+
+\bibitem{Wilkinson1987}
+Michael Wilkinson.
+\newblock An exact renormalisation group for {Bloch} electrons in a magnetic
+  field.
+\newblock {\em J. Phys. A: Math. Gen.}, 20:4337--4354, 1987.
+\newblock \href {https://doi.org/10.1088/0305-4470/20/13/035}
+  {\path{doi:10.1088/0305-4470/20/13/035}}.
+
+\end{thebibliography}

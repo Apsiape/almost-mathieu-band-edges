@@ -1,0 +1,140 @@
+\section{The conserved polynomial and its first-order structure}\label{app:remainder}
+These results explain why a norm bound alone misses the edge ladder. The global proof above selects the branch directly in energy space.
+
+\subsection{Residue regrouping of Paper A}
+Paper~A, Proposition~3.3, gives
+\begin{equation}\label{eq:polyidentity}
+ P(H)=V+S^q+S^{-q}+R_q,\quad
+ V(j)=2\Lambda\cos2\pi(q\theta+j\delta),\quad
+ \norm{R_q}\le C_hq^{5/2}e^{hq}|\delta|.
+\end{equation}
+The remainder is self-adjoint of range $q$. Under the unitary residue map
+$(\mathcal Uu)_r(m)=u(r+mq)$,
+\begin{equation}\label{eq:regroup}
+ V+S^q+S^{-q}
+ =\mathcal U^*\left(\bigoplus_{r=0}^{q-1}
+ H_{\Lambda,q\delta,q\theta+r\delta}\right)\mathcal U.
+\end{equation}
+Indeed shifts by $q$ preserve a residue class, and the potential there is
+$2\Lambda\cos2\pi(q\theta+r\delta+mq\delta)$.
+This is an immediate regrouping of the companion result, not a new operator estimate.
+
+All summands have the same phase-independent irrational spectrum $\Sigma'_q$. Spectral mapping gives
+\[
+ d_{\rm H}(P(\Sig),\Sigma'_q)\le\norm{R_q}.
+\]
+If $\mu$ is the DOS measure of $H$ and $N'$ the IDS of a summand, then
+\[
+ N'(t-\norm{R_q})\le\mu(\{E:P(E)\le t\})
+                       \le N'(t+\norm{R_q}).
+\]
+To see this, compress to long boxes, apply min--max, and pay the rank $O(q)$ boundary discrepancy between a compressed polynomial and the polynomial of a compression. Every residue class has density $1/q$, so there is no extra factor $q$ in the DOS.
+
+For $b\ge c>0$ choose $h-L<c$ to make the available error small relative to $\Lambda$. Absolute smallness follows on $b\ge L+\varepsilon$ with $h-L<\varepsilon$. If $B_q=C_hq^{5/2}e^{hq}|\delta|$ denotes the \emph{upper bound}, then
+\[
+ \frac{B_q}{2\hbar}=\frac{C_h}{4\pi}q^{3/2}e^{(h-L/2)q}\to\infty.
+\]
+Thus that bound supplies no resolution of the level spacing. This is not a lower bound on the actual remainder and proves no impossibility for a finer analysis. The transformed frequency is exactly $q\delta=q^2(\alpha-p/q)$. Its reciprocal has a continued-fraction carry in general; no semigroup renormalization identity is asserted.
+
+\subsection{An explicit second-order remainder}
+Write $P(E)=\sum_nc_nE^n$ and, for the frozen full-line operator $B_t$, define
+\begin{equation}\label{eq:Gdefinition}
+ \mathcal G_t=\frac12\sum_nc_n\sum_{a+b=n-1}
+ \bigl([B_t^a,X]D_tB_t^b+B_t^aD_t[X,B_t^b]\bigr).
+\end{equation}
+It is periodic, real symmetric, and has range at most $q-1$. Let $\Op^{\rm row}(\mathcal G)$ freeze its entries at the row phase $\phi_j=\theta+j\eps$.
+
+\begin{proposition}[First-order expansion]\label{prop:remainder}
+For fixed $h>L$, eventually and uniformly in $\theta$,
+\begin{equation}\label{eq:R2}
+ R_q=\eps\Op^{\rm row}(\mathcal G)+R_2,
+ \qquad \norm{R_2}\le C_hq^4e^{hq}\delta^2.
+\end{equation}
+Consequently on $b\ge L/2+\xi$, with an appropriate fixed $h-L<\xi$,
+$\norm{R_2}=o(\hbar)$ uniformly.
+\end{proposition}
+\begin{proof}
+Differentiating the rational magic formula $P(B_t)=S^q+S^{-q}+c(t)I$ gives $dP(B_t)[D_t]=c'(t)I$. Symmetrize the insertion of $X-j$ into the polynomial derivative. The commutators left over are~\eqref{eq:Gdefinition}, and
+\[
+ dP(B_t)[(X-j)D_t]=c'(t)(X-j)+\mathcal G_t.
+\]
+The first term has zero row $j$.
+
+As in the row proof of Paper~A, replace the rational potential only on $[j-q,j+q]$ by the actual one. The resulting diagonal perturbation is $W=\eps(X-j)D_t+W_2$ on this window, with
+$\norm W\le4\pi\lambda|\delta|$ and $\norm{W_2}\le4\pi^2\lambda\delta^2$. The first derivative on row $j$ sees no entries outside the window.
+
+Choose the fixed smooth energy cutoff $f_q=\chi P$ from the proof of Paper~A, Proposition~3.3. Its support lies in the derivative neighbourhood, and it equals $P$ near both comparison spectra. Rational spectral continuity and $\norm W\to0$ justify that assertion uniformly in the row. The derivative bounds imply $\norm{f_q}_{H^r}\le C_{r,h}q^re^{hq}$. Fourier inversion and Duhamel give
+\[
+ \norm{df_q(B)[W_2]}\le Cq^2e^{hq}\norm{W_2},\quad
+ \norm{f_q(B+W)-f_q(B)-df_q(B)[W]}
+       \le Cq^3e^{hq}\norm W^2.
+\]
+Thus each row of the error in~\eqref{eq:R2} has $\ell^2$ norm at most $Cq^3e^{hq}\delta^2$. Each entry has that bound, and both a row and a column have at most $2q+1$ entries. Direct banded Schur summation gives the claimed $q^4$ bound; no symmetry of row freezing is assumed.
+
+Finally
+\[
+ \frac{\norm{R_2}}{2\hbar}\le C_hq^3e^{(h-L/2-b)q},
+\]
+which decays for the stated fixed margin. This proves sufficiency, not necessity at or below $b=L/2$.
+\end{proof}
+
+Although every frozen $\mathcal G_t$ is symmetric, its row quantization need not be. Taking the Hermitian part of the full first-order comparison costs no more than $\norm{R_2}$, since $P(H)$ is self-adjoint. Such a comparison still concerns $P(H)$ and does not recover individual inverse branches or their IDS labels by itself.
+
+\subsection{Orbital and frame entries}
+For simple fibre eigenvalues $E_x$ and normalized eigenvectors $u_x$, write $D=\partial_tB$, $K=\partial_kB$. Divided differences with repeated nodes are understood by continuity.
+
+\begin{proposition}[Band-frame symbol]\label{prop:symbol}
+In the band frame,
+\begin{equation}\label{eq:divdiff}
+ \mathcal G_{xy}=\frac{iq}{2}\sum_zP[E_x,E_z,E_y]
+                    (D_{xz}K_{zy}-K_{xz}D_{zy}).
+\end{equation}
+In particular
+\begin{align}
+ \mathcal G_{xx}
+ &=-qP'(E_x)\sum_{z\ne x}
+        \frac{\operatorname{Im}(D_{xz}K_{zx})}{E_x-E_z},
+ \label{eq:orbital}\\
+ \mathcal G_{xy}
+ &=-iq\bigl(c'(t)\inner{u_x}{\partial_ku_y}
+       +2\sin k\inner{u_x}{\partial_tu_y}\bigr),\quad x\ne y.
+ \label{eq:frameentries}
+\end{align}
+Every simple phase-union edge has vanishing off-diagonal entries in~\eqref{eq:frameentries}.
+\end{proposition}
+\begin{proof}
+The fibre map obeys $[A,X](k)=-iq\partial_kA(k)$. Differentiate the powers in~\eqref{eq:Gdefinition} and insert the spectral decomposition between their factors. The resulting scalar sums are precisely the second divided differences, proving~\eqref{eq:divdiff}. All fibre eigenvalues have the same $P$-value $2\cos k+c(t)$. Hence a divided difference at three distinct nodes is zero, while
+$P[E_x,E_z,E_x]=P'(E_x)/(E_x-E_z)$.
+The diagonal commutator gives~\eqref{eq:orbital}. For $x\ne y$ only the repeated nodes $z=x,y$ remain. Hellmann--Feynman gives
+$P'(E_x)D_{xx}=c'(t)$ and $P'(E_x)K_{xx}=-2\sin k$; differentiation of eigenvectors yields~\eqref{eq:frameentries}. At a phase-union edge, $\sin k=0$ and $c'(t)=0$. Some other critical points are saddles; the converse characterization is not asserted.
+\end{proof}
+
+For a simple edge $E_a$ define
+\[
+ S_a=q\sum_{z\ne a}\frac{\operatorname{Im}(D_{az}K_{za})}{E_a-E_z},
+ \qquad \sigma_a=\eps\mathcal G_{aa}=-\eps P'(E_a)S_a.
+\]
+The E-space orbital correction is $-\eps S_a$, a recovery of the Rammal--Wilkinson term~\cite{RammalBellissard,Wilkinson1987,PST}. It is only the orbital part of the edge displacement: the Landau zero-point term is proportional to $|\eps|$ and supplies a separate one-sided contribution. The safe bound is $|S_a|\le q\norm D\norm K/g_a=O(g_a^{-1})$, where $g_a$ is the simple-band isolation. At the top edge this is subexponential. No uniform $O(1)$ bound for all nearly touching bands, no asymptotic $P'\sim qe^{hq}$, and no nonzero universal orbital lower coefficient are claimed.
+
+At an edge with $P(E_a)=\sigma R$, the signed shifted P-space centre is $\sigma R+\sigma_a$, not $\sigma(R+\sigma_a)$. A single-band spectral correspondence at a negative edge would require that convention and its own branch proof. The main theorem uses only $\sigma=+1$.
+
+\subsection{Closed gaps: the recovered Dirac model}
+At a central cone with $q\equiv0\pmod4$, $P(0)=R$ and $P'(0)=0$. Let $\Pi_0$ be the rank-two crossing projection. The degenerate polynomial calculus gives
+\begin{equation}\label{eq:Diracblock}
+ \Pi_0\mathcal G\Pi_0
+   =\frac{iqP''(0)}4[\Pi_0D\Pi_0,\Pi_0K\Pi_0].
+\end{equation}
+Chambers' quadratic expansion has perpendicular Pauli velocities
+\[
+ v_k=\sqrt{2/|P''(0)|},\qquad
+ v_t=\sqrt{8\pi^2q^2\Lambda/|P''(0)|}.
+\]
+Thus~\eqref{eq:Diracblock} has eigenvalues $\pm2\pi q^2\sqrt\Lambda$. After multiplication by $\eps$, they are $\pm\sgn(\delta)\hbar$. The block is nonzero; cancelling an inverse gap in a simple-band formula does not make its degenerate extension vanish.
+
+Quantizing the two linear Pauli directions and squaring gives oscillator levels $(2j+1)\hbar$ with the spin correction $\pm\hbar$. Consequently the leading Dirac model has one zero mode and pairs
+\[
+ E_D=\pm2\sqrt{\hbar D/|P''(0)|},\qquad D\ge1.
+\]
+This is the known Dirac Landau fan of Harper systems; see Claro~\cite[(4)--(6)]{Claro} and Bellissard--Barelli~\cite[Section~1.3]{BellissardBarelli}. Since $P$ is even, the paired model energies have the same P-value. Exact degeneracy of a finite scalar Jacobi matrix, an exact zero eigenstate of the full irrational operator, and an all-order anharmonic formula do not follow. Its satellite-gap transfer remains a separate problem. None of this degenerate model is needed for the top simple edge proof.
+
+\label{end:remainder}

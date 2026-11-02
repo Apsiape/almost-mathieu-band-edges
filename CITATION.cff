@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite this preprint if you use its results."
+title: "Band edges of the almost Mathieu operator at Liouville scales"
+authors:
+- family-names: Douglas
+  given-names: Seth
+  orcid: "https://orcid.org/0009-0007-4708-3252"
+- family-names: Mghirbi
+  given-names: Nidhal
+  orcid: "https://orcid.org/0009-0005-6534-1118"
+version: 1.0.0
+date-released: 2026-11-01
+type: generic
+license: CC-BY-4.0
+abstract: "Can a supercritical almost Mathieu operator have gaps that are only polynomially small in their integer label? We prove that it does whenever its frequency has finite Liouville exponent beta(alpha) greater than half of log(lambda). The proof uses the top edge of a rational approximant and imposes no parity condition on its denominator. At a convergent p_n/q_n, write delta_n = q_n alpha - p_n, b_n = -log|delta_n|/q_n and L = log(lambda). We construct gaps with labels m = -D q_n sign(delta_n) and width at least exp(-(b_n + L/2 + o(1))q_n), uniformly over an explicit growing range of D. This gives the power (beta′ + L/2)/(beta′ - L/2) below beta = 3L/2, for every L/2 < beta′ < beta, and (beta + L/2)/L at and above that value, with arbitrary positive slack. Hence the exponential gap-decay rate vanishes. A separate surplus argument includes beta = infinity. The reduction combines periodic Green-function decay, translated Wannier frames, self-adjoint comparison operators and exact finite-box counts. The orbital displacement is the classical Rammal-Wilkinson correction. The quantitative contribution is their uniform combination at one Liouville scale with growing labels. We also give the rational surplus argument, a fixed-curvature Mathieu limit, and a phase diagram that separates established results from conjectures. No computation enters a proof."
+preferred-citation:
+  type: generic
+  title: "Band edges of the almost Mathieu operator at Liouville scales"
+  authors:
+  - family-names: Douglas
+    given-names: Seth
+    orcid: "https://orcid.org/0009-0007-4708-3252"
+  - family-names: Mghirbi
+    given-names: Nidhal
+    orcid: "https://orcid.org/0009-0005-6534-1118"
+  year: 2026
+  version: 1.0.0
+  notes: 'Preprint. CC BY 4.0.'

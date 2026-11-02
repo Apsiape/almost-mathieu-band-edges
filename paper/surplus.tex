@@ -1,0 +1,125 @@
+\section{The rational surplus and the earlier thresholds}\label{sec:surplus}
+This argument is independent of the top-band reduction. It also handles $\beta=\infty$. Write $P=P_{p/q}$, $R=2\lambda^q+2$, and
+\[
+ \cU(p/q)=\{E:|P(E)|\le R\},\qquad
+ \cI'(p/q)=\{E:|P(E)|\le R-4\}.
+\]
+The first set is the rational phase union. The second is a rescaled \emph{dual} phase intersection. It is not the intersection of the supercritical fixed-phase spectra.
+
+\begin{inputbox}
+\begin{classicalidentity}[Avron--van Mouche--Simon and Chambers duality]
+For every reduced $p/q$,
+\begin{align}
+ s_q&:=|\cU(p/q)|-4(\lambda-1)\notag\\
+ &=|\{E:R-4<|P(E)|\le R\}|\notag\\
+ &=\sum_{\text{$2q$ band ends}}
+       \int_{R-4}^{R}\frac{dt}{|P'(E(t))|}.\label{eq:surplus}
+\end{align}
+\end{classicalidentity}
+\end{inputbox}
+\begin{proof}
+Chambers duality is $P_\lambda(E)=\lambda^qP_{1/\lambda}(E/\lambda)$. Avron--van Mouche--Simon~\cite[Theorem~1]{AvMS} give the dual phase-intersection measure $4(1-1/\lambda)$ in the hopping-one convention. Scaling by $\lambda$ gives $|\cI'|=4(\lambda-1)$. Their erratum~\cite{AvMSerratum} concerns the continuum Mathieu example and leaves this discrete theorem intact.
+
+For every $t\in[-R,R]$, Chambers realizes $P(E)=t$ as a Hermitian fibre spectrum. The $q$ monotone inverse branches therefore cover $[-R,R]$, with touching endpoints permitted. Removing $[-R+4,R-4]$ in their image leaves two pieces per branch. Change variables by $t=|P(E)|$. At a touching endpoint the integral is improper and integrable; endpoints have zero measure. This proves~\eqref{eq:surplus}.
+\end{proof}
+
+\begin{proposition}[Markov lower bound for the rational surplus]\label{prop:surplus}
+For every reduced $p/q$,
+\begin{equation}\label{eq:Markov}
+ s_q\ge\frac{8(\lambda-1)}{q^2(\lambda^q+1)}
+       \ge4(\lambda-1)q^{-2}e^{-Lq}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a phase-union band $B$ of length $\ell$, Markov's polynomial inequality rescaled from $[-1,1]$ gives
+\[
+ \sup_B|P'|\le 2q^2R/\ell.
+\]
+The two end pieces in $B$ have total image length eight, so their total length is at least $4\ell/(q^2R)$. Sum over bands and use $|\cU|\ge4(\lambda-1)$ to obtain~\eqref{eq:Markov}.
+\end{proof}
+
+Avila--Last--Shamis--Zhou~\cite[Proposition~5.1]{ALSZ} already give quantitative rational band-end strip bounds with exponential rate $L$ after dual scaling. The surplus mechanism and that rate have a close published predecessor. Formula~\eqref{eq:Markov} makes the following deduction independent of the unpublished derivative estimates.
+
+For $\eta=|\alpha-p/q|$, the window argument of Paper~A~\cite[Lemmas~2.5--2.6]{PaperA} gives
+\begin{equation}\label{eq:continuity}
+ d_{\mathrm H}(\cU(p/q),\Sig)\le\epsilon_q,
+ \qquad \epsilon_q=(8+4\pi\lambda)\sqrt\eta+4\pi\lambda\eta.
+\end{equation}
+The irrational measure is $|\Sig|=4(\lambda-1)$ for every irrational frequency. For this noncritical statement one can cite Jitomirskaya--Krasovsky~\cite[Theorem~2]{JKmeasure}; Avila--Krikorian~\cite{AKmeasure} also cover the critical completion.
+
+\begin{proposition}[Capped gap measure and a tail label]\label{prop:capped}
+With $s_q$ and $\epsilon_q$ as above,
+\begin{equation}\label{eq:capped}
+ \sum_{m\ne0}\min\{|G_m|,2\epsilon_q\}\ge s_q-2\epsilon_q.
+\end{equation}
+If $s_q\ge16\epsilon_q$ and $M=\lfloor s_q/(8\epsilon_q)\rfloor$, some $|m|>M$ satisfies
+\begin{equation}\label{eq:pigeonhole}
+ |G_m|\ge\frac{s_qM}{8m^2}
+       \ge\frac{s_q^2}{128\epsilon_qm^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The measure of $\cU\setminus\Sig$ is at least $s_q$. Its portions beyond the two spectral extremes have total length at most $2\epsilon_q$. Inside a bounded gap $(a,b)$, every point of $\cU$ lies in the $\epsilon_q$ endpoint strips. Their total length is at most $\min(b-a,2\epsilon_q)$. The bounded gaps have distinct integer labels. Countable additivity proves~\eqref{eq:capped}.
+
+The $2M$ labels with $0<|m|\le M$ contribute at most $4M\epsilon_q\le s_q/2$. Since $2\epsilon_q\le s_q/8$, the uncapped tail has measure at least $s_q/4$. If all its gaps were less than $s_qM/(8m^2)$, summing the two signs and using $\sum_{r>M}r^{-2}\le1/M$ would contradict that bound. Finally $M\ge s_q/(16\epsilon_q)$.
+\end{proof}
+
+\begin{theorem}[The surplus range, including infinite $\beta$]\label{thm:measure}
+If $\beta>2L$, then for every $2L<\beta'<\beta$ and $L<h<\beta'/2$, infinitely many labels satisfy
+\[
+ |G_m|\ge C|m|^{-K(h,\beta')},\qquad
+ K(h,\beta')=2+\max\left\{0,\frac{4h-\beta'}{\beta'-2h}\right\},
+\]
+where $C>0$. In particular $\rho=0$ for $\beta=\infty$ as well.
+\end{theorem}
+\begin{proof}
+On infinitely many scales $b_n\ge\beta'$,~\eqref{eq:continuity} gives $\epsilon_{q_n}\le C_1e^{-\beta'q_n/2}$. Equation~\eqref{eq:Markov} implies $s_{q_n}\ge c_he^{-hq_n}$. Thus $M_n\ge c e^{(\beta'/2-h)q_n}\to\infty$. The label supplied by~\eqref{eq:pigeonhole} obeys
+\[
+ |G_m|\ge c e^{(\beta'/2-2h)q_n}|m|^{-2},
+ \qquad |m|\ge c e^{(\beta'/2-h)q_n}.
+\]
+If $\beta'<4h$, substitute the upper bound on $q_n$ from the second inequality into the negative exponential in the first. Otherwise discard the nonnegative exponential. This proves the formula. For $\beta=\infty$ choose any $\beta'>4h$ and obtain exponent two with a constant. The bounded spectral diameter proves $\rho\ge0$, as before.
+\end{proof}
+
+\begin{proposition}[Even denominators and small excess]\label{prop:even}
+Let $\beta_e$ be the limsup of $b_n$ along indices with even $q_n$, with value zero if this set is finite. If $\beta_e>L$, then for every $L<\beta'<\beta_e$, $L<h<\beta'$ and $\epsilon>0$, infinitely many labels satisfy
+\[
+ |G_m|\ge C_\epsilon
+ |m|^{-2-\max\{0,(2h-\beta')/(\beta'-h)\}-\epsilon}.
+\]
+The same conclusion, and hence $\rho=0$, holds with $\beta$ in place of $\beta_e$ if a $\beta$-attaining subsequence has a rational gap with excess
+$\operatorname{ex}_n=|P_n(c_n)|-R_n=e^{o(q_n)}$.
+\end{proposition}
+\begin{proof}
+For even $q$, the central rational closure gives $P(0)=\sigma R$, $P'(0)=0$, with $\sigma=(-1)^{q/2}$. The closure is classical (Bellissard--Simon~\cite{BellissardSimon1982}); the polynomial value is also given by Lamoureux--Mingo~\cite{LamoureuxMingo2007}. Paper~C~\cite[Corollary~7.2]{PaperC} fixes our normalization. The initial branch from zero to the point $E_4>0$ where $\sigma P(E_4)=R-4$ lies in $\cU$. The near-spectrum derivative bound of Paper~A, Proposition~3.3(2), applies on it eventually. If $K=\sup|P''|\le Cq^2e^{hq}$, then
+\[
+ 4=R-\sigma P(E_4)\le KE_4^2/2,\qquad
+ s_q\ge2E_4\ge cq^{-1}e^{-hq/2}.
+\]
+Apply Proposition~\ref{prop:capped} with $\epsilon_q\le C e^{-\beta'q/2}$. This gives
+\[
+ M\ge cq^{-1}e^{(\beta'-h)q/2},\qquad
+ |G_m|\ge cq^{-2}e^{(\beta'/2-h)q}|m|^{-2}.
+\]
+The same power conversion as above gives the assertion; powers of $q=O(\log|m|)$ are absorbed by the arbitrary $\epsilon$.
+
+For the excess variant first put the critical point in the derivative domain. If the rational gap has length $w$ and diameter bound $D_0=4+4\lambda$, real-root factorization gives
+\[
+ (\log|P|)''=-\sum_j(E-e_j)^{-2}\le-q/D_0^2.
+\]
+Integrating to the more distant endpoint shows
+\[
+ \frac{qw^2}{8D_0^2}\le\log(1+\operatorname{ex}/R)
+ \le\operatorname{ex}/R.
+\]
+Thus $w\to0$ exponentially when $\operatorname{ex}=e^{o(q)}$. The gap and its critical point are near $\Sig$ by~\eqref{eq:continuity}. On an adjacent end piece the bound $|P''|\le K$ is therefore valid. If $v=|P'(x)|$, reaching $P'(c)=0$ takes distance at least $v/K$. Integrating $v-Kt$ along that segment gives
+\[
+ |P'(x)|^2\le2K(|P(c)|-|P(x)|)
+          \le2K(\operatorname{ex}+4).
+\]
+The inverse-derivative integral then yields $s_q\ge4/\sqrt{2K(\operatorname{ex}+4)}=e^{-(h/2+o(1))q}$. The previous argument applies on the stipulated same resonant subsequence.
+\end{proof}
+
+These are sufficient conditions. No converse estimate on the actual surplus is established here. Nor does this proof identify the individual labels of rational campaign gaps with their minimal rational representatives at an irrational frequency. If a rational gap has width $w>2\epsilon_q$, its central core lies in an irrational gap of width between $w-2\epsilon_q$ and $w+2\epsilon_q$. This is an absolute width statement about the containing gap. It does not, by itself, identify its exact integer label.
+
+\label{end:surplus}

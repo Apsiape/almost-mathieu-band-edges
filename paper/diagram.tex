@@ -1,0 +1,108 @@
+\section{The arithmetic picture and certified finite checks}\label{sec:diagram}
+\subsection{A phase diagram with phase conditions}
+Put $x=2\beta/L$. Denote the upper Abel-averaged fastest exponent at phase $\theta$ by $\alpha_u^+(\theta)$ and its supremum over phases by $\alpha_{\rm worst}$. Paper~C also defines an exponent uniform over launch sites, $\alpha_u^{\rm unif}$, which bounds that supremum. These quantities agree in the exact-law regime specified below.
+
+The typical fastest exponent and the two packing dimensions of every nonzero spectral measure are $\max\{0,1-2/x\}$ at almost every phase, by Paper~A~\cite[Theorems~A and C]{PaperA}; the value is zero at $x=0$. The packing entries concern spectral measures, not the packing dimension of the spectral set. At $\beta=\infty$ these values are one at every phase. Paper~A gives the finite-positive-$\beta$ law used here. Its $\beta=\infty$ transport and packing endpoint is due to Jitomirskaya--Zhang~\cite[Corollary~3]{JZ2022}, and its $\beta=0$ fastest endpoint to Damanik--Tcheremchantsev~\cite{DT2007}. Paper~A sharpens earlier packing estimates of Jitomirskaya--Liu--Tcheremchantsev~\cite{JLT2025}. The typical transport framework for general supercritical type~I operators is developed in Paper~B~\cite{PaperB}.
+
+Table~\ref{tab:phase} keeps the phase quantifiers visible. ``AL'' means Anderson localization and ``SC'' purely singular continuous spectrum. Completely resonant phases satisfy $2\theta\in\alpha\Z+\Z$. The phase $1/4$ is not completely resonant for irrational $\alpha$.
+
+\begin{table}[ht]
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.08\linewidth}>{\raggedright\arraybackslash}p{.23\linewidth}>{\raggedright\arraybackslash}p{.26\linewidth}>{\raggedright\arraybackslash}p{.23\linewidth}>{\raggedright\arraybackslash}p{.12\linewidth}@{}}
+\toprule
+$x$ & Spectral type at a.e. phase & Specified exceptional phases & $\alpha_{\rm worst}$ & $\rho$\\
+\midrule
+$0$ & AL & AL at completely resonant phases; SC at a dense set of other phases & $0$ & $1$ if $\alpha$ is Diophantine\\[3pt]
+$(0,1)$ & AL & AL at completely resonant phases & $[0,x/(x+2)]$ & Open; conjecture $1-x$\\[3pt]
+$1$ & AL & No equality-line classification from the cited strict criterion & $[0,1/3]$ & Open\\[3pt]
+$(1,2)$ & AL & SC at $1/4$ if $\beta_e=\beta$ & $[1-1/x,x/(x+2)]$ if $\beta_e=\beta$ & $0$\\[3pt]
+$2$ & Not classified by the strict arithmetic transition & SC at $1/4$ if $\beta_e=\beta$ & $1/2$ if $\beta_e=\beta$ & $0$\\[3pt]
+$(2,\infty)$ & SC at every phase & Same all-phase statement & $1-1/x$ if $\beta_e=\beta$ & $0$\\[3pt]
+$\infty$ & SC at every phase & Same all-phase statement & $1$ & $0$\\
+\bottomrule
+\end{tabular}
+\caption{Established statements and explicit open entries. Every bracket in the transport column is a pair of proved bounds. The gap column uses Theorems~\ref{thm:polynomial} and~\ref{thm:measure}. No exact gap law is asserted at $x=1$.}\label{tab:phase}
+\end{table}
+
+The a.e.-phase AL and all-phase SC statements use Avila--You--Zhou~\cite[Theorem~1.1]{AYZ2017} for $0<\beta<\infty$, with strict inequalities at $L=\beta$. The endpoint spectral-type assertions at $x=0$ and $x=\infty$ use the classical endpoint results recalled in Avila--You--Zhou (Remark~1.2 of arXiv:1512.03124). Liu~\cite[Theorem~1.1]{Liu2022} proves completely resonant AL for $L>2\beta$. At $1/4$, even $q_n$ imply a phase resonance at $q_n/2$ with error $|\delta_n|/2$; its exponent is at least $2\beta_e$. The absence-of-point-spectrum part of Jitomirskaya--Liu~\cite[Theorem~4.2 and the remark after Theorem~1.1]{JLphase} therefore gives SC when $L<2\beta_e$. Its localization half has additional frequency hypotheses; we do not use that half for this entry.
+
+The transport bounds are from Paper~C, Theorem~7.5 and Corollaries~5.6 and~7.6. The phase-$1/4$ lower bound uses even denominators and $\beta_e$, not even indices. Without $\beta_e=\beta$, retain that lower bound with $\beta_e$ and the typical all-phase lower bound separately. The exact worst-phase formula is then not supplied by these imports. A conditional parity-free mechanism in Paper~C requires its own wide-band hypothesis; it is not a consequence of the gap theorem here.
+
+At a finite scale,
+\begin{equation}\label{eq:finitecross}
+ \frac{\log\kappa_n}{Lq_n}
+ =1-\frac{2b_n}{L}+\frac{2\log(2\pi q_n)}{Lq_n}.
+\end{equation}
+Thus $x=1$ does not force $\kappa_n=O(1)$. Fixed margins on either side of one give exponential smallness or largeness along the corresponding scales. The logarithmic correction matters at the equality line.
+
+\subsection{The known transport geometry}
+For even $q$, put $\sigma=(-1)^{q/2}$ and let $0<\eta\le1/4$. In one period of the local phase drift, the launch set
+\[
+ \left|\cos2\pi(q\theta+j\delta)-\sigma\right|
+                     \le\eta\Lambda^{-1}/16
+\]
+has cardinality $q\sqrt{\eta/(2\kappa)}(1+O(\Lambda^{-1}))+O(1)$. This is the quadratic turning-point width divided by the mesh $|\delta|$. Its logarithm has rate $(b-L/2)q$ only when the main count diverges. Continuous window length is not an exact test for occupancy by one lattice cell.
+
+Paper~C's nearby-phase burst theorem applies with its scale condition $b\ge h/2+(h-L)$ and time interval $e^{(h/2+(h-L))q}\le T\le|\delta|^{-1}$. It gives a polynomially small fastest tail. At the resonant time its radius has exponent $b-h/2$, approaching the preceding geometric exponent as $h\downarrow L$.
+
+The confinement estimate of Paper~C, Proposition~6.4, is a uniform square-root upper bound on a cosine sublevel arc, plus its collars. At a generic phase a particular arc can be narrower. In Paper~A's notation $J_n=3+C_hq^{5/2}e^{hq}|\delta|$ is greater than three; it is $3+o(1)$ on $b\ge L+\gamma$ if $h-L<\gamma$. Alternatively $\|S^q+S^{-q}+R_q\|\le3$ eventually there. These bounds match the turning-point exponential radius. Below $b=L$, the coarse norm bound permits a larger confinement upper bound; it does not prove that this enlargement is attained by the dynamics.
+
+\subsection{What the numerical checks certify}\label{sec:numerics}
+All numbers in this subsection are inherited from the independent verification reports D77 and D80. They are interval certificates or exact finite-matrix counts. We do not rerun those campaigns here. No number is used in a proof.
+
+For the Mathieu gaps $G_D(\kappa)$ of Appendix~\ref{app:mathieu}, D77 encloses a crossing $G_1=2G_2$ in
+\[
+ \kappa_*\in[1.4260784738\mathbin{\pm}6.60\cdot10^{-11}].
+\]
+This certifies a crossing, not global uniqueness. Ten independent checks of the rational phase-union prediction give the intervals in Table~\ref{tab:collapse}. Here the parent is $p/q$, $A$ is the following continued-fraction coefficient in the verified family, $w$ is the measured rational width, and $P'$ is the parent derivative at the measured location. This tests widths conditional on locations.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rrrrl@{}}
+\toprule
+Parent & $\lambda$ & $A$ & $|m|$ & Enclosure of $\log(w|P'|/G_D)$\\
+\midrule
+$2/3$ &5&699&3&$[0.0001979253,0.0001979254]$\\
+$3/5$ &5&2000&10&$[0.0000162096,0.0000162097]$\\
+$3/5$ &2&600&15&$[-0.0005267205,-0.0005267204]$\\
+$8/13$&5&385&78&$[0.0039697174,0.0039697175]$\\
+$8/13$&2&77&52&$[0.0172042988,0.0172042989]$\\
+$5/8$ &2&200&16&$[0.0003463309,0.0003463310]$\\
+$3/5$ &5&60&15&$[0.0091106244,0.0091106245]$\\
+$2/3$ &5&69&3&$[0.0034522615,0.0034522616]$\\
+$8/13$&2&385&13&$[0.0005374229,0.0005374230]$\\
+$2/3$ &5&149&6&$[0.0008759784,0.0008759785]$\\
+\bottomrule
+\end{tabular}
+\caption{Certified finite rational Mathieu collapse from D77, Section~5. There are ten cases and eight distinct integer labels. These data do not prove an irrational gap law.}\label{tab:collapse}
+\end{table}
+
+D80 tests the translated construction itself on boxes containing several wells. All three cases have parent $5/13$. Case G uses $\lambda=2$, $\theta=0.0377$, $\hbar=0.1$ and three wells. H uses the same coupling and phase, $\hbar=0.005$ and two wells. OOS was registered before its independent measurement: $\lambda=3$, $\theta=0.0193$, $\hbar=0.1$ and three wells. The arithmetic uses $\delta=\hbar/(2\pi q\lambda^{q/2})$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}llcl@{}}
+\toprule
+Case & Inclusive box & Counts for $D=1,\ldots,6$ & Maximum level error\\
+\midrule
+G & $[731,222520]$ & $3,6,9,12,15,18$ & $[0,0.000282844609]$\\
+H & $[14638,2971820]$ & $2,4,6,8,10,12$ & $[0,0.000314943324]$\\
+OOS & $[256912,3351000]$ & $3,6,9,12,15,18$ & $[0,0.000013630460]$\\
+\bottomrule
+\end{tabular}
+\caption{D80 finite-box certificates. Errors are in units of $2\hbar/P_*'$ after the common dipole shift. Each row includes three interior fractions of each counting window and midpoint counts after moving both ends by $-1000$ or $+1000$ sites.}\label{tab:globalchecks}
+\end{table}
+
+The ground-cluster projector assigns each translated anchor class the per-well share
+\[
+\begin{split}
+ \text{G: }&[0.9558209196836182962179037231977
+                 \mathbin{\pm}1.93\cdot10^{-32}],\\
+ \text{OOS: }&[0.98136338757751036956774744137
+                 \mathbin{\pm}3.53\cdot10^{-30}].
+\end{split}
+\]
+The tables and the display above report the independent certificates, including the corrected cluster-projector weights. The original single-eigenvector weight prediction, residual-growth prediction and factor-30 switch prediction for the ratio of a gap to the derivative proxy TP1 failed; TP1 is not a measured transport exponent. At $q=21$ and $\lambda=5$, the literal TP1 interval also failed, and the full original gap-switch calculation remains uncertified. These finite checks do not establish asymptotic complementarity. The accompanying Numerical Record, \S\S1--3, preserves the registrations, their certified comparison intervals, the corrected projector interpretation and the still uncomputed full-period test.
+
+\label{end:diagram}
