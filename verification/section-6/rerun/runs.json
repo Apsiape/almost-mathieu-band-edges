@@ -1,0 +1,268 @@
+[
+  {
+    "label": "original_0",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "0",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 1.108647
+  },
+  {
+    "label": "original_1",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "1",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.86884
+  },
+  {
+    "label": "original_2",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "2",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.9416
+  },
+  {
+    "label": "original_3",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "3",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.920504
+  },
+  {
+    "label": "original_4",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "4",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 1.394262
+  },
+  {
+    "label": "original_5",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "original",
+      "5",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 1.372652
+  },
+  {
+    "label": "oos_0",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify.py",
+      "oos",
+      "0",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.93147
+  },
+  {
+    "label": "oos_1",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify.py",
+      "oos",
+      "1",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.896982
+  },
+  {
+    "label": "oos_2",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify.py",
+      "oos",
+      "2",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.958965
+  },
+  {
+    "label": "oos_3",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify.py",
+      "oos",
+      "3",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": ".",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.939542
+  },
+  {
+    "label": "coarse_0",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "oos",
+      "0",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": "coarse",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.923178
+  },
+  {
+    "label": "coarse_1",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "oos",
+      "1",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": "coarse",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.907848
+  },
+  {
+    "label": "coarse_2",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "oos",
+      "2",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": "coarse",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.935986
+  },
+  {
+    "label": "coarse_3",
+    "command": [
+      "python",
+      "-u",
+      "-B",
+      "code/certify_coarse.py",
+      "oos",
+      "3",
+      "--replay-bracket"
+    ],
+    "working_directory": "section-6",
+    "output_subdirectory": "coarse",
+    "timeout_seconds": 1200,
+    "threads": 1,
+    "status": "completed",
+    "exit_code": 0,
+    "seconds": 0.927025
+  }
+]

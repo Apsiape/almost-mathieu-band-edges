@@ -14,7 +14,7 @@ Table~\ref{tab:phase} keeps the phase quantifiers visible. ``AL'' means Anderson
 $x$ & Spectral type at a.e. phase & Specified exceptional phases & $\alpha_{\rm worst}$ & $\rho$\\
 \midrule
 $0$ & AL & AL at completely resonant phases; SC at a dense set of other phases & $0$ & $1$ if $\alpha$ is Diophantine\\[3pt]
-$(0,1)$ & AL & AL at completely resonant phases & $[0,x/(x+2)]$ & Open; conjecture $1-x$\\[3pt]
+$(0,1)$ & AL & AL at completely resonant phases & $[0,x/(x+2)]$ & $[0,1-x]$; $\rho\ge1/C$ if $x\le2/C$\\[3pt]
 $1$ & AL & No equality-line classification from the cited strict criterion & $[0,1/3]$ & Open\\[3pt]
 $(1,2)$ & AL & SC at $1/4$ if $\beta_e=\beta$ & $[1-1/x,x/(x+2)]$ if $\beta_e=\beta$ & $0$\\[3pt]
 $2$ & Not classified by the strict arithmetic transition & SC at $1/4$ if $\beta_e=\beta$ & $1/2$ if $\beta_e=\beta$ & $0$\\[3pt]
@@ -22,7 +22,7 @@ $(2,\infty)$ & SC at every phase & Same all-phase statement & $1-1/x$ if $\beta_
 $\infty$ & SC at every phase & Same all-phase statement & $1$ & $0$\\
 \bottomrule
 \end{tabular}
-\caption{Established statements and explicit open entries. Every bracket in the transport column is a pair of proved bounds. The gap column uses Theorems~\ref{thm:polynomial} and~\ref{thm:measure}. No exact gap law is asserted at $x=1$.}\label{tab:phase}
+\caption{Established statements and explicit open entries. Every bracket in the transport column is a pair of proved bounds. The gap column uses Theorems~\ref{thm:below}, \ref{thm:polynomial} and~\ref{thm:measure}, and Corollary~\ref{cor:bracket}. No exact gap law is asserted at $x=1$.}\label{tab:phase}
 \end{table}
 
 The a.e.-phase AL and all-phase SC statements use Avila--You--Zhou~\cite[Theorem~1.1]{AYZ2017} for $0<\beta<\infty$, with strict inequalities at $L=\beta$. The endpoint spectral-type assertions at $x=0$ and $x=\infty$ use the classical endpoint results recalled in Avila--You--Zhou (Remark~1.2 of arXiv:1512.03124). Liu~\cite[Theorem~1.1]{Liu2022} proves completely resonant AL for $L>2\beta$. At $1/4$, even $q_n$ imply a phase resonance at $q_n/2$ with error $|\delta_n|/2$; its exponent is at least $2\beta_e$. The absence-of-point-spectrum part of Jitomirskaya--Liu~\cite[Theorem~4.2 and the remark after Theorem~1.1]{JLphase} therefore gives SC when $L<2\beta_e$. Its localization half has additional frequency hypotheses; we do not use that half for this entry.
@@ -105,4 +105,5 @@ The ground-cluster projector assigns each translated anchor class the per-well s
 \]
 The tables and the display above report the independent certificates, including the corrected cluster-projector weights. The original single-eigenvector weight prediction, residual-growth prediction and factor-30 switch prediction for the ratio of a gap to the derivative proxy TP1 failed; TP1 is not a measured transport exponent. At $q=21$ and $\lambda=5$, the literal TP1 interval also failed, and the full original gap-switch calculation remains uncertified. These finite checks do not establish asymptotic complementarity. The accompanying Numerical Record, \S\S1--3, preserves the registrations, their certified comparison intervals, the corrected projector interpretation and the still uncomputed full-period test.
 
+\input{below-numerics}
 \label{end:diagram}

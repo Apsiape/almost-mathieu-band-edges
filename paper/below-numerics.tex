@@ -1,0 +1,38 @@
+\subsection{New finite certificates below the threshold}\label{sec:below-numerics}
+The three new independent checking campaigns certify finite rational widths, finite rounded-span Green columns, and finite rounded-span complementary spectra. These are different experiments. They do not certify exact infinite-support Wannier functions or an irrational asymptotic theorem. The accompanying Numerical Record, \S\S4--6, gives the fuller intervals and preserves failed registrations. No new computation was used to produce the intervals printed here.
+
+The rational-width campaign independently certified 19 of 64 submitted widths and four registered out-of-sample widths. The latter use $\lambda=5$, parent $p/q=13/21$, and extensions
+$(13A+8)/(21A+13)$. Their certified fibre counts are $D$ above the centre, fixing rational IDS $1-D/(21A+13)$.
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}rrl@{}}
+\toprule
+$A$&$D$&Outward enclosure of $\log(\text{rational gap width})$\\
+\midrule
+20&2&$[-68.974899318838,-68.974899318837]$\\
+20&3&$[-101.720353379131,-101.720353379130]$\\
+40&2&$[-67.646792273466,-67.646792273465]$\\
+40&3&$[-99.079273854345,-99.079273854344]$\\
+\bottomrule
+\end{tabular}
+\caption{Finite rational certificates at the two registered $D$ values. They are not irrational-transfer certificates.}\label{tab:belowwidthchecks}
+\end{table}
+
+For the continuation experiment define the finite-span statistic
+\[
+ \rho_c=\frac{E_*-\sup\sigma(Q_IH_IQ_I|_{\Ran Q_I})}{m_0}.
+\]
+The exact dyadic frame coefficients define the tested span.
+At $\lambda=5$, parent $13/21$, offset $y=3/10$, the independently certified enclosures are
+\[
+\begin{array}{ccl}
+ b&\text{family}&\rho_c\\
+ .28&\text{continued and box}&[66.310252694963,66.323516071840]\\
+ .33&\text{continued and box}&[49.271919945713,49.281775315240].
+\end{array}
+\]
+Each family was certified separately; the repeated enclosure does not assert exact equality of their spectra. Every case also passed the strict test $\rho_c>1.000001$. Here the numerical clamp is the specified $C^1$ cubic clamp, whereas the analytic construction uses a fixed $C^\infty$ clamp.
+
+The Green-column campaign independently certified six original rounded-span boxes and two new ones. It measures a cell-boundary tail-rate statistic, rather than the full infinite-volume Schur norm. Its exact window convention and all eight outward intervals are in Numerical Record \S5.
+
+The rational $D=5$ slope registration within $0.25$ of $2(D-1)$ failed in its tested family. The universal corrected-increment residual bound $0.0061$ was also too small; a certified value has magnitude greater than $0.006597244239$. The safe original-sample bound is $0.00660$. In the continuation campaign the original universal no-twofold-drop and finite-$q$ continued/box agreement predictions failed in some preasymptotic cases. The later registered out-of-sample bands passed. These successes do not retroactively change failed registrations and no finite sample proves a limiting constant.

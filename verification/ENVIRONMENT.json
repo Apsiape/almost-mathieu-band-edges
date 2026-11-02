@@ -1,0 +1,9 @@
+{
+  "python": "3.13.12",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "python_flint": "0.9.0",
+  "FLINT": "3.6.0",
+  "threads": 1,
+  "timeout_seconds_per_process": 1200
+}

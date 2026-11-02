@@ -1,0 +1,224 @@
+\section{Complementary Green decay and a genuine one-well continuation}\label{app:below-resolvent}
+This appendix proves the complementary inverse used below the threshold. The rational inputs are Lemmas~\ref{lem:complexgrowth}--\ref{lem:strip}; the raw orbitals and exact translated coordinates are those of Appendix~\ref{app:frames}. The proof of Lemma~\ref{lem:complement} supplies the form exclusion and its support-sensitive Bessel sum. No semiclassical quantization input from Appendix~\ref{app:mathieu} is used here.
+
+\subsection{Range, constants and weighted algebra}
+Fix $0<\xi\le L/4$, $\tau=\xi/100$, and a convergent with
+\[
+ b\ge4\xi,\quad d=|\delta|=e^{-bq},\quad \epsilon=\delta/q,\quad
+ s=L-\xi,\quad a=L-4\tau.
+\]
+For this appendix there is no upper bound on $b$. Use the slack convention~\eqref{eq:slack} after counting all derivatives and products. Constants below may depend on $\lambda,\xi$, never on a well, offset, box position or number of wells. As in Section~\ref{sec:methods}, $\EE$ denotes a fixed polynomial times an arbitrarily small fixed exponential loss.
+
+\begin{lemma}[The one-band inputs in the enlarged range]\label{lem:belowrange}
+The coordinate, Wannier, Gram and raw-compression statements of Appendix~\ref{app:frames} hold when $b\ge4\xi$, with the same forms of their estimates. Lemma~\ref{lem:complement} and its forbidden-end box version also hold in this range.
+\end{lemma}
+\begin{proof}
+The top-band contour and the anchored rational orbitals are independent of $\delta$. The translated-coordinate identity is exact. In the Gram proof, the same-well phase difference is $n\delta$ and the interwell distance is at least $1/(3d)$. Thus its geometric sums require only exponentially small $d$ and $qt_{\rm fr}\to0$, not $b>L/2$. The same observation applies to the potential Taylor formula and raw compression. Their displayed errors are retained, rather than divided by the small-curvature spacing $\hbar$.
+
+For the complement proof, $\ell_c=\lceil(qd)^{-1/2}\rceil$ satisfies
+$\ell_c d=o(t_{\rm fr})$ and $\ell_c q=o(d^{-1})$. Keep both support factors in~\eqref{eq:supportBessel}. The drift, IMS and joint Bessel errors are respectively bounded by
+\[
+ C\sqrt{d/q},\qquad Cd/q,\qquad \EE d/q.
+\]
+By~\eqref{eq:m0}, $m_0\ge\exp(-\xi q/2-o(q))$. In particular the drift-to-$m_0$ ratio is
+$\exp(-(b/2-\xi/2)q+o(q))=o(1)$. It is $b>\xi$ with slack that is needed here. All three errors are $o(m_0)$ for $b\ge4\xi$. The forbidden-midpoint geometry is unchanged. This proves the asserted extension directly from the stated proofs. No extension of a transport or all-band theorem is involved.
+\end{proof}
+
+For kernels on physical sites define
+\[
+ \|K\|_s=\max\left\{\sup_x\sum_y|K(x,y)|e^{s|x-y|},
+                       \sup_y\sum_x|K(x,y)|e^{s|x-y|}\right\}.
+\]
+The first-moment norm $\|K\|_{s,1}$ inserts $1+|x-y|$ in both sums. Both are submultiplicative. A Lipschitz weight $\omega$ of slope at most $s$ gives
+$\|e^\omega K e^{-\omega}\|\le\|K\|_s$.
+
+We will also use a rectangular synthesis bound. If distinct integer centres $c$ carry $|g_c(x)|\le G e^{-a|x-c|}$ and
+$|C_{cc'}|\le C e^{-\varrho|c-c'|}$, then, for $s<\min(a,\varrho)$ and $a-s\le1$,
+\begin{equation}\label{eq:belowsynthesis}
+ \left\|\sum_{c,c'}C_{cc'}|g_c\rangle\langle g_{c'}|\right\|_s
+ \le\frac{27CG^2}{(a-s)^2\min\{1,\varrho-s\}}.
+\end{equation}
+Indeed the rectangular orbital kernel and its adjoint each cost at most $3G/(a-s)$; the centre kernel costs at most $3C/\min\{1,\varrho-s\}$. Multiplying the three Schur bounds proves the formula. First moments cost further fixed powers of the strict slope gaps. The two orbital denominators must both be retained.
+
+Put $M'=\Lambda e^{-\xi q/2}$ and
+\[
+ \mathcal R=\{z\in\C:|z-E_*|\le m_0/4\},\qquad
+ g(\phi)=2\Lambda-c(\phi),\qquad R=2\Lambda+2.
+\]
+The root-isolation product in Lemma~\ref{lem:contour} gives, after enlarging $q_0$,
+$|P(z)-R|\le 1.01P_*'m_0/4$ on $\mathcal R$.
+
+\subsection{Frozen references, including partial frames}
+Here are the four frozen estimates needed in the patch construction.
+
+First, the contour and complex Bloch strip extend to $g(\phi)\le R/(32q)$ by reducing the strip by $\log4$. In the proof of Lemma~\ref{lem:contour}, the phase term then costs at most $R/(32q)+2$, leaving a strict contour margin. Write $K_q'=\EE$ for the enlarged fibre-resolvent bound. Riesz calculus and contour shifting in the uniform Bloch gauge give
+\begin{equation}\label{eq:belowF1}
+ \|(z-B_\phi)^{-1}(1-\Pi_\phi)\|_s+\|\Pi_\phi\|_s\le\EE.
+\end{equation}
+The reduced resolvent is analytic even if $z$ meets the top band, since that band is removed. The fibre entry multiplied by its Bloch factor is periodic; it is this integrand that is shifted.
+
+Second, if also $g(\phi)\ge M'/2$, choose $s_0=L-3\xi/4$. On $|\operatorname{Im}k|\le s_0q$,
+\[
+ |P(z)-P(E_\phi(k))|
+ \ge g(\phi)+2-2\cosh(s_0q)-|P(z)-R|\ge c\,g(\phi).
+\]
+The joining segment remains in the root-isolation disc, where
+$|P'|\le e^{1/4}P_*'$. Hence
+$|z-E_\phi(k)|\ge c\,g(\phi)/P_*'$. Splitting off the top-band Riesz term gives
+\begin{equation}\label{eq:belowF2}
+ \|(z-B_\phi)^{-1}\|_s
+ \le C_\xi K_q'\left(1+\frac{rP_*'}{g(\phi)}\right)
+ \le \exp(\xi q/2+o(q)).
+\end{equation}
+The strict strip margin is $s_0-s=\xi/4$. At $g\asymp M'$ the actual edge Floquet rate is $L-\xi/2+O(1/q)$. A rate such as $L-5\tau$ is unavailable there. The prefactor in~\eqref{eq:belowF2} pays for the small energy denominator.
+
+Third, if $g(\phi)\ge R/(64q)$, the monodromy argument of Lemma~\ref{lem:green} applies with multiplier at least $\Lambda/(128q)$. Its inside-cell propagation and angle bound give
+\begin{equation}\label{eq:belowF3}
+ |(z-B_\phi)^{-1}(x,x')|
+ \le\EE\exp\left(-\left(L-\frac{\log(128q)}q\right)|x-x'|\right).
+\end{equation}
+The reverse direction at complex energy uses transpose symmetry.
+
+Fourth, a partial top-band frame needs a compressed inverse, not rows deleted from a full inverse. Let $T_t=(\widehat E_{n-m}(t))_{m,n\in\Z}$ be the top-band Laurent matrix. For $g(t)\ge M'/2$, convexity gives
+$\widehat E_0(t)\le E_*-g(t)/P_*'$, so that
+\[
+ \operatorname{Re}(z-\widehat E_0(t))\ge cM'/P_*'.
+\]
+At cell slope $\varrho_c=(L-7\xi/8)q$, the off-diagonal Schur norm divided by this diagonal bound is at most
+\[
+ Cq\,\frac{rP_*'}{\Lambda}
+           e^{-(3\xi/8-\tau)q}=o(1).
+\]
+This follows from~\eqref{eq:bandFourier} and $rP_*'\le\Lambda\EE$.
+Every compression to a subset $\mathcal M\subset\Z$ preserves the bound. The diagonal Neumann series therefore proves
+\begin{equation}\label{eq:belowF4}
+ |((z-T_t)_{\mathcal M}^{-1})_{mn}|
+ \le C\frac{P_*'}{M'}e^{-\varrho_c|m-n|}.
+\end{equation}
+Lifting by~\eqref{eq:belowsynthesis} gives a physical-site norm at slope $s$ of at most $\exp(\xi q/2+o(q))$.
+
+\subsection{The full-frame parametrix}
+\begin{lemma}[Full complementary Green decay]\label{lem:globalS}
+Let $\Pi$ be the full global translated-frame projection and $Q=1-\Pi$. For every $z\in\mathcal R$,
+\[
+ Y(z)=Q(z-H)Q+\Pi
+\]
+is invertible, and, with $G(z)=Y(z)^{-1}-\Pi$,
+\begin{equation}\label{eq:belowS}
+ \|Y^{-1}\|_s+\|G\|_s\le A,\qquad
+ A=C_{\lambda,\xi}q^{C_{\lambda,\xi}}
+       e^{(\xi/2+C_{\lambda,\xi}(h-L))q}.
+\end{equation}
+Increasing this constant once, for each fixed $k\ge0$,
+$\|\partial_z^kG\|_s\le k!A^{k+1}$. The real-energy forbidden-midpoint box version holds with the same form of constants.
+\end{lemma}
+\begin{proof}
+Use the squared partition in Lemma~\ref{lem:complement}, with patches of length $O(\ell_cq)$, overlap at most three and first differences $O((\ell_cq)^{-1})$. Enlarge each patch by a fixed multiple of $\ell_cq$. It meets the frame of at most one well. The phase variation on it is $O(\sqrt{d/q})=o(t_{\rm fr})$.
+
+On an interior patch freeze the full top-band projection; its complementary inverse is~\eqref{eq:belowF1}. On a patch meeting a hard frame edge freeze the retained interval of the top-band frame. This partial projection $\Pi'_a$ need not commute with $B_a$. It is a subprojection of the invariant full top-band projection $\Pi_a$, however. The complement splits exactly into the lower bands and the compression of the top-band Laurent matrix to the omitted indices. Their inverses are~\eqref{eq:belowF1} and~\eqref{eq:belowF4}; include $\Pi'_a$ on the retained subspace. On a patch with no nearby frame, the phase is at least $t_{\rm fr}-O(\sqrt{d/q})$ from the phase lattice. Use~\eqref{eq:belowF2} or~\eqref{eq:belowF3}. Thus the frozen operators
+\[
+ Y_a=(1-P_a)(z-B_a)(1-P_a)+P_a
+\]
+have two-sided inverses $R_a$ with
+$\sup_a\|R_a\|_s\le \exp(\xi q/2+o(q))$.
+
+We record the projection mismatch to justify using a nonlocal $\Pi$.
+The Gram proof in Lemma~\ref{lem:Gram}, now with the frame weight
+$e^{(L-5\tau)q|j-j'|}$, gives a same-well row and column sum
+$d\,e^{-\tau q/2}$ after absorbing the geometric moments. Cross-well terms are smaller than $e^{-c/d}$. The binomial series for $\Gamma^{-1/2}$ and the Neumann series for $\Gamma^{-1}$ converge in that algebra. Synthesis with both denominators in~\eqref{eq:belowsynthesis} gives a projection kernel and its first moment bounded by $\EE$.
+
+For a frozen patch centred at $c_a$, the difference between a raw vector at $c_a+mq$ and its frozen reference has envelope
+\[
+ |m\delta|\EE e^{-a|x-c_a-mq|}.
+\]
+On the enlarged patch use
+$|m|\le |x-c_a-mq|/q+C\ell_c$ before summation. This costs at most $\EE\sqrt{d/q}$, including its first moment. Missing interior reference vectors and other wells have tails $e^{-c\ell_cq}$ after the strict slope loss. The Gram nonlocal part has the same required bound. Therefore, on each fattened patch $N_a^+$,
+\[
+ \|\un_{N_a^+}(\Pi-P_a)\|_s+
+ \|(\Pi-P_a)\un_{N_a^+}\|_s\le\EE\sqrt{d/q}.
+\]
+The frozen potential drift obeys
+$|H(x,x)-B_a(x,x)|\le C|\epsilon||x-c_a|$, or the same formula with the patch centre. Its unbounded distance factor is absorbed by the first projection moment.
+
+For clarity the exact difference identity, with
+$D_a=H-B_a$ and $\Delta_a=\Pi-P_a$, is
+\begin{equation}\label{eq:belowmismatch}
+ Y-Y_a=-(1-P_a)D_a(1-P_a)
+ -\Delta_a(z-H)Q-(1-P_a)(z-H)\Delta_a+\Delta_a.
+\end{equation}
+Both occurrences in the last compression terms contain $H$.
+Nearest-neighbour locality permits a one-site enlargement in the mixed term; the remaining far part has the extra frozen projection tail. The preceding estimates prove
+\[
+ \|Y\|_{s,1}\le\EE,\qquad
+ \|\chi_a(Y-Y_a)\|_s+\|(Y-Y_a)\chi_a\|_s\le\EE\sqrt{d/q}.
+\]
+
+Set $R_0=\sum_a\chi_aR_a\chi_a$. Direct multiplication gives
+\[
+\begin{split}
+ YR_0-1&=\sum_a\chi_a(Y-Y_a)R_a\chi_a
+                  +\sum_a[Y,\chi_a]R_a\chi_a,\\
+ R_0Y-1&=\sum_a\chi_aR_a(Y-Y_a)\chi_a
+                  +\sum_a\chi_aR_a[\chi_a,Y].
+\end{split}
+\]
+For the commutator sums use
+$\sum_a|\chi_a(x)-\chi_a(x')|\le C|x-x'|/(\ell_cq)$.
+Bounded overlap and the first moment give, for both residuals,
+\[
+ \|YR_0-1\|_s+\|R_0Y-1\|_s
+ \le\exp(\xi q/2+o(q))\sqrt{d/q}
+ =\exp(-(b/2-\xi/2)q+o(q))<1.
+\]
+Choose the individual residual bounds below $1/2$. The two Neumann inversions close in the Schur algebra and give a common inverse. On $\Ran Q$, $G=(z-QHQ)^{-1}$; on $\Ran\Pi$ it vanishes. Consequently
+$\partial_z^kG=(-1)^kk!G^{k+1}$.
+
+For a forbidden-end box, interior truncations have stronger exponential tails. At an end the frozen far-phase operator lies strictly below real $z$. The inverse of $z-B_a$ is entrywise nonnegative, and its Dirichlet half-line inverse is bounded by the full-line inverse: the heat-kernel path expansion simply kills paths leaving the interval. This proves the required frozen bound at the end. The same two residual estimates close with fixed enlarged constants, independently of box length. This positivity argument is used only for real energy.
+\end{proof}
+
+\subsection{A clamped physical phase}
+Fix an odd $C^\infty$ function $\Psi$ with
+\[
+ \Psi(v)=v\ (|v|\le1/4),\qquad 0\le\Psi'\le1,\qquad
+ \Psi(v)=3/8\ (v\ge .45).
+\]
+Such a function exists by choosing its smooth nonnegative derivative on $[1/4,.45]$ with integral $1/8$, equal to one near the left end and zero near the right. Put $\psi(u)=\Psi(qu)/q$ and define
+\begin{equation}\label{eq:continuation}
+ (H_y^cf)(m)=f(m+1)+f(m-1)
+ +v\!\left(mp/q+\psi(\epsilon(m-qy))\right)f(m).
+\end{equation}
+Retain exactly
+\[
+ J(y)=\{j:|\delta(j-y)|\le t_{\rm fr}\},\quad
+ W_y e_j=S^{jq}w_{\delta(j-y)},\quad
+ \Gamma_y=W_y^*W_y,\quad \Pi_y=W_y\Gamma_y^{-1}W_y^*.
+\]
+Let $Q_y=1-\Pi_y$. The operator agrees with the true affine local chart for
+$|m-qy|\le1/(4d)$. The retained centres have distance at most
+$qt_{\rm fr}/d=o(d^{-1})$ from $qy$. Outside the agreement interval the frozen local phase has distance at least $1/(4q)$ from $q^{-1}\Z$, hence $g\ge2\Lambda$. The two far tails are exactly periodic, at frozen phases $\pm3/(8q)$. Translation and reflection give
+\begin{equation}\label{eq:belowcovphysical}
+ H^c_{y+1}=S^qH^c_yS^{-q},\qquad
+ \mathcal RH^c_y\mathcal R=H^c_{-y},
+\end{equation}
+and the same identities for the frame projections. The physical operator is smooth in $y$; only $J(y)$ has events.
+
+\begin{lemma}[The continued complement, Lemma $S^c$]\label{lem:Sc}
+For every $y\in\R$ and $z\in\mathcal R$,
+\[
+ Y_y^c=Q_y(z-H_y^c)Q_y+\Pi_y
+\]
+is invertible. Its inverse and $G_y^c=(Y_y^c)^{-1}-\Pi_y$ satisfy~\eqref{eq:belowS} uniformly in $y$. For real energy,
+$Q_yH_y^cQ_y\le(E_*-m_0)Q_y$.
+\end{lemma}
+\begin{proof}
+Apply the preceding parametrix with the same patches. Interior and edge patches meeting the frame lie wholly in the agreement interval. All frozen references are unchanged. Outside that interval the phase is far from the phase lattice and uses~\eqref{eq:belowF3}. Inside it there is only the phase component about zero, so the no-nearby-frame classification is unchanged. The global drift estimate follows from the $1$-Lipschitz property of $\psi$:
+\[
+ |H_y^c(x,x)-B_{\phi_a}(x,x)|\le C|\epsilon||x-x_a|,
+\]
+with the analogous anchor formula on near-frame patches. It remains valid off the patch and thus controls the first moments in~\eqref{eq:belowmismatch}. Same-well Gram and missing-frame terms are identical; there are no other-well terms. Both parametrix residuals therefore have the same small bounds.
+
+For the form inequality, use Lemma~\ref{lem:belowrange}'s patch proof. All inside-frame cells meeting an interior patch are retained. Every other patch is at phase distance at least $t_{\rm fr}/3$ from the phase lattice; the clamped region is farther away. Keep the joint Bessel support factors. The three errors are still $o(m_0)$.
+
+The periodic far tails explain why a one-well inverse is possible: their essential spectra lie at least $c\Lambda/P_*'$ below $E_*$. One cannot obtain this conclusion by retaining a finite frame while leaving the unmodified irrational operator on the entire line. That modification would be finite rank at the compression level and would leave remote physical wells in its essential spectrum. Here the physical operator itself has been continued before it is compressed.
+\end{proof}
+\label{end:below-resolvent}

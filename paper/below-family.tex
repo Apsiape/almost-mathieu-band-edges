@@ -1,0 +1,333 @@
+\section{The common Feshbach family and its corrected estimates}\label{app:below-family}
+For the remainder of the below-threshold proof restrict to
+\begin{equation}\label{eq:belowregime}
+ 4\xi\le b\le L/2-\eta,\qquad \eta>0.
+\end{equation}
+All constants are uniform in this range, after fixing $\lambda,\xi,\eta$.
+Set $T=t_{\rm fr}/d$, so $J(y)=\Z\cap[y-T,y+T]$.
+In this appendix $X$ denotes a self-energy matrix; the position operator occurs only inside the already defined dipole $s(t)$.
+
+\subsection{The pencil and its common centre}
+Let $C_y=\Gamma_y^{-1/2}$, $\widetilde W_y=W_yC_y$, and
+\[
+ z_j=Q_yH_y^c\widetilde W_y e_j,\qquad
+ X_y(E)_{jj'}=\langle z_j,G_y^c(E)z_{j'}\rangle.
+\]
+For real $E\in\mathcal R$ define the Hermitian Feshbach matrix
+\[
+ F_y^c(E)=\widetilde W_y^*H_y^c\widetilde W_y+X_y(E).
+\]
+For complex energy the entries continue analytically in $E$ with the real orbitals fixed. Lemma~\ref{lem:Sc} makes this a genuine family.
+
+Put
+\begin{equation}\label{eq:belowpencil}
+\begin{split}
+ E_{\rm ref}&=E_*+s(0),\qquad e=P_*'(E_{\rm ref}-E),\\
+ A_y(e)&=P_*'(E_{\rm ref}-F_y^c(E)),\qquad c(e)=A_0(e)_{00},\\
+ u&=e-c(e),\qquad h(y,u)=A_y(e(u))-c(e(u)).
+\end{split}
+\end{equation}
+The invertibility of $e\mapsto u$ is proved below. The exact pencil identity is
+\begin{equation}\label{eq:belowpencilidentity}
+ h(y,u)-u=A_y(e)-e=P_*'(E-F_y^c(E)).
+\end{equation}
+The full common constant is subtracted, including the band average, the exact potential remainder, the Loewdin correction and the self-energy at offset zero.
+
+Covariance~\eqref{eq:belowcovphysical} carries the Gram matrix, its inverse square root, the sources and the complementary inverse to their shifted counterparts. Therefore
+\begin{equation}\label{eq:belowcov}
+ F_{y+1}^c(E)_{j+1,j'+1}=F_y^c(E)_{jj'},\qquad
+ h(y+1,u)_{j+1,j'+1}=h(y,u)_{jj'}.
+\end{equation}
+Its diagonal is one function $U(j-y,u)$, with $U(0,u)=0$. Reflection makes $U$ even. The common centre is exact, rather than a separately chosen energy for each translated well.
+
+\subsection{Quantitative locality with nonlocal projections}
+\begin{lemma}[Local comparison]\label{lem:belowlocality}
+Let $H_i$ be bounded self-adjoint nearest-neighbour operators on $\ell^2(\Z)$, with off-diagonal entries of modulus at most one, allowing zero entries and Dirichlet direct sums, and let $P_i$ be orthogonal projections. Suppose
+$Y_i=Q_i(z-H_i)Q_i+P_i$ are invertible with
+$\|Y_i^{-1}\|_s\le A$, $\|P_i\|_s\le A_P$.
+Let $K$ be a site set, $\rho\ge2$, $0<\sigma\le s/2$, and
+\[
+ \omega(x)=\sigma\bigl(\rho-\min\{\dist(x,K),\rho\}\bigr).
+\]
+Assume $D=H_1-H_2$ has both endpoints of its entries at distance at least $\rho-1$ from $K$, $\|D\|\le C_D$, and
+$\|e^\omega(P_1-P_2)e^\omega\|\le C_\Delta$.
+Then
+\[
+ \|\un_K(Y_1^{-1}-Y_2^{-1})\un_K\|
+ \le C e^{-2\sigma\rho+2\sigma}A^2(1+A_P)^2
+       (1+|z|+\|H_1\|+\|H_2\|)(C_D+C_\Delta).
+\]
+For $G_i=Y_i^{-1}-P_i$, add $e^{-2\sigma\rho}C_\Delta$.
+\end{lemma}
+\begin{proof}
+Write $\Delta=P_1-P_2$ and $B_1=z-H_1$. Direct expansion gives
+\begin{equation}\label{eq:belowlocalidentity}
+ Y_1-Y_2=-Q_2DQ_2-\Delta B_1Q_1-Q_2B_1\Delta+\Delta.
+\end{equation}
+In particular the third term contains $H_1$, not $H_2$.
+Use $Y_1^{-1}-Y_2^{-1}=-Y_1^{-1}(Y_1-Y_2)Y_2^{-1}$.
+Since $\omega=\sigma\rho$ on $K$, insert $e^\omega$ at both local ends and $e^{-\omega}$ at the adjoining inverse factors. This extracts $e^{-2\sigma\rho}$. Each conjugated inverse costs $A$. Since $\omega\le\sigma$ on the endpoints of $D$,
+$\|e^\omega D e^\omega\|\le e^{2\sigma}C_D$.
+Conjugated $Q_i$ cost $1+A_P$. Since $\omega$ is $\sigma$-Lipschitz and each nearest-neighbour entry has modulus at most one, every changed off-diagonal entry of $e^\omega H_ie^{-\omega}-H_i$ has modulus at most $e^\sigma-1$. Its absolute row and column sums are at most $2(e^\sigma-1)$, even when bonds are zero. The Schur bound gives
+$\|e^\omega H_ie^{-\omega}\|\le\|H_i\|+2(e^\sigma-1)$.
+The remaining terms use the assumed sandwich norm of $\Delta$.
+This proves the bound without asserting exact support for $Q_2DQ_2$.
+\end{proof}
+
+\begin{proposition}[Comparison with the true box]\label{prop:belowboxcompare}
+For a forbidden-midpoint box containing $K_0$ consecutive physical wells, let $F_I(E)$ be its full Feshbach matrix in the orthonormalized internal frame. For real $E\in\mathcal R$,
+\begin{equation}\label{eq:belowboxcompare}
+ \left\|F_I(E)-\bigoplus_{\nu\ {\rm in}\ I}F^c_{y_\nu}(E)\right\|_{\rm Schur}
+ \le2\exp\left(-\frac{s}{40d}\right).
+\end{equation}
+The row and column bounds are independent of $K_0$.
+\end{proposition}
+\begin{proof}
+Use the anchors and offsets in~\eqref{eq:anchors}--\eqref{eq:wellpositions}. For a selected well work in its translated chart, with
+\[
+ \sigma=s/8,\qquad r_K=1/(16d),\qquad \rho=1/(8d).
+\]
+Let $K$ be the $r_K$-neighbourhood of its frame centres.
+Embed the box as $H_1=H_I\oplus B_{\rm far}$ and $P_1=\Pi_I\oplus0$, where the two exterior Dirichlet half-lines are frozen at the continued far phases. They are frozen because the clamp saturates by $.45$, whereas the box ends are at distance $(.5-o(1))/d$ from this selected bottom. Their inverses at real $E$ are bounded by the positive full-line far-phase inverse, as in Lemma~\ref{lem:globalS}. Compare with $H_2=H_y^c$, $P_2=\Pi_y$. Both inverses have norm at most a fixed multiple of $A$. The internal bonds of both operators have modulus one and the two cut bonds of $H_1$ are zero, so both belong to the locality lemma's stated class.
+
+The potential difference begins at distance $1/(4d)$ from the selected bottom. Its distance from $K$ is at least $\rho-1$ for large $q$. Removed end bonds lie farther away. Also $\|H_1-H_2\|\le4\lambda+4$.
+
+We prove the projection hypothesis directly. Let $U$ be the selected raw well frame truncated to $I$, $V$ the raw vectors of all other wells, and
+$P_U=U(U^*U)^{-1}U^*$. With $V_0=(1-P_U)V$,
+\begin{equation}\label{eq:belowprojectiondecomp}
+ \Pi_I=P_U+V_0(V_0^*V_0)^{-1}V_0^*.
+\end{equation}
+The second Gram matrix is the Schur complement of the full raw Gram matrix and has a uniform positive lower bound. Every other-well centre lies at distance at least $.9/d$ from the selected bottom. At those centres $\omega=0$ and
+$\omega(x)\le\sigma|x-c_f|$. Rectangular synthesis at the stronger orbital slope shows
+$\|e^\omega V\|\le\EE$ and
+$\|e^\omega(1-P_U)e^{-\omega}\|\le1+\|P_U\|_\sigma$.
+Thus the sandwich norm of the second term of~\eqref{eq:belowprojectiondecomp} is bounded by $\EE$, uniformly in the number of wells. It is not claimed to be small: a nonzero other-well orthogonal projection has norm one.
+
+Replacing the truncated $U$ by its infinite selected-well frame changes its projection by at most $\exp(-.4a/d+O(q))$. Each centre lies at distance $(.5-o(1))/d$ from the nearest end. The maximum sandwich cost is
+$e^{2\sigma\rho}=\exp(s/(32d))$, so this difference remains decreasing doubly exponentially. Consequently $C_\Delta\le\EE$ in Lemma~\ref{lem:belowlocality}. The local inverse difference is at most
+\[
+ \exp\left(-\frac{s}{32d}+O(q)+o(q)\right).
+\]
+
+Changing the orthonormal bases uses an unweighted estimate. Raw cross-well overlaps, and box truncation tails, have row and column sums at most $e^{-c_a/d}$ for any fixed $c_a<a/3$. The convergent Gram inverse-square-root series is Lipschitz on their common neighbourhood of one. The selected full-box Loewdin columns and one-well Loewdin columns therefore differ in their summed norms by $e^{-c_a/d}$. A physical cross-well exponential weight would spend this overlap exponent and is unnecessary here.
+
+For source localization, use a bounded strong envelope of slope $a_0=L-10\tau>s$. It follows directly from the residual decomposition of Lemma~\ref{lem:coupling} and the projection synthesis, without a $d$ prefactor. Its tail outside $K$ is at most $e^{-a_0/(16d)+O(q)}$. Combine the local inverse estimate, source tails and unweighted basis change. Summing entries of a selected block costs at most $e^{Cq}$; the reserve between $s/32$ and $s/40$ absorbs it.
+
+Cross-well blocks have the same total bound by the strong source envelopes and the $s$-decaying inverse, since consecutive frames are separated by $(.9-o(1))/d$. Sum first over distinct integer centres and then over well separations. Both are geometric Schur sums, so there is no multiplication by $K_0$. This proves~\eqref{eq:belowboxcompare}.
+\end{proof}
+
+\subsection{Exact raw diagonal and differentiated Gram cancellation}
+Write $\mathcal U(t)=2\Lambda(1-\cos2\pi qt)$ and let $F$ be the scalar inverse function of Appendix~\ref{app:comparison}. Its curvature satisfies $f=\sup|F''|\le\EE/\Lambda$ and $F'(0)=1$. The band-average part of the raw rescaled diagonal is
+\[
+ \mathcal B(t)=\frac1{2\pi}\int_0^{2\pi}F(2-2\cos k+\mathcal U(t))\,dk.
+\]
+The exact mean-value formula is
+\begin{equation}\label{eq:belowbandaverage}
+ \mathcal B(t)-\mathcal B(0)
+ =\mathcal U(t)\frac1{2\pi}\int_0^{2\pi}\int_0^1
+ F'(2-2\cos k+r\mathcal U(t))\,dr\,dk.
+\end{equation}
+The relative error is $O(f(4+\mathcal U(t)))$; its derivative is obtained from this identity. In particular the common constant is $\mathcal B(0)$, not exactly $2$. The Taylor bound used here is
+$|F(w)-w|\le f|w|^2/2$, on its disc; ordered bounds are used only for real arguments. Since $fM'\le e^{-\xi q/2}\EE$ and
+\[
+ \mathcal U(\delta r)=\kappa r^2
+       \bigl(1+O((2\pi q\delta r)^2)\bigr),
+ \qquad (2\pi qt_{\rm fr})^2=e^{-\xi q/2},
+\]
+the value and first offset derivative have the required small relative errors up to the frame edge.
+
+The dipole $s(t)=\epsilon d(t)$ is even, with its first three fixed-order derivatives bounded by $\EE$ (Proposition~\ref{prop:compression}). Subtract $s(0)$ and use evenness before estimating. For the potential Taylor remainder retain the exact even function
+\begin{equation}\label{eq:belowexactTaylor}
+ D_\epsilon(t)=\int_0^1(1-r)\sum_m m^2w_t(m)^2
+          v''(mp/q+t+r\epsilon m)\,dr.
+\end{equation}
+The remainder is exactly $\epsilon^2D_\epsilon(t)$, not a quadratic truncation with a discarded cubic term. For $k\le2$,
+$|\partial_t^kD_\epsilon|\le\EE$, by the summable orbital moments.
+Reflection proves $D_\epsilon(-t)=D_\epsilon(t)$. After subtracting its value at zero, its rescaled contribution and first offset derivative are bounded by
+\[
+ CP_*'\epsilon^2\EE\delta^2r^2,\qquad
+ CP_*'\epsilon^2\EE\delta^2|r|.
+\]
+Dividing the coefficients by $\kappa$ leaves at most $d^2\EE$ times fixed polynomial factors.
+
+If $Z=C_y-1$ and $M=W_y^*H_y^cW_y$, the full Loewdin correction to its diagonal is
+\begin{equation}\label{eq:belowfullLoewdin}
+ (ZM+MZ+ZMZ)_{jj}
+ =2Z_{jj}M_{jj}+2\operatorname{Re}\sum_{g\ne j}Z_{jg}M_{gj}
+                         +(ZMZ)_{jj}.
+\end{equation}
+Although $\Gamma_{jj}=1$, $Z_{jj}$ need not vanish; its binomial series starts quadratically in $\Gamma-1$. The off-diagonal products have size
+$d\,e^{-2(L-C\tau)q}\EE$, with still smaller diagonal terms. Their fixed phase derivatives obey the same budgets by differentiating the convergent series. The clamp errors in all these raw formulas are doubly exponentially small.
+
+Here is the extra phase cancellation in that differentiation. For $n\ne0$,
+\[
+ O(t_1,t_2;n)=\langle w_{t_1},S^{nq}w_{t_2}\rangle,\qquad O(t,t;n)=0.
+\]
+Differentiate along the common phase direction first:
+$(\partial_1+\partial_2)^kO(t,t;n)=0$, $k=1,2$.
+Then a mean-value integral in the second variable gains $|n\delta|$.
+Each $y$ derivative contributes another $-\delta$. At any fixed slightly reduced frame slope $s'<a$ this gives
+\begin{equation}\label{eq:belowGramderivative}
+ \|\partial_y^k(\Gamma_y-1)\|_{\text{frame},s'}
+ \le d^{k+1}\EE,\qquad k=1,2.
+\end{equation}
+The diagonal derivatives vanish exactly. Functional calculus transfers these estimates to $C_y$; projection derivatives satisfy the weaker
+$\|\partial_y^k\Pi_y\|_s\le d^k\EE$.
+Differentiating $Y_y^c$ and its inverse consequently yields
+\[
+ \|\partial_yG_y^c\|_s\le dA^2\EE,\qquad
+ \|\partial_y^2G_y^c\|_s\le d^2A^3\EE.
+\]
+These derivatives are asserted between frame events.
+
+\subsection{Boundary sources with a sufficient spatial slope}
+The following exact cancellation is made before any differentiation.
+On a fixed-$J$ interval, choose a frozen coefficient matrix $T_y$ using only the retained coefficients. Then
+\[
+ H_y^cW_y=W_yT_y+R_{\rm in}+R_{\rm bd}+R_{\rm clamp},
+\]
+so
+\begin{equation}\label{eq:belowresidualcancel}
+ Q_yH_y^cW_yC_y
+       =Q_y(R_{\rm in}+R_{\rm bd}+R_{\rm clamp})C_y.
+\end{equation}
+Every derivative of the cancelled $W_yT_y$ term has disappeared.
+This includes all mixed projection and Loewdin derivatives.
+
+An omitted term in $R_{\rm bd}$ has its orbital centre at $(j+m)q$, outside the retained frame. Its Fourier coefficient has the factor $e^{-\eta'|m|}$. One must not multiply the full unweighted boundary norm by an additional original-centre spatial envelope. Instead take the conservative slope
+\begin{equation}\label{eq:belowslope}
+ t=L-b-3\tau>0.
+\end{equation}
+It is smaller than both $a$ and $s$. For each omitted $m\ne0$,
+\[
+ e^{-\eta'|m|}e^{-a|x-jq-mq|}
+ \le e^{-t|x-jq|}
+      e^{-(\eta'-tq)|m|}e^{-(a-t)|x-jq-mq|}.
+\]
+Here $\eta'-tq\ge(b+2\tau)q-O(\log q)$. Summing the missing translates gains $d$ with a fixed exponential reserve. Fixed frozen derivatives spend only the previously budgeted losses. The interior residual is $d$-small by Lemma~\ref{lem:coupling}; the clamp residual is doubly exponentially small at this smaller slope. The exact identity~\eqref{eq:belowresidualcancel}, including its differentiated $Q_y$ and $C_y$, therefore gives
+\begin{equation}\label{eq:belowsource}
+ |\partial_y^k z_j(x)|\le d^{k+1}\EE e^{-t|x-jq|},
+ \qquad k=0,1,2.
+\end{equation}
+An arbitrarily small further slope loss to absorb polynomial moments is included in the reserve $3\tau$. This bound is uniform at every retained cell, including edge cells. Boundary residuals are never declared to have finite support in the cell index.
+
+Weighted synthesis with~\eqref{eq:belowS} now proves, for $m\ge0$,
+\begin{align}
+ |X_{j,j+m}|&\le d^2A\EE e^{-tqm},\label{eq:belowX1}\\
+ |\partial_yX_{j,j+m}|&\le d^3A^2\EE e^{-tqm},\label{eq:belowX2}\\
+ |\partial_EX_{j,j+m}|&\le d^2A^2\EE e^{-tqm}.\label{eq:belowXE}
+\end{align}
+The second $y$ derivative has $d^4A^3\EE$ in the same envelope. In particular the nearest-neighbour derivative retains its spatial factor.
+
+Since $P_*'d^2=\kappa\EE$ up to fixed polynomial factors in the upper bounds, the long-hop comparison has exponent
+\[
+ P_*'|X_{j,j+m}|
+ \le\exp((L-2b+\xi/2+o(1))q-tqm).
+\]
+The strict margin is
+\begin{equation}\label{eq:belowhopmargin}
+ t-(L-2b)-\xi/2=b-3\tau-\xi/2>0.
+\end{equation}
+Thus for a sufficiently small positive $\gamma<\xi/2$, $m=1$ tends to zero and every $m\ge2$ is bounded by
+$(e^{-\gamma q}/\kappa)^{m-1}$ after enlarging the error constant.
+The derivatives have the extra factor $dA$. For the diagonal,
+\begin{equation}\label{eq:belowdiagonalderivative}
+ P_*'|\partial_yX_{jj}|
+ \le\kappa\,a_q,\qquad a_q=e^{-(b-\xi)q}\EE.
+\end{equation}
+
+The unweighted source norm also gives
+$\|\partial_EX_y\|\le d^2A^2\EE=o(1)$.
+In~\eqref{eq:belowpencil}, $\partial_e=-(P_*')^{-1}\partial_E$, so the rescaling cancels:
+\[
+ |c'(e)|\le d^2A^2\EE=o(1).
+\]
+The coordinate $e\mapsto u$ is bi-Lipschitz with constants $1+o(1)$, and
+\begin{equation}\label{eq:belowenergyLip}
+ \|h(y,u)-h(y,u')\|\le2d^2A^2\EE|u-u'|.
+\end{equation}
+The raw compression is independent of energy.
+
+\subsection{Events and the mean-value proof of the diagonal bound}
+The event set is $(\Z+T)\cup(\Z-T)$, with at most two events per half-open unit offset interval; coincident events are handled together. $H_y^c$ has no event.
+
+Fix an event $a$ and evaluate all raw orbitals and the smooth physical operator at $y=a$. Write $J_-=J(a-)$, $J_0=J(a)$ and $J_+=J(a+)$ for the limiting index sets. The assigned frame is the closed frame:
+\[
+ J_0=\Z\cap[a-T,a+T]=J_-\cup J_+.
+\]
+At an entering endpoint $J_-=J_0\setminus\{j_{\rm in}\}$ and $J_+=J_0$; at a leaving endpoint $J_-=J_0$ and $J_+=J_0\setminus\{j_{\rm out}\}$. If both events coincide, $J_-=J_0\setminus\{j_{\rm in}\}$ and $J_+=J_0\setminus\{j_{\rm out}\}$.
+Thus the comparison $J_-\to J_0\to J_+$ uses at most two rank-one changes, through the union frame. All changed cells are at the frame edges.
+
+For a nested addition $J_{\rm new}=J_{\rm old}\cup\{j_e\}$ let $w_e$ be the added raw orbital, $Q_{\rm old}=1-\Pi_{\rm old}$, and
+\[
+ v=\frac{Q_{\rm old}w_e}{\|Q_{\rm old}w_e\|},\qquad
+ \Pi_{\rm new}-\Pi_{\rm old}=|v\rangle\langle v|.
+\]
+The squared denominator is the scalar Schur complement of the old Gram matrix in the new one, hence is bounded below by the common positive Gram bound. Weighted Gram synthesis localizes $v$ about $j_eq$ at a strong orbital slope. In particular, for a local site set $K$ at physical distance $R$ from that centre, take the lemma's weight with $\rho$ a fixed fraction of $R$. Then
+$\|e^\omega v\|\le e^{Cq}$ and
+$\|e^\omega(\Pi_{\rm new}-\Pi_{\rm old})e^\omega\|
+=\|e^\omega v\|^2\le e^{Cq}$.
+Here the strong orbital decay pays for the weight toward $K$; no projection row is asserted to vanish.
+
+All endpoint variants have the same uniform Gram bounds. Their complementary inverse bounds follow either from Lemma~\ref{lem:Sc} for the closed frame or by taking the one-sided limits on a fixed index set; the bounds are uniform up to the endpoint. Thus Lemma~\ref{lem:belowlocality} applies to each nested comparison with $H_1=H_2=H_a^c$ and $D=0$. Its local inverse difference is at most $e^{-cR+Cq}$. Gram inverse-square-root calculus gives the same locality for the change of retained Loewdin columns: in the convergent Gram series, every difference term contains an overlap to the added edge cell, while the remaining factors have uniformly summable exponential kernels. Applying this to the raw compression and to both sources and the inverse in the self-energy gives, on common retained indices, a Feshbach entry change at minimum cell distance $r$ from the changed edge of at most
+\begin{equation}\label{eq:belowentryjump}
+ \exp(-c_0qr+O(q)),\qquad c_0>0.
+\end{equation}
+The same bound applies to the raw-compression change. It is uniform in the energy interval. Reversing a nested addition proves the removal estimate. At a simultaneous event apply it separately to $J_-\subset J_0$ and $J_+\subset J_0$; their sum controls both differences to the assigned value, rather than only the left-to-right difference. All these matrices are continuous in $E$ on each endpoint variant, by the uniform complementary inverse bound. The common bi-Lipschitz coordinate $E=E(u)$ therefore makes both event differences continuous in $u$.
+
+Let $\chi(r)=X^c_{-r}(E)_{00}$ for $|r|\le T$. Between events,
+$P_*'|\chi'(r)|\le\kappa a_q$.
+For $|r|\le T/2$, every event traversed from $0$ stays at cell distance at least $T/2-O(1)$ from cell zero. There are at most $2|r|+2$ events, each with at most two nested comparisons, so~\eqref{eq:belowentryjump} makes their event-inclusive total variation, even after multiplication by $P_*'$, smaller than every fixed exponential in $q$. This includes a terminal assigned event value.
+
+For $|r|>T/2$, use the crude uniform norm
+$|\chi|\le d^2A\EE$ for the left, assigned and right frames at each event. The total rescaled jump contribution is at most
+$C\kappa A\EE(|r|+1)$. Relative to $\eps_0\kappa r^2$ it is at most
+\[
+ \frac{CA\EE}{\eps_0T}.
+\]
+Choose, for example, $\gamma=\xi/3$ and
+\begin{equation}\label{eq:beloweps}
+ \eps_0=C\left(e^{-(b-\xi)q}\EE+e^{-\gamma q}
+                                      +d e^{10\tau q}\right).
+\end{equation}
+The preceding ratio tends to zero, since
+$A/T=\exp(-(b-3\xi/4)q+o(q))$ and $b\ge4\xi$.
+Integrating the derivative on the continuity intervals and adding these jump totals proves the full value estimate for $\chi(r)-\chi(0)$. No smooth approximant across the event lattice is assumed.
+
+Combine this with~\eqref{eq:belowbandaverage}--\eqref{eq:belowfullLoewdin}. The raw near-neighbour expansion of $F(2-2\cos k+\mathcal U)$ has coefficient $-1+O(f(4+\mathcal U))$; the Fourier remainder retains its full spatial decay. The raw long-hop upper bounds are
+\[
+ \EE(32q)^m\Lambda^{1-m}e^{\tau qm}
+       +d\EE e^{-(L-6\tau)q(m-1)},\qquad m\ge2,
+\]
+with the same offset derivative bounds after a strict phase-strip loss.
+For these derivatives the frozen transfer proof extends to a small complex phase neighbourhood: each inserted phase perturbation is $O(|\operatorname{Im}t|)$, the finite product expansion remains bounded when $q|\operatorname{Im}t|\to0$, and the root contour has a strict margin. Use bilinear continuation of real orbitals before conjugation. This is an extension of the proof of Lemma~\ref{lem:complexgrowth}, not a claim about the complex Lyapunov exponent.
+The raw bounds,~\eqref{eq:belowhopmargin} and the enlarged error~\eqref{eq:beloweps} imply
+\begin{align}
+ |U(r,u)-\kappa r^2|&\le\eps_0\kappa(1+r^2),\label{eq:belowA}\\
+ |\partial_rU(r,u)-2\kappa r|&\le\eps_0\kappa(1+|r|),\label{eq:belowAprime}\\
+ |h_{j,j+1}+1|+|\partial_yh_{j,j+1}|&\le\eps_0,\label{eq:belowB}\\
+ |h_{j,j+m}|+|\partial_yh_{j,j+m}|&\le(\eps_0/\kappa)^{m-1}
+                         \quad(m\ge2).\label{eq:belowC}
+\end{align}
+Enlarge $C$ once to cover sums and leave fixed reserves. Derivative assertions are between events. The raw diagonal jumps are deep-small by~\eqref{eq:belowentryjump}, and elsewhere its uniformly small Loewdin bound can be summed by the same crude argument. This completes the mean-value route to the full-frame diagonal estimate.
+
+It remains to control events after eliminating all but a resonant pair.
+For the chart near $y=D/2$, the pair $\{0,D\}$ stays at distance $T-O_D(1)$ from every changed edge cell. Use the three endpoint variants just constructed and the same energy coordinate. Their complement diagonal detunings, by~\eqref{eq:belowA}, are at least $c_D\kappa$. The Neumann walk expansion converges with cell weight $(\log\kappa)/2$: a weighted nearest step costs $O(\kappa^{-1/2})$, and~\eqref{eq:belowC} controls longer edges.
+
+For clarity, split each nested comparison at the common central cells of distance at most $T/2$ from the pair. Changes of entries wholly in this central set are $e^{-c qT+Cq}$ by~\eqref{eq:belowentryjump}, including the factor $P_*'$ in $h$. Changes involving an outer cell, or the added or removed edge cell, enter a pair Schur entry only through a walk reaching the outer set. The weighted expansion bounds the total of such walks by $e^{-c_D T\log\kappa+Cq}$. This covers the change of dimension as well as changes of the retained entries. Sums over central indices and the uniformly bounded inverses cost at most $e^{Cq}$, since $|J|=O(T)$ and $\log T=O(q)$. As $\log\kappa\ge(2\eta+o(1))q$, each nested comparison therefore changes the full pair Schur matrix by at most
+$B_q=e^{-c_DqT+Cq}$, after decreasing $c_D>0$ if necessary.
+
+Denote the pair Schur matrices of the left, assigned and right frames by $\mathcal F(a-,u)$, $\mathcal F(a,u)$ and $\mathcal F(a+,u)$. At each event the preceding two legs give
+\[
+ \|\mathcal F(a,u)-\mathcal F(a-,u)\|
+ +\|\mathcal F(a+,u)-\mathcal F(a,u)\|\le2B_q.
+\]
+At a single endpoint event one leg is zero. There are at most two events in a half-open unit chart, so their event-inclusive sum is at most $4B_q$. Define $\eps_{\rm jump}=2B_q$ and absorb this fixed factor and $e^{Cq}$ by reducing the positive constants. Then
+\begin{equation}\label{eq:belowJ}
+ \eps_{\rm jump}\le e^{-c_1qT}
+ \le\exp\!\left(-c_2e^{(b-\xi/4)q}\right)
+ \le\kappa^{-4D}
+\end{equation}
+for every fixed $D$ and large $q$. Here $qT=e^{(b-\xi/4)q}/(2\pi)$.
+There is no extra factor $q$ in the final double-exponential exponent. The endpoint matrices, their complement inverses and hence these two differences are continuous in $u$, since the detuning bound is uniform. This proves the full event-inclusive hypothesis, including the assigned closed-frame value and coincident events.
+\label{end:below-family}

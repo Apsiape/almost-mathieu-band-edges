@@ -1,0 +1,64 @@
+\section{Assembly, exact inertia and the irrational IDS}\label{app:below-assembly}
+We now prove Theorem~\ref{thm:below}. The only companion analytic estimates are Paper~A, Proposition~3.3(2), and Paper~B, Lemmas~2.4--2.5, with their extensions proved in Appendix~\ref{app:complex} and the frozen-phase argument of Appendix~\ref{app:below-family}. The rational one-band and translated-frame inputs are explicitly proved in Appendices~\ref{app:top}--\ref{app:frames} and Lemma~\ref{lem:belowrange}. The IDS passage and full-support argument are those of Appendix~\ref{app:global}. We use no statement about transport to prove a gap.
+
+Choose a subsequence with $b_n\to\beta$, let $\xi=\beta/8$, and choose $\eta>0$ with $\beta<L/2-2\eta$. Then~\eqref{eq:belowregime} holds eventually and
+\[
+ \kappa_n=(2\pi q_n)^2e^{(L-2b_n)q_n}\longrightarrow\infty.
+\]
+Fix $D$ first. Choose the constants of Theorem~\ref{thm:covariantmodel}, then the finite derivative/product slack $h-L$, and finally the large-$n$ threshold. Equations~\eqref{eq:belowcov}, \eqref{eq:belowA}--\eqref{eq:belowC}, \eqref{eq:belowenergyLip} and~\eqref{eq:belowJ} verify every model hypothesis for $I(y)=J(y)$ and the coordinate $u$ in~\eqref{eq:belowpencil}. The frame is long enough to contain all fixed intermediate sites.
+
+\subsection{The physical energy window really lies in the inverse disk}
+The common constant may contain a dipole shift of order $d\EE$. It must be retained in locating the energy window. The definition of $c(e)$, the raw identities and~\eqref{eq:belowX1} give the safe bound
+\begin{equation}\label{eq:belowlocation}
+ |E-E_*|\le d\EE+d^2A\EE+e^{-Lq}\EE+
+                                  C_D\kappa/P_*'.
+\end{equation}
+Here $|s(0)|\le d\EE$, the self-energy contributes $d^2A\EE$, the band-average constant contributes $(P_*')^{-1}\EE$, and $u=O_D(\kappa)$. Lemma~\ref{lem:convex} gives $P_*'\ge c_\lambda\Lambda$, so the last term is at most $C_Dq^2d^2$. All four terms are $o(m_0)$ because $b\ge4\xi$, $A=e^{\xi q/2+o(q)}$ and $m_0\ge e^{-\xi q/2-o(q)}$. The whole relevant $u$ neighbourhood therefore pulls back into $|E-E_*|<m_0/4$, where the constructed family and its derivatives exist. Equivalently one may define the family first on this pulled-back neighbourhood and apply the bi-Lipschitz map;~\eqref{eq:belowlocation} leaves a strict margin at its ends.
+
+The model theorem supplies $W$ of half-width
+$w\ge(3/16)A_D\kappa^{1-D}$. On its middle half the spectral margin of $h(y,u)-u$ is at least $(1-\eps_0)w/2$, uniformly in $y$. By~\eqref{eq:belowpencilidentity}, the corresponding $F_y^c(E)-E$ margin is that amount divided by $P_*'$. The map from $u$ to $E$ has metric factor $(1+o(1))/P_*'$. Determinant nonvanishing alone would not supply this uniform perturbation margin.
+
+\subsection{The exact finite-box count}
+For each forbidden-midpoint box $I$ with $K$ consecutive wells, Lemma~\ref{lem:belowrange} places the entire box complement below $E_*-m_0<E$. Proposition~\ref{prop:belowboxcompare} bounds the TOTAL Schur error between $F_I(E)$ and the direct sum of the continued well matrices by
+$2e^{-s/(40d)}$. This is much smaller than $w/P_*'$ for fixed $D$. Weyl's inequality therefore preserves exactly $DK$ positive eigenvalues of $F_I(E)-E$ on a slightly smaller common window.
+
+For completeness, in a finite box the block factorization of $H_I-E$ gives a congruence to
+\[
+ \bigl(F_I(E)-E\bigr)\oplus\bigl(Q_IH_IQ_I-E\bigr).
+\]
+Indeed eliminating the lower block yields
+$\Pi_IH_I\Pi_I-E+
+ \Pi_IH_IQ_I(E-Q_IH_IQ_I)^{-1}Q_IH_I\Pi_I$,
+which is $F_I(E)-E$. The second congruent block is strictly negative.
+Finite-dimensional Schur inertia consequently gives
+\begin{equation}\label{eq:belowexactcount}
+ \#\{\operatorname{eig}H_I>E\}=DK
+\end{equation}
+exactly. We use no identity between infinite positive inertias and divide no residual counting error by the volume.
+
+At this fixed convergent, let $K\to\infty$. Equation~\eqref{eq:boxlength} gives $|I|=K/d+O(1)$. The moving-interval IDS limit proved in Appendix~\ref{app:global} applies to these boxes: finite trace moments have a uniformly bounded boundary error, and irrational unique ergodicity is uniform in the starting site. Hence~\eqref{eq:belowexactcount} gives
+\[
+ 1-N(E)=Dd
+\]
+on the same open energy interval. Full support of the DOS, proved there for the minimal continuous family, identifies it as a spectral gap. For $Dd<1$ its label is
+\[
+ m=-Dq\sgn\delta,\qquad
+ \{m\alpha\}=\{-D\sgn\delta\,(p+\delta)\}=1-Dd.
+\]
+The window length and the bi-Lipschitz pullback give, after shrinking once more,
+\[
+ |G_{-Dq\sgn\delta}|\ge c_D\kappa^{1-D}/P_*'.
+\]
+For example $c_D=A_D/1000$ is smaller than all the preceding reserves once $q$ is sufficiently large. This proves~\eqref{eq:belowwidth} with a constant depending only on $D$.
+
+\subsection{The exponential quotient and the order of limits}
+Paper~A's derivative bound, also Corollary~\ref{cor:derivatives}, gives
+$P_*'\le C_hq e^{hq}$ for every fixed $h>L$. Thus, for each fixed $D$ and every $\epsilon>0$, choose $h-L$ sufficiently small and then $q$ large. Since $\log\kappa=(L-2b)q+2\log(2\pi q)$, the width just proved implies
+\[
+ |G_{-Dq\sgn\delta}|
+ \ge\exp\left(-[(D-1)(L-2b)+L+\epsilon]q\right).
+\]
+Equivalently the exponent has an $o(1)$ remainder by diagonalizing the fixed-loss choices and their thresholds. This does not assume a polynomial upper bound on $P_*'/\Lambda$ and does not yield a two-sided $O(\log q/q)$ rate error. Lemma~\ref{lem:fixedD} now proves $\rho\le1-x$.
+
+All comparisons are at fixed $D$. First the beta-attaining convergent tends to infinity; the arbitrarily large choice of fixed $D$ is made only in the final scalar liminf argument. The proof gives no reverse bound $\rho\ge1-x$. Combining with the separately imported Liu--Shi theorem through~\eqref{eq:belowduality} gives exactly Corollary~\ref{cor:bracket}.
+\label{end:below-assembly}

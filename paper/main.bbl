@@ -101,6 +101,13 @@ David Damanik and Serguei Tcheremchantsev.
 \newblock \href {https://doi.org/10.1090/S0894-0347-06-00554-6}
   {\path{doi:10.1090/S0894-0347-06-00554-6}}.
 
+\bibitem{PaperDv1}
+Seth Douglas and Nidhal Mghirbi.
+\newblock Band edges of the almost {Mathieu} operator at {Liouville} scales.
+\newblock Preprint, version 1.0.0, Zenodo, 2026.
+\newblock \href {https://doi.org/10.5281/zenodo.23873797}
+  {\path{doi:10.5281/zenodo.23873797}}.
+
 \bibitem{PaperA}
 Seth Douglas and Nidhal Mghirbi.
 \newblock Exact transport and spectral dimensions for the almost {Mathieu}

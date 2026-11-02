@@ -1,0 +1,52 @@
+\section[The fixed-D reduction and the literature comparison]{The fixed-$D$ reduction and the literature comparison}\label{sec:below}
+The small-$\kappa$ comparison used above the threshold does not resolve the gaps needed here. In fact its relative coupling error in~\eqref{eq:errors2} grows like
+$\exp((L/2-b+\xi/2)q)\EE$ when $b<L/2$. We retain the self-energy as an operator and control its variation.
+
+\begin{lemma}[Fixed $D$ suffices]\label{lem:fixedD}
+Suppose $0<\beta<L/2$. If~\eqref{eq:belowexponential} holds for every fixed $D\ge1$ and every positive $\epsilon$, on a subsequence with $b_n\to\beta$, then $\rho\le1-2\beta/L$.
+\end{lemma}
+\begin{proof}
+Put $x_n=2b_n/L$ and $m_n=-Dq_n\sgn\delta_n$. The asserted bound gives
+\[
+ \frac{-\log|G_{m_n}|}{L|m_n|}
+ \le 1-x_n+\frac{x_n}{D}+\frac{\epsilon}{LD}.
+\]
+At fixed $D$, take $n\to\infty$ and then $\epsilon\downarrow0$. Thus
+$\rho\le1-x+x/D$. Now take arbitrarily large fixed $D$. No interchange of limits or growing-$D$ estimate is required.
+\end{proof}
+
+\subsection{What the proof must preserve}
+The nearest-neighbour path connecting cells $D$ apart has $D$ edges and $D-1$ intermediate denominators of size $\kappa$. Its coupling has order $\kappa^{1-D}$. A norm error tending to zero can still exceed it. The proof in Appendices~\ref{app:below-resolvent}--\ref{app:below-assembly} provides relative estimates instead.
+
+First a weighted inverse is constructed on the full complementary space, including patches crossing a hard frame edge. A clamped continuation gives the same inverse for a genuine one-well physical operator. Exact covariance fixes a single crossing centre in all charts. Differentiating an exact residual identity gives the small phase derivative of the self-energy, including boundary cells. A mean-value argument with controlled frame events then supplies the full quadratic diagonal estimate. Finally the common gap window has a uniform spectral margin. The comparison with each physical box uses a total row-and-column error independent of its number of wells.
+
+\subsection{Liu--Shi, duality and the overlapping scope}\label{sec:below-literature}
+Liu--Shi's Theorem~1.3 in arXiv:1708.01760v3~\cite{LiuShi2019} gives an absolute constant $C$ such that, for irrational $\alpha$ with $0\le\beta<\infty$ and $0<|\mu|\le e^{-C\beta}$,
+\[
+ |G_m(\mu)|\le|\mu|^{|m|/C}\qquad(|m|\ge m_*(\mu,\alpha)).
+\]
+Their Remark~1.4(4) says exactly:
+\begin{quote}
+We expect the optimal decay in (1.4) to be $C|\lambda|^{|m|}$.
+\end{quote}
+The coupling in that quotation is their subcritical coupling. The statement is an expectation of a sharper gap upper bound.
+
+In the hopping-one normalization, Aubry duality preserves the density of states after energy scaling:
+\begin{equation}\label{eq:belowduality}
+ N_\lambda(E)=N_{1/\lambda}(E/\lambda),\qquad
+ |G_m(\lambda)|=\lambda\,|G_m(1/\lambda)|.
+\end{equation}
+One way to see the first identity is to write the operator with the two magnetic-translation generators. Fourier interchange exchanges them and preserves their canonical trace. All density-of-states moments of $H_\lambda/\lambda$ and $H_{1/\lambda}$ agree. Their measures have compact support, so polynomial approximation proves equality of measures. The distribution functions agree by continuity. This supplies label preservation, rather than only spectrum scaling. Liu--Shi use $2$ times the rotation number for their labels; since $N=1-2\,\text{rotation number}$, their integer sign is reversed. Its absolute value is unchanged.
+
+With $\mu=1/\lambda$ their theorem therefore yields
+\[
+ |G_m(\lambda)|\le\lambda e^{-L|m|/C}
+ \quad\hbox{when }L\ge C\beta.
+\]
+Taking the normalized liminf proves $\rho\ge1/C$. Enlarge $C$ to at least four, which weakens neither its applicability here nor the conclusion. The overlap with Theorem~\ref{thm:below} is exactly
+\[
+ 0<\beta<L/2,\quad L\ge C\beta,
+ \qquad\hbox{equivalently}\qquad 0<x\le2/C.
+\]
+This proves Corollary~\ref{cor:bracket}. If the sharper bound expected in the quotation held throughout that scope, the same argument would give $\rho\ge1$. Our strict upper bound is contrary to that expectation on this overlap. The proved Liu--Shi bound remains compatible with our result. Neither their remark nor our theorem supplies the missing inequality $\rho\ge1-x$.
+\label{end:below}

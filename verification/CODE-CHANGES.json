@@ -1,0 +1,64 @@
+[
+  {
+    "section": 4,
+    "source_sha256": "8c0ae9eaf5b836add136357b180ca823bb67c7e2a5b700739fc12be627414e55",
+    "public_file": "section-4/code/certify.py",
+    "changes": [
+      "relative output directory",
+      "remove report append and Windows-only memory probe",
+      "public module description"
+    ]
+  },
+  {
+    "section": 5,
+    "source_sha256": "f11b42851f32faa8583ecdaf40aa20140089721d9fa7cd94a70a5b141c77eabd",
+    "public_file": "section-5/code/certify.py",
+    "changes": [
+      "relative input and output directories",
+      "selected original indices retained as dictionary keys",
+      "default uses archived exact out-of-sample frames; --generate-frame retains original builder",
+      "recheck nearest-binary64 delta/theta rounding for archived OOS inputs"
+    ]
+  },
+  {
+    "section": 5,
+    "source_sha256": "3c000338f4766542f1903bf02209e00fc12142fdabc6066a7431f7e930c98421",
+    "public_file": "section-5/code/certify_before_rounding_fix.py",
+    "changes": [
+      "relative input and output directories",
+      "selected original indices retained as dictionary keys",
+      "default uses archived exact out-of-sample frames; --generate-frame retains original builder"
+    ]
+  },
+  {
+    "section": 6,
+    "source_sha256": "93900edc44cca5342c96e2f2500cb22eb68d639a5c5785b14bacf1330af3e8db",
+    "public_file": "section-6/code/certify.py",
+    "changes": [
+      "relative input and output directories",
+      "default uses archived exact out-of-sample frames; --generate-frame retains original builder",
+      "explicit single FLINT thread",
+      "--replay-bracket recomputes certified inertia at the archived decimal endpoints; it does not infer them from the candidate eigensolver"
+    ]
+  },
+  {
+    "section": 6,
+    "source_sha256": "d67db982fa2d5e91fecdcd110660fa506ac14b8977ef9ef9db02f77b892567a3",
+    "public_file": "section-6/code/certify_coarse.py",
+    "changes": [
+      "relative input and output directories",
+      "default uses archived exact out-of-sample frames; --generate-frame retains original builder",
+      "explicit single FLINT thread",
+      "--replay-bracket recomputes certified inertia at the archived decimal endpoints; it does not infer them from the candidate eigensolver"
+    ]
+  },
+  {
+    "section": 4,
+    "source_sha256": "41b6d74c323dc7958389d57e7795b0d392209e25e73095eede6be0a721d90df7",
+    "public_file": "section-4/code/analyze.py",
+    "changes": [
+      "read regenerated outputs and write derived tables relative to folder",
+      "remove Windows memory probes and historical engine hash list"
+    ]
+  }
+]

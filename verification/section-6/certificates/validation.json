@@ -1,0 +1,18 @@
+{
+  "accepted_certificates": 10,
+  "original": 6,
+  "oos": 4,
+  "all_registered_oos_predictions_pass": true,
+  "pair_bounds": [
+    {
+      "b": ".28",
+      "absolute_difference_upper": "[0.0132633768770000000000000000000 +/- 1e-36]"
+    },
+    {
+      "b": ".33",
+      "absolute_difference_upper": "[0.00985536952700000000000000000000 +/- 1e-36]"
+    }
+  ],
+  "max_peak_working_set": 72171520,
+  "numerical_scope": "finite rounded spans and finite Dirichlet operators only"
+}

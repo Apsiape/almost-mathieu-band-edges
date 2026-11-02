@@ -1,0 +1,164 @@
+\section{A covariant deep-lattice gap theorem}\label{app:below-model}
+We state the finite-interval model with the covariance and event hypotheses that the preceding construction actually supplies. The constants are chosen at fixed $D$ before any asymptotic limit.
+
+\begin{theorem}[Common window at fixed $D$]\label{thm:covariantmodel}
+Fix an integer $D\ge1$. For each $y\in\R$ let $I(y)$ be a finite interval of integers, with
+$I(y+1)=I(y)+1$ and
+$\Z\cap[y-D-3,y+D+3]\subset I(y)$.
+Let $h(y,u)$ be Hermitian on $\ell^2(I(y))$, for
+\[
+ u\in\mathcal E_D=[\kappa D^2/4-\kappa/8,\,
+                         \kappa D^2/4+\kappa/8].
+\]
+Assume exact covariance $h(y+1,u)_{j+1,j'+1}=h(y,u)_{jj'}$ and the following bounds, uniformly in that energy interval:
+\begin{enumerate}
+\item The diagonal is $U(j-y,u)$, with
+$|U(r,u)-\kappa r^2|\le\eps_0\kappa(1+r^2)$ and
+$|\partial_rU(r,u)-2\kappa r|\le\eps_0\kappa(1+|r|)$.
+\item $|h_{j,j+1}+1|\le\eps_0$ and $|\partial_yh_{j,j+1}|\le\eps_0$.
+For $m\ge2$, both $|h_{j,j+m}|$ and $|\partial_yh_{j,j+m}|$ are at most $(\eps_0/\kappa)^{m-1}$.
+\item $\|h(y,u)-h(y,u')\|\le\eps_0|u-u'|$.
+\item Between a fixed set of at most two events per half-open unit interval in $y$, the entries are $C^1$ in $y$ and the preceding derivative bounds hold. Event locations do not depend on $u$. At each event $a$ the one-sided limits of the resonant-pair Schur complement $\mathcal F$ defined below exist, and its assigned value satisfies the event-inclusive budget, writing $\mathcal A$ for the events in the half-open unit chart:
+\[
+\begin{gathered}
+ \sum_{a\in\mathcal A}
+ \bigl(\|\mathcal F(a,u)-\mathcal F(a-,u)\|
+       +\|\mathcal F(a+,u)-\mathcal F(a,u)\|\bigr)
+ \le2\eps_{\rm jump},\\
+ \eps_{\rm jump}\le\kappa^{-4D}.
+\end{gathered}
+\]
+The bound is uniform in $u$, both event differences are continuous in $u$, and coincident endpoint changes are included in this same budget.
+\end{enumerate}
+Endpoint changes of $I(y)$ occur only at such events, away from the resonant pair.
+There are $K_D<\infty$ and $\eps_D>0$, depending only on $D$, such that if $\kappa\ge K_D$ and $\eps_0\le\eps_D$, a common window
+$W=[u_c-w,u_c+w]\subset\mathcal E_D$ satisfies
+\[
+ w\ge\frac3{16}A_D\kappa^{1-D},\qquad
+ A_D=2^{-D}[4(D+2)^2]^{-(D-1)}.
+\]
+For every $y$ and $u\in W$, $h(y,u)-u$ is invertible with exactly $D$ negative eigenvalues. On the middle half of $W$, its spectral distance from zero is at least $(1-\eps_0)w/2$.
+\end{theorem}
+\begin{proof}
+Covariance reduces all offsets to one chart
+$y=D/2+r$, $|r|\le1/2$, with the same energy coordinate.
+The resonant pair is $P=\{0,D\}$; let $C=I(y)\setminus P$.
+
+\emph{Complement and inertia.}
+For $\eps_0\le c/(D+4)^2$, every diagonal detuning in $C$ has modulus at least $\kappa/4$ (a smaller fixed constant would suffice). Exactly the $D-1$ intermediate sites have negative detuning. For intermediate $i$ the modulus is at most $4\kappa(D+2)^2$. The off-diagonal row sum is bounded by
+\[
+ 2(1+\eps_0)+2\frac{\eps_0/\kappa}{1-\eps_0/\kappa}.
+\]
+Diagonal Neumann inversion, with $\kappa$ large, gives
+$\|(h_{CC}-u)^{-1}\|\le8/\kappa$.
+The diagonal-to-full homotopy stays invertible, so the complement has exactly $D-1$ negative eigenvalues. More distant detunings grow quadratically; this will absorb their diagonal derivatives.
+
+The pair Schur complement is Hermitian:
+\[
+ \mathcal F=h_{PP}-u-h_{PC}(h_{CC}-u)^{-1}h_{CP}
+ =\begin{pmatrix}a_1-u&-T_0\\-\overline{T_0}&a_2-u\end{pmatrix}.
+\]
+No reality assumption on long hops is required.
+
+\emph{Relative tunnelling bound.}
+The unique shortest all-nearest-neighbour path from $0$ to $D$ has $D$ edges and $D-1$ intermediate denominators. Its magnitude $M_0$ is at least $A_D\kappa^{1-D}$. This includes $D=1$ with the empty product.
+
+To enumerate all other paths, let $\ell$ be total physical length and $r_0$ the number of edges. The path has $r_0-1$ denominators and $\ell-r_0$ powers of the long-hop parameter. Its absolute weight is at most
+\[
+ C^{r_0}\eps_0^{\ell-r_0}\kappa^{1-\ell}.
+\]
+The number of signed compositions at those parameters is at most
+$2^{r_0}\binom{\ell-1}{r_0-1}$.
+Every nonprincipal path with $\ell=D$ uses a long edge and gains an $\eps_0$ factor. Paths with $\ell>D$ have $\ell-D$ even and at least two; the all-nearest-neighbour backtracks gain $\kappa^{-2}$. The composition majorants are geometric for sufficiently large $\kappa$. Dividing their sum by $A_D\kappa^{1-D}$ gives a finite constant $B_D$ times $\eps_0+\kappa^{-2}$.
+Choose $\eps_0\le1/(16B_D)$, then $\kappa$ so large that $B_D\kappa^{-2}\le1/16$. After reserving another fixed factor,
+\begin{equation}\label{eq:belowtunnel}
+ |T_0|\ge\tfrac34 A_D\kappa^{1-D}.
+\end{equation}
+This is an absolute-error estimate relative to the main path and therefore also controls complex long-hop cancellations. Only coarse denominator constants were used on the whole energy window; no small relative detuning error there is asserted.
+
+\emph{The crossing at a common energy.}
+Put $d_0=(a_1-a_2)/2$ and $m_0^{\rm pair}=(a_1+a_2)/2-u$.
+Between events, differentiation of the Schur formula gives
+\begin{align*}
+ \partial_r d_0&=\kappa D+O_D(\eps_0\kappa+\kappa^{-1}),\\
+ \partial_r m_0^{\rm pair}&=2\kappa r+
+                                     O_D(\eps_0\kappa+\kappa^{-1}).
+\end{align*}
+The positive sign in the first formula follows already for the pure quadratic diagonal. In differentiating the complement inverse, a distant diagonal derivative is divided by two detunings; its quadratic growth makes the sum bounded independently of interval length. Hopping derivatives have the same summable walk bounds.
+
+If there were no events, strict monotonicity of $d_0$ would give one crossing $r_*(u)$, with
+$|r_*|=O_D(\eps_0+\kappa^{-2})$.
+Only Lipschitz dependence on $u$ is assumed. The Schur formula gives
+\[
+ a_i(u')-a_i(u)=O_D(\eps_0+\kappa^{-2})|u'-u|.
+\]
+Consequently the crossing displacement is at most
+$O_D(\eps_0+\kappa^{-2})|u'-u|/\kappa$, and the value of $m_0^{\rm pair}$ at that crossing changes by
+$-(u'-u)+O_D(\eps_0+\kappa^{-2})|u'-u|$.
+
+With events, put $J_a(u)=\mathcal F(a+,u)-\mathcal F(a-,u)$.
+On non-event points of the chart define
+\[
+ \widehat{\mathcal F}(r,u)
+ =\mathcal F(r,u)-\sum_{a<r}J_a(u),
+\]
+where event coordinates are translated by $y=D/2+r$.
+At an event use the continuous extension
+\[
+ \widehat{\mathcal F}(a,u)
+ =\mathcal F(a-,u)-\sum_{b<a}J_b(u).
+\]
+Indeed, the right limit subtracts the additional $J_a$ and equals the left limit. Moreover
+\[
+\begin{split}
+ \|\widehat{\mathcal F}(a,u)-\mathcal F(a,u)\|
+ &\le\sum_{b<a}\|J_b(u)\|
+           +\|\mathcal F(a-,u)-\mathcal F(a,u)\|\\
+ &\le2\eps_{\rm jump}.
+\end{split}
+\]
+At a non-event the same bound follows from
+$\|J_a\|\le\|\mathcal F(a+)-\mathcal F(a)\|
++\|\mathcal F(a)-\mathcal F(a-)\|$.
+Thus the auxiliary matrix is within $2\eps_{\rm jump}$ of the assigned matrix at every point, including a chart's assigned endpoint. Use half-open charts, assigning a boundary event to the chart that starts there.
+Its between-event derivatives are unchanged, its $d_0$ is strictly monotone, and its crossing is continuous in $u$: the event differences are continuous and the crossing derivative is bounded below by $c_D\kappa$.
+The preceding finite-difference energy bounds gain only an additive $O_D(\eps_{\rm jump})$ error; no small energy derivative of the jump matrix is needed. An intermediate-value argument across an
+$O_D(\eps_0\kappa+\kappa^{-1})$ neighbourhood of $\kappa D^2/4$ selects $u_c$ at which the actual crossing values satisfy
+$|m_0^{\rm pair}|\le C_D\eps_{\rm jump}$ and
+$|d_0|\le2\eps_{\rm jump}$.
+Continuity of the jump matrices in $u$ suffices for this argument.
+
+\emph{Determinant reserve.}
+Let $t_{\min}$ be the infimum of $|T_0|$ on the chart and the energy neighbourhood of radius $\kappa/16$ about $u_c$, and put $w=t_{\min}/4$. For small $\eps_0$ that neighbourhood lies in the previous coarse window. Equation~\eqref{eq:belowtunnel} gives the stated lower bound on $w$. A nearest-edge and complement bound also gives $t_{\min}\le C_D$, so $w$ is bounded independently of $\kappa$.
+
+Choose the dimensionless derivative-error constant $\zeta>0$ as small as needed, by decreasing $\eps_D$ and increasing $K_D$. For $|u-u_c|\le w$, write $\sigma=r-r_*(u)$. Integrating the derivatives on the continuity pieces and retaining the event errors gives
+\[
+\begin{split}
+ |d_0|&\ge(1-\zeta)\kappa D|\sigma|-C_D\eps_{\rm jump},\\
+ |m_0^{\rm pair}|&\le(1+\zeta)w+(1+\zeta)\kappa\sigma^2
+                    +\zeta\kappa|\sigma|+C_D\eps_{\rm jump}.
+\end{split}
+\]
+All mixed terms in the square are retained. In particular,
+\[
+ 2\zeta(1+\zeta)w\kappa|\sigma|
+ \le\zeta w^2+\zeta(1+\zeta)^2\kappa^2\sigma^2.
+\]
+The $w\sigma^2$ mixed term contributes $O_D(w/\kappa)$ to the coefficient of $\kappa^2\sigma^2$. The remaining square contributes
+$[(1+\zeta)|\sigma|+\zeta]^2$ to that coefficient.
+Since $|\sigma|\le1/2+O_D(\zeta)$, first choose $\zeta$ small and then $\kappa$ large. The coefficient is strictly less than $D^2(1-3\zeta)$ and is absorbed by the negative $d_0^2$ term. All event terms are bounded by $C_D\kappa\eps_{\rm jump}$. The pointwise comparison with $\widehat{\mathcal F}$ just proved includes the assigned event values, so these estimates and the following determinant bound hold there as well. Thus
+\[
+ (m_0^{\rm pair})^2-d_0^2
+ \le2w^2+C_D\kappa\eps_{\rm jump}\le3w^2.
+\]
+The last inequality uses $\eps_{\rm jump}\le\kappa^{-4D}$ and
+$w^2\ge c_D\kappa^{2-2D}$. Since $|T_0|\ge4w$,
+\[
+ \det\mathcal F=(m_0^{\rm pair})^2-d_0^2-|T_0|^2
+                    \le-13w^2<0.
+\]
+There is exactly one negative pair eigenvalue. Finite Hermitian Schur inertia adds the complement's $D-1$ negatives. Covariance transports the same $W$ to every chart.
+
+For the last assertion fix $y$. Min--max and energy Lipschitz continuity imply that each ordered eigenvalue of $h(y,u)-u$ decreases, in the finite-difference sense, at rates between $1-\eps_0$ and $1+\eps_0$. If its modulus at a middle-half point were less than $(1-\eps_0)w/2$, it would cross zero before the appropriate end of $W$, contradicting invertibility throughout $W$. This gives the uniform margin, independently of $|I(y)|$.
+\end{proof}
+\label{end:below-model}

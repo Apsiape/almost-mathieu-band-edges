@@ -1,13 +1,18 @@
 \section{Conjectures}\label{sec:conjectures}
 This section contains no further theorem. The global gap rate in~\eqref{eq:rho} must be distinguished from the ratio between adjacent satellites at one rational scale.
 
-\begin{conjecture}[The unresolved gap side]\label{conj:gap}
+
+\begin{conjecture}[The lower half of the gap law]\label{conj:gap}
 For $0<x=2\beta(\alpha)/L<1$,
 \[
- \rho(\lambda,\alpha)=1-x.
+ \rho(\lambda,\alpha)\ge1-x.
 \]
+Together with Theorem~\ref{thm:below}, this would give $\rho=1-x$.
 \end{conjecture}
-The perturbative Mathieu formula at fixed $D$ suggests this value. It does not prove it. For $\kappa\gg1$, the $D$-th model gap is of order $\kappa^{1-D}$, much smaller than an error $o(\sqrt\kappa)$ when $D\ge2$. Resolving these gaps needs relative tunnelling estimates. An exact global rate also needs control over all sufficiently large labels. A local ladder supplies neither requirement.
+The upper half is proved: for arbitrarily large fixed $D$, the common avoided-crossing window gives a lower bound on selected gap widths. The lower half remains open. It asks for upper bounds on every sufficiently large labelled gap. That requires a multiscale induction controlling all large labels, rather than only the subsequences $Dq_n$. We prove neither a two-sided fixed-$D$ asymptotic nor an $O(\log q_n/q_n)$ remainder for the normalized rate. The available bound on the Chambers-polynomial derivative,
+$P_n'(E_n)\le C_hq_n\exp(hq_n)$ for every fixed $h>L$,
+gives only an $o(1)$ exponential remainder; it supplies no polynomial bound on
+$P_n'(E_n)/\lambda^{q_n}$.
 
 \begin{conjecture}[The missing dynamical upper bound]\label{conj:transport}
 If $1<x<2$, then
@@ -26,7 +31,7 @@ The gap and worst-transport arithmetic laws are
 \]
 with the appropriate endpoint interpretations. Equivalently, the proposed functions satisfy $\alpha_{\rm worst}(x)=\rho(1/x)$.
 \end{conjecture}
-The vanishing gap half for $x>1$ is now a theorem. The other equalities remain open in the ranges described above. Below one, zero fastest exponent is a weaker conjecture than dynamical localization. Literal all-phase dynamical localization is false: Jitomirskaya--Simon~\cite{JSimon} give dense sets of phases with no point spectrum. In the supercritical regime these have SC spectrum, precluding dynamical localization.
+The vanishing gap half for $x>1$ and the upper gap half below one are theorems. The lower gap half below one, the equality line $x=1$, and the other equalities remain open in the ranges described above. Below one, zero fastest exponent is a weaker conjecture than dynamical localization. Literal all-phase dynamical localization is false: Jitomirskaya--Simon~\cite{JSimon} give dense sets of phases with no point spectrum. In the supercritical regime these have SC spectrum, precluding dynamical localization.
 
 A stronger quantitative ladder beyond the second cap of~\eqref{eq:Dcap} is another open problem. A proof would have to retain both the inverse-polynomial function and the cosine potential inside a uniform quantization theorem. We do not import a general perturbation-stable Harper theorem under the name of the Mathieu ladder. Such a theorem would have additional parameter-uniformity obligations.
 

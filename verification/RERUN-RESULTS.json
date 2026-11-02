@@ -1,0 +1,64 @@
+{
+  "4": {
+    "processes": 9,
+    "seconds": 13.860618,
+    "maximum_process_seconds": 2.310953,
+    "skipped": 0,
+    "status": "reproduced",
+    "widths": 23,
+    "original": 19,
+    "out_of_sample": 4,
+    "scientific_outputs": "exact JSON equality",
+    "smallest_original_log_width": [
+      "-71.272126200684",
+      "-71.272126200683"
+    ],
+    "failed_D5_slope": [
+      "7.610606702904",
+      "7.610606702905"
+    ],
+    "false_increment_bound": ".0061",
+    "safe_original_increment_bound": ".00660"
+  },
+  "5": {
+    "processes": 10,
+    "seconds": 11.798448,
+    "maximum_process_seconds": 1.992839,
+    "skipped": 0,
+    "status": "reproduced",
+    "accepted_certificates": 8,
+    "original": 6,
+    "out_of_sample": 2,
+    "scientific_outputs": "exact JSON equality except elapsed time and adapted script hashes",
+    "excluded_rounding_trials": "reproduced; remain excluded",
+    "excluded_window_trials": "preserved as invalid, not rerun with accepted convention"
+  },
+  "6": {
+    "processes": 14,
+    "seconds": 14.027501,
+    "maximum_process_seconds": 1.394262,
+    "skipped": 0,
+    "status": "within enclosure",
+    "accepted_certificates": 10,
+    "original": 6,
+    "out_of_sample": 4,
+    "coarse_out_of_sample": 4,
+    "scientific_outputs": "archived decimal bracket endpoints independently recertified by interval inertia",
+    "pair_bounds": [
+      {
+        "b": ".28",
+        "absolute_difference_upper": [
+          "0.013263376876",
+          "0.013263376878"
+        ]
+      },
+      {
+        "b": ".33",
+        "absolute_difference_upper": [
+          "0.009855369526",
+          "0.009855369528"
+        ]
+      }
+    ]
+  }
+}

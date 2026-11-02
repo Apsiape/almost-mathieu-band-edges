@@ -1,0 +1,6 @@
+{
+  "status": "Reported historical failures; not independently recertified here.",
+  "no_twofold_drop": "failed in preasymptotic examples",
+  "universal_finite_q_continued_box_agreement": "failed in preasymptotic examples",
+  "scope": "The six original and four new independent cases do not relabel these failures."
+}

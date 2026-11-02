@@ -8,7 +8,7 @@ Chambers' formula, in the uniform Bloch gauge, is
 \end{equation}
 Here $B_t(k)$ has cyclic hopping factors $e^{\pm ik/q}$. The sign of $k$ is fixed so that $[A,X](k)=-iq\partial_kA(k)$. The physical shift or its adjoint can be used as the cyclic hopping matrix; this declaration fixes the orientation in the orbital formulas. All energy spectra and all width estimates are invariant under reversing $k$.
 
-Six inputs organize the proof. (I1) is Chambers' identity. (I2) is the near-spectrum derivative estimate in Paper~A, Proposition~3.3(2). (I3) is the complex-energy extension of Paper~B's growth and rational-product lemmas, proved in Appendix~\ref{app:complex}. (I4) is the Aubry--Perron maximal-site fact at $B_0(0)$, proved in Appendix~\ref{app:frames}. (I5) is the common uniform Mathieu ladder, derived from one-well quantization in Appendix~\ref{app:mathieu}. (I6) comprises the continuous IDS, full DOS support, and the convention $N=\{m\alpha\}$; see Avron--Simon~\cite{AvronSimon} and Avila--You--Zhou~\cite[Section~1]{AYZdry}.
+Six inputs organize the retained above-threshold proof. (I1) is Chambers' identity. (I2) is the near-spectrum derivative estimate in Paper~A, Proposition~3.3(2). (I3) is the complex-energy extension of Paper~B's growth and rational-product lemmas, proved in Appendix~\ref{app:complex}. (I4) is the Aubry--Perron maximal-site fact at $B_0(0)$, proved in Appendix~\ref{app:frames}. (I5) is the common uniform Mathieu ladder, derived from one-well quantization in Appendix~\ref{app:mathieu}. (I6) comprises the continuous IDS, full DOS support, and the convention $N=\{m\alpha\}$; see Avron--Simon~\cite{AvronSimon} and Avila--You--Zhou~\cite[Section~1]{AYZdry}.
 
 For fixed $\xi\in(0,L)$ we set $\tau=\xi/100$. Only finitely many derivatives and resolvent products occur. Let $C_*$ dominate their exponential-loss coefficients. We choose $h>L$ only after that list is fixed, so that
 \begin{equation}\label{eq:slack}
@@ -18,4 +18,5 @@ The notation $\EE=e^{o(q)}$ in the appendices denotes a positive quantity bounde
 
 Dirichlet compression to an interval $I$ is denoted by a subscript $I$. Eigenvalues are counted with multiplicity. Strict inequalities in counting windows are used only away from the enclosing clusters. Schur norms always include both row and column sums. Weighted Schur estimates are proved with their spatial weights before the corresponding norm is simplified.
 
+The below-threshold proof uses (I1)--(I4) and (I6), with the enlarged one-band range proved in Lemma~\ref{lem:belowrange}. Its new inputs are proved in Lemmas~\ref{lem:globalS}, \ref{lem:Sc}, Proposition~\ref{prop:belowboxcompare} and Theorem~\ref{thm:covariantmodel}. It retains the energy-dependent self-energy instead of invoking (I5). Every fixed-$D$ constant is chosen before the convergent threshold.
 \label{end:methods}

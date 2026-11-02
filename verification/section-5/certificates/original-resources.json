@@ -1,0 +1,56 @@
+{
+  "independent.resources.json": {
+    "seconds": 1.0179138,
+    "peak_working_set": 69226496,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_oos_0_4096.resources.json": {
+    "seconds": 1.3111654,
+    "peak_working_set": 66985984,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_oos_1_4096.resources.json": {
+    "seconds": 1.3817209,
+    "peak_working_set": 70467584,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_10_4096.resources.json": {
+    "seconds": 1.1175722,
+    "peak_working_set": 69439488,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_4_4096.resources.json": {
+    "seconds": 1.1442875,
+    "peak_working_set": 69455872,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_5_4096.resources.json": {
+    "seconds": 1.9289822,
+    "peak_working_set": 71495680,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_6_4096.resources.json": {
+    "seconds": 0.9018026,
+    "peak_working_set": 69500928,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_7_4096.resources.json": {
+    "seconds": 1.1224294,
+    "peak_working_set": 70184960,
+    "timed_out": false,
+    "exit_code": 0
+  },
+  "independent_original_9_4096.resources.json": {
+    "seconds": 0.889157,
+    "peak_working_set": 69435392,
+    "timed_out": false,
+    "exit_code": 0
+  }
+}
